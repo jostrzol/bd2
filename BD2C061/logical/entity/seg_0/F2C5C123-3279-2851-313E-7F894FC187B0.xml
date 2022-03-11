@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F2C5C123-3279-2851-313E-7F894FC187B0" name="Ankieta">
+<createdBy>ogurczak</createdBy>
+<createdTime>2022-03-11 11:45:34 UTC</createdTime>
+<ownerDesignName>BD2C061</ownerDesignName>
+<engineerTo>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>ankiety</preferredAbbreviation>
+<shortName>ank</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID Ankiety" id="0A139164-6A7E-3650-F6E7-D4874D46190B">
+<createdBy>ogurczak</createdBy>
+<createdTime>2022-03-11 16:50:54 UTC</createdTime>
+<ownerDesignName>BD2C061</ownerDesignName>
+<engineerTo>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID Agenta" id="6DA06EA6-A7CD-8AF4-4FBB-AB2A84E46D19">
+<createdBy>ogurczak</createdBy>
+<createdTime>2022-03-11 16:49:32 UTC</createdTime>
+<generatorID>DE18F529-0A9F-8BB9-8C56-857E1E3DF119</generatorID>
+<ownerDesignName>BD2C061</ownerDesignName>
+<engineerTo>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+</engineerTo>
+<referedAttribute>4912E507-2E5D-F420-7482-A842E2D58B28</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID Klienta" id="1178539F-D4E2-D01A-5297-90602281BA15">
+<createdBy>ogurczak</createdBy>
+<createdTime>2022-03-11 16:49:44 UTC</createdTime>
+<generatorID>13E4E474-143D-8FE0-CC72-58E5D564FD0E</generatorID>
+<ownerDesignName>BD2C061</ownerDesignName>
+<engineerTo>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+</engineerTo>
+<referedAttribute>E338D5AC-CAA6-A649-35C6-CA53C982470C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Kod typu ankiety" id="1EB68F2E-3BD6-DC11-31C1-7C43820D7B7F">
+<createdBy>ogurczak</createdBy>
+<createdTime>2022-03-11 17:04:13 UTC</createdTime>
+<generatorID>56E14ACD-B358-1431-2D08-3712837C733B</generatorID>
+<ownerDesignName>BD2C061</ownerDesignName>
+<engineerTo>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+</engineerTo>
+<referedAttribute>9C07B1C4-91D6-A587-1705-748D3C703EF7</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Data wypełnienia" id="32AE3C7A-9E03-76D5-2CB3-82898BA5ED7F">
+<createdBy>ogurczak</createdBy>
+<createdTime>2022-03-11 17:21:45 UTC</createdTime>
+<ownerDesignName>BD2C061</ownerDesignName>
+<engineerTo>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="66CFF542-2DA9-E64B-0507-1274EDA9A4F2" name="Ankieta PK">
+<createdBy>ogurczak</createdBy>
+<createdTime>2022-03-11 16:58:10 UTC</createdTime>
+<ownerDesignName>BD2C061</ownerDesignName>
+<engineerTo>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0A139164-6A7E-3650-F6E7-D4874D46190B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

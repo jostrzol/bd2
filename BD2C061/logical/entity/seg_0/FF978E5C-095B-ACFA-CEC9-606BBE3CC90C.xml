@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FF978E5C-095B-ACFA-CEC9-606BBE3CC90C" name="Odpowiedź">
+<createdBy>ogurczak</createdBy>
+<createdTime>2022-03-11 17:00:07 UTC</createdTime>
+<ownerDesignName>BD2C061</ownerDesignName>
+<engineerTo>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>odpowiedzi</preferredAbbreviation>
+<shortName>odp</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID Ankiety" id="EA491687-135E-8A20-C1BF-1E664811819A">
+<createdBy>ogurczak</createdBy>
+<createdTime>2022-03-11 17:01:25 UTC</createdTime>
+<generatorID>A160B82C-0A60-9E84-6F0D-F34A5A14DE11</generatorID>
+<ownerDesignName>BD2C061</ownerDesignName>
+<engineerTo>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+</engineerTo>
+<referedAttribute>0A139164-6A7E-3650-F6E7-D4874D46190B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID pytania" id="EABA005F-FB6D-6469-14C7-5486990BB5CA">
+<createdBy>ogurczak</createdBy>
+<createdTime>2022-03-11 17:04:38 UTC</createdTime>
+<generatorID>A5320EC2-C37A-1947-7E39-20CD9DB8147A</generatorID>
+<ownerDesignName>BD2C061</ownerDesignName>
+<engineerTo>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+</engineerTo>
+<referedAttribute>2C0F97C6-AF11-A21B-060C-3089917E6ABF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Wartość" id="91AF8F80-52A7-20E0-AA2E-977A1145B627">
+<createdBy>ogurczak</createdBy>
+<createdTime>2022-03-11 17:04:44 UTC</createdTime>
+<ownerDesignName>BD2C061</ownerDesignName>
+<engineerTo>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+</engineerTo>
+<constraintName>wartości odpowiedzi</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<listOfValues>
+<valueDef value="0" description=""/>
+<valueDef value="100" description=""/>
+<valueDef value="50" description=""/>
+</listOfValues>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5D1EC4CA-0328-8DC9-32CF-3EF3CE577E88" name="Odpowiedź PK">
+<createdBy>ogurczak</createdBy>
+<createdTime>2022-03-11 17:01:55 UTC</createdTime>
+<ownerDesignName>BD2C061</ownerDesignName>
+<engineerTo>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>EA491687-135E-8A20-C1BF-1E664811819A</attributeRef>
+<attributeRef>EABA005F-FB6D-6469-14C7-5486990BB5CA</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
