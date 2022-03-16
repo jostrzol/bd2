@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C12F1776-8BA4-75FC-108A-6DF087F7EC77" name="Firma">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C74BD59C-BF81-E563-DD92-BB1D4CA4BA8F" name="Osoba">
 <createdBy>ogurczak</createdBy>
-<createdTime>2022-03-11 11:43:17 UTC</createdTime>
+<createdTime>2022-03-16 16:59:13 UTC</createdTime>
 <ownerDesignName>BD2C061</ownerDesignName>
 <engineerTo>
 <item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
@@ -14,33 +14,34 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
-<preferredAbbreviation>firmy</preferredAbbreviation>
-<shortName>frm</shortName>
+<preferredAbbreviation>Osoby</preferredAbbreviation>
+<shortName>osb</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="ID Firmy" id="E91A1B1B-FA0F-3697-B27C-01AC9C374715">
+<Attribute name="Id osoby" id="FBD11185-2DFD-6793-7BBE-6720B23CB116">
 <createdBy>ogurczak</createdBy>
-<createdTime>2022-03-11 16:48:21 UTC</createdTime>
+<createdTime>2022-03-16 17:42:55 UTC</createdTime>
 <ownerDesignName>BD2C061</ownerDesignName>
 <engineerTo>
 <item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="78FC0B69-4843-377A-287E-94CBF0F6CFAA" name="Firma PK">
+<identifier id="2A11C5D9-9692-2240-9AEB-08B94A379714" name="Osoba PK">
 <createdBy>ogurczak</createdBy>
-<createdTime>2022-03-11 16:48:51 UTC</createdTime>
+<createdTime>2022-03-16 17:43:13 UTC</createdTime>
 <ownerDesignName>BD2C061</ownerDesignName>
 <engineerTo>
 <item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>E91A1B1B-FA0F-3697-B27C-01AC9C374715</attributeRef>
+<attributeRef>FBD11185-2DFD-6793-7BBE-6720B23CB116</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

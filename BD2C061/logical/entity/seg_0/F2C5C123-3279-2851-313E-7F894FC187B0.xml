@@ -14,10 +14,10 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
-<preferredAbbreviation>ankiety</preferredAbbreviation>
+<preferredAbbreviation>Ankiety</preferredAbbreviation>
 <shortName>ank</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="ID Ankiety" id="0A139164-6A7E-3650-F6E7-D4874D46190B">
+<Attribute name="Id ankiety" id="0A139164-6A7E-3650-F6E7-D4874D46190B">
 <createdBy>ogurczak</createdBy>
 <createdTime>2022-03-11 16:50:54 UTC</createdTime>
 <ownerDesignName>BD2C061</ownerDesignName>
@@ -26,50 +26,9 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="ID Agenta" id="6DA06EA6-A7CD-8AF4-4FBB-AB2A84E46D19">
-<createdBy>ogurczak</createdBy>
-<createdTime>2022-03-11 16:49:32 UTC</createdTime>
-<generatorID>DE18F529-0A9F-8BB9-8C56-857E1E3DF119</generatorID>
-<ownerDesignName>BD2C061</ownerDesignName>
-<engineerTo>
-<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
-</engineerTo>
-<referedAttribute>4912E507-2E5D-F420-7482-A842E2D58B28</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="ID Klienta" id="1178539F-D4E2-D01A-5297-90602281BA15">
-<createdBy>ogurczak</createdBy>
-<createdTime>2022-03-11 16:49:44 UTC</createdTime>
-<generatorID>13E4E474-143D-8FE0-CC72-58E5D564FD0E</generatorID>
-<ownerDesignName>BD2C061</ownerDesignName>
-<engineerTo>
-<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
-</engineerTo>
-<referedAttribute>E338D5AC-CAA6-A649-35C6-CA53C982470C</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Kod typu ankiety" id="1EB68F2E-3BD6-DC11-31C1-7C43820D7B7F">
-<createdBy>ogurczak</createdBy>
-<createdTime>2022-03-11 17:04:13 UTC</createdTime>
-<generatorID>56E14ACD-B358-1431-2D08-3712837C733B</generatorID>
-<ownerDesignName>BD2C061</ownerDesignName>
-<engineerTo>
-<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
-</engineerTo>
-<referedAttribute>9C07B1C4-91D6-A587-1705-748D3C703EF7</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Data wypełnienia" id="32AE3C7A-9E03-76D5-2CB3-82898BA5ED7F">
 <createdBy>ogurczak</createdBy>
@@ -81,6 +40,51 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id osoby" id="D4365D81-549A-0F47-0A24-15E8B68BCB17">
+<createdBy>ogurczak</createdBy>
+<createdTime>2022-03-16 17:44:00 UTC</createdTime>
+<generatorID>13E4E474-143D-8FE0-CC72-58E5D564FD0E</generatorID>
+<ownerDesignName>BD2C061</ownerDesignName>
+<engineerTo>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+</engineerTo>
+<referedAttribute>FBD11185-2DFD-6793-7BBE-6720B23CB116</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id osoby1" id="4AFD3619-322A-05D4-02A5-9A4E0FCD3790">
+<createdBy>ogurczak</createdBy>
+<createdTime>2022-03-16 17:44:07 UTC</createdTime>
+<generatorID>DE18F529-0A9F-8BB9-8C56-857E1E3DF119</generatorID>
+<ownerDesignName>BD2C061</ownerDesignName>
+<engineerTo>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+</engineerTo>
+<referedAttribute>FBD11185-2DFD-6793-7BBE-6720B23CB116</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Kod typu ankiety" id="8A2EE701-7169-B1AD-44FC-84E20925B6D7">
+<createdBy>ogurczak</createdBy>
+<createdTime>2022-03-16 17:49:41 UTC</createdTime>
+<generatorID>56E14ACD-B358-1431-2D08-3712837C733B</generatorID>
+<ownerDesignName>BD2C061</ownerDesignName>
+<engineerTo>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+</engineerTo>
+<referedAttribute>9C07B1C4-91D6-A587-1705-748D3C703EF7</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>

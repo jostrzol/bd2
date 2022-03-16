@@ -8,7 +8,7 @@
 </engineerTo>
 <targetTransferable>false</targetTransferable>
 <sourcePk>3E8FA3A2-C7ED-D879-38B6-FA64F8C9CD5F</sourcePk>
-<identifying>false</identifying>
+<identifying>true</identifying>
 <nameOnSource>definiuje</nameOnSource>
 <nameOnTarget>zdefiniowane przez</nameOnTarget>
 <optionalSource>true</optionalSource>

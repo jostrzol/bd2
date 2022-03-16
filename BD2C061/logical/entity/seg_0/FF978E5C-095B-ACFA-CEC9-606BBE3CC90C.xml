@@ -14,10 +14,10 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
-<preferredAbbreviation>odpowiedzi</preferredAbbreviation>
+<preferredAbbreviation>Odpowiedzi</preferredAbbreviation>
 <shortName>odp</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="ID Ankiety" id="EA491687-135E-8A20-C1BF-1E664811819A">
+<Attribute name="Id ankiety" id="EA491687-135E-8A20-C1BF-1E664811819A">
 <createdBy>ogurczak</createdBy>
 <createdTime>2022-03-11 17:01:25 UTC</createdTime>
 <generatorID>A160B82C-0A60-9E84-6F0D-F34A5A14DE11</generatorID>
@@ -28,21 +28,8 @@
 <referedAttribute>0A139164-6A7E-3650-F6E7-D4874D46190B</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="ID pytania" id="EABA005F-FB6D-6469-14C7-5486990BB5CA">
-<createdBy>ogurczak</createdBy>
-<createdTime>2022-03-11 17:04:38 UTC</createdTime>
-<generatorID>A5320EC2-C37A-1947-7E39-20CD9DB8147A</generatorID>
-<ownerDesignName>BD2C061</ownerDesignName>
-<engineerTo>
-<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
-</engineerTo>
-<referedAttribute>2C0F97C6-AF11-A21B-060C-3089917E6ABF</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Wartość" id="91AF8F80-52A7-20E0-AA2E-977A1145B627">
@@ -52,16 +39,46 @@
 <engineerTo>
 <item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
 </engineerTo>
-<constraintName>wartości odpowiedzi</constraintName>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
 <listOfValues>
 <valueDef value="0" description=""/>
 <valueDef value="100" description=""/>
 <valueDef value="50" description=""/>
 </listOfValues>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nr pytania" id="040B5542-6B59-2593-3A73-C245D27E4FEF">
+<createdBy>ogurczak</createdBy>
+<createdTime>2022-03-16 17:45:21 UTC</createdTime>
+<generatorID>A5320EC2-C37A-1947-7E39-20CD9DB8147A</generatorID>
+<ownerDesignName>BD2C061</ownerDesignName>
+<engineerTo>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+</engineerTo>
+<referedAttribute>2C0F97C6-AF11-A21B-060C-3089917E6ABF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Kod typu ankiety" id="9A8BE516-37A1-2260-675D-D80D7F713A43">
+<createdBy>ogurczak</createdBy>
+<createdTime>2022-03-16 18:37:15 UTC</createdTime>
+<generatorID>A5320EC2-C37A-1947-7E39-20CD9DB8147A</generatorID>
+<ownerDesignName>BD2C061</ownerDesignName>
+<engineerTo>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+</engineerTo>
+<referedAttribute>8118046E-A9B6-C658-4183-6878BED48E68</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
@@ -76,7 +93,8 @@
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>EA491687-135E-8A20-C1BF-1E664811819A</attributeRef>
-<attributeRef>EABA005F-FB6D-6469-14C7-5486990BB5CA</attributeRef>
+<attributeRef>040B5542-6B59-2593-3A73-C245D27E4FEF</attributeRef>
+<attributeRef>9A8BE516-37A1-2260-675D-D80D7F713A43</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

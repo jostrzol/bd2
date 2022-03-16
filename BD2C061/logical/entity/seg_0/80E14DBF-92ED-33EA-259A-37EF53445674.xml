@@ -14,10 +14,10 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
-<preferredAbbreviation>pytania</preferredAbbreviation>
+<preferredAbbreviation>Pytania</preferredAbbreviation>
 <shortName>pyt</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="ID pytania" id="2C0F97C6-AF11-A21B-060C-3089917E6ABF">
+<Attribute name="Nr pytania" id="2C0F97C6-AF11-A21B-060C-3089917E6ABF">
 <createdBy>ogurczak</createdBy>
 <createdTime>2022-03-11 17:04:19 UTC</createdTime>
 <ownerDesignName>BD2C061</ownerDesignName>
@@ -26,22 +26,9 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Kod typu ankiety" id="A9D7FC04-A9EE-4FBC-0E72-657F3EAA7E89">
-<createdBy>ogurczak</createdBy>
-<createdTime>2022-03-11 17:04:13 UTC</createdTime>
-<generatorID>316EFD6E-D395-8279-AC3F-5F23B55F1A9C</generatorID>
-<ownerDesignName>BD2C061</ownerDesignName>
-<engineerTo>
-<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
-</engineerTo>
-<referedAttribute>9C07B1C4-91D6-A587-1705-748D3C703EF7</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Czy opcjonalne" id="3BDD7ACC-F9B6-1AA8-8F93-823191EC786E">
 <createdBy>ogurczak</createdBy>
@@ -52,7 +39,27 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT042</logicalDatatype>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<listOfValues>
+<valueDef value="0" description="Pytanie obowiązkowe"/>
+<valueDef value="1" description="Pytanie opcjonalne"/>
+</listOfValues>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Kod typu ankiety" id="8118046E-A9B6-C658-4183-6878BED48E68">
+<createdBy>ogurczak</createdBy>
+<createdTime>2022-03-16 17:49:41 UTC</createdTime>
+<generatorID>316EFD6E-D395-8279-AC3F-5F23B55F1A9C</generatorID>
+<ownerDesignName>BD2C061</ownerDesignName>
+<engineerTo>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+</engineerTo>
+<referedAttribute>9C07B1C4-91D6-A587-1705-748D3C703EF7</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
@@ -67,6 +74,7 @@
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>2C0F97C6-AF11-A21B-060C-3089917E6ABF</attributeRef>
+<attributeRef>8118046E-A9B6-C658-4183-6878BED48E68</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>
