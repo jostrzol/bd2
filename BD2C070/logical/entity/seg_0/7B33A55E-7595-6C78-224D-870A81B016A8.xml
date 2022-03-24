@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7B33A55E-7595-6C78-224D-870A81B016A8" name="Klient">
+<createdBy>ogurczak</createdBy>
+<createdTime>2022-03-11 11:47:38 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<engineerTo>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>C74BD59C-BF81-E563-DD92-BB1D4CA4BA8F</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>Klienci</preferredAbbreviation>
+<shortName>kli</shortName>
+</Entity>
