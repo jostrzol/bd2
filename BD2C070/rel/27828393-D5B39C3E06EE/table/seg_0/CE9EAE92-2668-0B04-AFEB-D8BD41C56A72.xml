@@ -1,0 +1,110 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CE9EAE92-2668-0B04-AFEB-D8BD41C56A72" name="Pytania">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<generatorID>80E14DBF-92ED-33EA-259A-37EF53445674</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<abbreviation>pyt</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Nr_pytania" id="3CD4623E-84C4-2785-2D61-5249EAB7118E">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<generatorID>2C0F97C6-AF11-A21B-060C-3089917E6ABF</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Treść" id="0C395797-A8F8-3EE3-F1AD-82767FD41BED">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Treść pytania dostępna dla wypełniającego.]]></commentInRDBMS>
+<generatorID>5D633E47-C56C-7EA9-9B53-20F41BACC868</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000 CHAR</dataTypeSize>
+<ownDataTypeParameters>1000 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Czy_opcjonalne" id="E96280CA-533D-396C-F59A-E717E42313A6">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<generatorID>3BDD7ACC-F9B6-1AA8-8F93-823191EC786E</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<listOfValues>
+<valueDef value="N" description="Pytanie obowiązkowe"/>
+<valueDef value="T" description="Pytanie opcjonalne"/>
+</listOfValues>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Kod_typu_ankiety" id="BFE944C8-B573-8051-828D-061B69EFAE3B">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<generatorID>8118046E-A9B6-C658-4183-6878BED48E68</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C9B508FF-84E8-AFF3-9881-A72AC53FDC90" referredColumn="E40A1496-CC3F-321C-9CCD-C90B78AD8FCF"/>
+</associations>
+</Column>
+<Column name="Opis" id="A7F904E9-39BA-09C8-AEC6-776DBE1A50CF">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Opis wewnętrzny pytania, niewidoczny na ankiecie.]]></commentInRDBMS>
+<generatorID>0D731886-23B5-7ACF-A123-E0D4A8E93883</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000 CHAR</dataTypeSize>
+<ownDataTypeParameters>1000 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="35881DEF-3C4D-F991-2A3A-1FDC162011FB" name="Pytania_PK">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<generatorID>2A7C4E59-59A2-13B4-1E64-433FB4A94B3F</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3CD4623E-84C4-2785-2D61-5249EAB7118E"/>
+<colUsage columnID="BFE944C8-B573-8051-828D-061B69EFAE3B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A0823223-CBC5-03A1-9E7D-C5FF4EFF94BC" name="Pytania_Typy_ankiet_FK">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<generatorID>316EFD6E-D395-8279-AC3F-5F23B55F1A9C</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BFE944C8-B573-8051-828D-061B69EFAE3B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

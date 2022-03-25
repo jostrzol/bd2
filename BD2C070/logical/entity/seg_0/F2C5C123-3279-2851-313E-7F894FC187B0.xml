@@ -85,7 +85,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>12 CHAR</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>12 CHAR,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Uwagi" id="BA045251-5B16-E973-1AB7-DC603AAA1DCB">
 <createdBy>tuco</createdBy>

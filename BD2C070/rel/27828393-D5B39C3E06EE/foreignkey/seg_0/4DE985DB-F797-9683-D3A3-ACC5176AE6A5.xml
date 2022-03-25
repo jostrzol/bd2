@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="4DE985DB-F797-9683-D3A3-ACC5176AE6A5" containerWithKeyObject="D388BD1E-B501-85EF-C87F-CADED3F58405" localFKIndex="A2628F35-57A2-3449-8344-E08CD91840D3" name="Ankiety_Typy_ankiet_FK">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<generatorID>56E14ACD-B358-1431-2D08-3712837C733B</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<referredTableLongName>Typy_ankiet</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>69DA4639-854B-8CC1-5DF2-46C0D47DC67E</referredTableID>
+<keyObject>AB72C1FA-CFD0-FF0A-743D-2EBF16BD44A5</keyObject>
+<referredKeyID>AB72C1FA-CFD0-FF0A-743D-2EBF16BD44A5</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Kod_typu_ankiety</refColNames>
+<transferable>false</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

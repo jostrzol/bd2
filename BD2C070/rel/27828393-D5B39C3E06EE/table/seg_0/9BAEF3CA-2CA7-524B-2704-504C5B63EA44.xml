@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9BAEF3CA-2CA7-524B-2704-504C5B63EA44" name="Osoby">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<generatorID>C74BD59C-BF81-E563-DD92-BB1D4CA4BA8F</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<abbreviation>osb</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="osb_Id_osoby" id="98B9E88F-9A8A-D15F-E583-298C3A57630D">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<generatorID>FBD11185-2DFD-6793-7BBE-6720B23CB116</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="osb_Nazwisko" id="636F0279-74E0-A668-1E5C-01324A43107E">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<generatorID>4095A9A0-2DFC-0A53-6850-0A1A573B3FD7</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="osb_Imię" id="9A6485B8-BE0E-F7B3-29A7-D8A29D86A25E">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<generatorID>6E9C113C-2A17-7F43-0124-9ADA57127ED6</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="osb_Imię_2" id="6E77E5A8-4D52-037C-9E9E-A8602FA1A2F8">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<generatorID>6D709054-721E-6BDA-AFE7-C6B4830F3119</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="osb_Uwagi" id="51BA2691-5919-76B2-FD3C-91AA954DE758">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<generatorID>4B9C47B7-7E7A-6972-3EA0-1DB324271104</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 CHAR</dataTypeSize>
+<ownDataTypeParameters>4000 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1A85A74C-931C-ACD8-7AE2-B6FC057D3420" name="Osoby_PK">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<generatorID>2A11C5D9-9692-2240-9AEB-08B94A379714</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="98B9E88F-9A8A-D15F-E583-298C3A57630D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -30,9 +30,10 @@
 <dataTypePrecision>3</dataTypePrecision>
 <ownDataTypeParameters>,3,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Nazwa" id="5D633E47-C56C-7EA9-9B53-20F41BACC868">
+<Attribute name="Treść" id="5D633E47-C56C-7EA9-9B53-20F41BACC868">
 <createdBy>tuco</createdBy>
 <createdTime>2022-03-24 23:07:18 UTC</createdTime>
+<commentInRDBMS><![CDATA[Treść pytania dostępna dla wypełniającego.]]></commentInRDBMS>
 <ownerDesignName>BD2C070</ownerDesignName>
 <engineerTo>
 <item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
@@ -40,8 +41,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>100 CHAR</dataTypeSize>
-<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<dataTypeSize>1000 CHAR</dataTypeSize>
+<ownDataTypeParameters>1000 CHAR,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Czy opcjonalne" id="3BDD7ACC-F9B6-1AA8-8F93-823191EC786E">
 <createdBy>ogurczak</createdBy>
@@ -52,13 +53,13 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>1</dataTypePrecision>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
 <listOfValues>
-<valueDef value="0" description="Pytanie obowiązkowe"/>
-<valueDef value="1" description="Pytanie opcjonalne"/>
+<valueDef value="N" description="Pytanie obowiązkowe"/>
+<valueDef value="T" description="Pytanie opcjonalne"/>
 </listOfValues>
-<ownDataTypeParameters>,1,</ownDataTypeParameters>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Kod typu ankiety" id="8118046E-A9B6-C658-4183-6878BED48E68">
 <createdBy>ogurczak</createdBy>
@@ -78,6 +79,7 @@
 <Attribute name="Opis" id="0D731886-23B5-7ACF-A123-E0D4A8E93883">
 <createdBy>tuco</createdBy>
 <createdTime>2022-03-24 23:05:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[Opis wewnętrzny pytania, niewidoczny na ankiecie.]]></commentInRDBMS>
 <ownerDesignName>BD2C070</ownerDesignName>
 <engineerTo>
 <item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>

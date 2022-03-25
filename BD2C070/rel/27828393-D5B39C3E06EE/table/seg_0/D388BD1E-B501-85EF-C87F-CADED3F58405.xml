@@ -1,0 +1,144 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D388BD1E-B501-85EF-C87F-CADED3F58405" name="Ankiety">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<generatorID>F2C5C123-3279-2851-313E-7F894FC187B0</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<abbreviation>ank</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id_ankiety" id="6DE3D457-0094-AE1F-E6B7-90B1E3E8D2F1">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<generatorID>0A139164-6A7E-3650-F6E7-D4874D46190B</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Data_wypełnienia" id="3DA11254-3098-5A79-0F1E-FD9047A8D54D">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<generatorID>32AE3C7A-9E03-76D5-2CB3-82898BA5ED7F</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Id_osoby" id="A7AF519B-E5A4-90EA-F891-39A86F1DBB66">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<generatorID>D4365D81-549A-0F47-0A24-15E8B68BCB17</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9AC44A9C-3956-DBE2-4092-20399C6562AC" referredColumn="41837F01-F3DD-E8C9-C292-E8DED6288B75"/>
+</associations>
+</Column>
+<Column name="Id_osoby1" id="059DD4B3-0091-9791-D178-76243EBC3D4B">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<generatorID>4AFD3619-322A-05D4-02A5-9A4E0FCD3790</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="186774E5-9CE9-FF21-2896-F7D003FF6B04" referredColumn="EA303F39-48DC-276E-C345-A631A1267B3A"/>
+</associations>
+</Column>
+<Column name="Kod_typu_ankiety" id="329D5326-4EE5-4991-E5F7-C121DD79AB34">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<generatorID>8A2EE701-7169-B1AD-44FC-84E20925B6D7</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4DE985DB-F797-9683-D3A3-ACC5176AE6A5" referredColumn="E40A1496-CC3F-321C-9CCD-C90B78AD8FCF"/>
+</associations>
+</Column>
+<Column name="Uwagi" id="E1A6B4C9-A12F-E439-ED36-7AEC99EE694F">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<generatorID>BA045251-5B16-E973-1AB7-DC603AAA1DCB</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000 CHAR</dataTypeSize>
+<ownDataTypeParameters>1000 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6641415B-7E6D-14F2-8979-0B786E7BBF23" name="Ankiety_PK">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<generatorID>66CFF542-2DA9-E64B-0507-1274EDA9A4F2</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6DE3D457-0094-AE1F-E6B7-90B1E3E8D2F1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E7205B7C-071E-FD58-7801-CBCCDEC11269" name="Ankiety_Agenci_FK">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<generatorID>DE18F529-0A9F-8BB9-8C56-857E1E3DF119</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="059DD4B3-0091-9791-D178-76243EBC3D4B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6C2EA0EB-E576-65C1-14E6-32642951A676" name="Ankiety_Klienci_FK">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<generatorID>13E4E474-143D-8FE0-CC72-58E5D564FD0E</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A7AF519B-E5A4-90EA-F891-39A86F1DBB66"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A2628F35-57A2-3449-8344-E08CD91840D3" name="Ankiety_Typy_ankiet_FK">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<generatorID>56E14ACD-B358-1431-2D08-3712837C733B</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="329D5326-4EE5-4991-E5F7-C121DD79AB34"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
