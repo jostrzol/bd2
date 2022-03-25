@@ -12,7 +12,7 @@
 <nameOnSource>wypełnił</nameOnSource>
 <nameOnTarget>wypełniona przez</nameOnTarget>
 <optionalSource>true</optionalSource>
-<optionalTarget>false</optionalTarget>
+<optionalTarget>true</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
 <sourceEntity>7B33A55E-7595-6C78-224D-870A81B016A8</sourceEntity>
 <targetCardinalityString>*</targetCardinalityString>

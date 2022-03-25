@@ -17,4 +17,125 @@
 <normalForm>Third</normalForm>
 <preferredAbbreviation>Agenci</preferredAbbreviation>
 <shortName>agt</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Data urodzenia" id="97AF6705-E2CD-4781-9346-68DF43E2C7EA">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 20:05:30 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<engineerTo>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Państwo" id="56B2050B-DFBB-68D4-A84A-827E015B49C6">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 20:38:32 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<engineerTo>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Miasto" id="E9284A11-CCDE-145A-92A7-9BAAACB3C937">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 20:38:58 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<engineerTo>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Kod pocztowy" id="3EA8ACE5-E602-3E66-B6F7-8AC7A746AB3D">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 20:40:26 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<engineerTo>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Ulica" id="50832E34-9386-0262-65E8-FB3CFBD1044C">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 20:40:59 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<engineerTo>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 CHAR</dataTypeSize>
+<ownDataTypeParameters>40 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nr domu" id="BD7A797E-B45C-3A0D-D426-34AC75902627">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 20:42:45 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<engineerTo>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5 CHAR</dataTypeSize>
+<ownDataTypeParameters>5 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nr mieszkania" id="447A11EA-BCD6-5CC2-3BC7-9044754C336D">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 20:43:06 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<engineerTo>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5 CHAR</dataTypeSize>
+<ownDataTypeParameters>5 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PESEL" id="CC7A4056-B1FA-032F-A637-02E140D6390B">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 20:04:42 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<engineerTo>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>11 BYTE</dataTypeSize>
+<ownDataTypeParameters>11 BYTE,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="9EB7C65A-175A-86C9-0A44-54D36DC1A81C" name="Agent PESEL UID">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 20:06:08 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<engineerTo>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+</engineerTo>
+<newElementsIDs>CC7A4056-B1FA-032F-A637-02E140D6390B</newElementsIDs>
+<usedAttributes>
+<attributeRef>CC7A4056-B1FA-032F-A637-02E140D6390B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

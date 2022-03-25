@@ -30,6 +30,19 @@
 <dataTypePrecision>5</dataTypePrecision>
 <ownDataTypeParameters>,5,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="e-mail" id="9492D173-044E-CA48-5958-9B3D873FEB22">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 17:58:42 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<engineerTo>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 CHAR</dataTypeSize>
+<ownDataTypeParameters>40 CHAR,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="Nazwisko" id="4095A9A0-2DFC-0A53-6850-0A1A573B3FD7">
 <createdBy>tuco</createdBy>
 <createdTime>2022-03-24 20:23:10 UTC</createdTime>
@@ -69,20 +82,6 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>20 CHAR</dataTypeSize>
 <ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="e-mail" id="9492D173-044E-CA48-5958-9B3D873FEB22">
-<createdBy>tuco</createdBy>
-<createdTime>2022-03-25 17:58:42 UTC</createdTime>
-<ownerDesignName>BD2C070</ownerDesignName>
-<engineerTo>
-<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>40 CHAR</dataTypeSize>
-<ownDataTypeParameters>40 CHAR,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Telefon" id="250F47A0-B6BD-495C-557E-A37438BAE192">
 <createdBy>tuco</createdBy>
