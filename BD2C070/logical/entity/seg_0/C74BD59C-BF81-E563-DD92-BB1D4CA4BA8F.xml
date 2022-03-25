@@ -70,6 +70,34 @@
 <dataTypeSize>20 CHAR</dataTypeSize>
 <ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="e-mail" id="9492D173-044E-CA48-5958-9B3D873FEB22">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 17:58:42 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<engineerTo>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 CHAR</dataTypeSize>
+<ownDataTypeParameters>40 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Telefon" id="250F47A0-B6BD-495C-557E-A37438BAE192">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 17:58:58 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<engineerTo>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="Uwagi" id="4B9C47B7-7E7A-6972-3EA0-1DB324271104">
 <createdBy>tuco</createdBy>
 <createdTime>2022-03-24 22:53:05 UTC</createdTime>
@@ -96,6 +124,30 @@
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>FBD11185-2DFD-6793-7BBE-6720B23CB116</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="5C254ED1-83A6-F086-045A-074ACBBFA24C" name="Osoba Telefon UID">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 18:01:00 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<engineerTo>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+</engineerTo>
+<newElementsIDs>250F47A0-B6BD-495C-557E-A37438BAE192</newElementsIDs>
+<usedAttributes>
+<attributeRef>250F47A0-B6BD-495C-557E-A37438BAE192</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="BE167242-1A11-59C1-15AD-4D0943D4F809" name="Osoba e-mail UID">
+<createdBy>tuco</createdBy>
+<createdTime>2022-03-25 18:01:15 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<engineerTo>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+</engineerTo>
+<newElementsIDs>9492D173-044E-CA48-5958-9B3D873FEB22</newElementsIDs>
+<usedAttributes>
+<attributeRef>9492D173-044E-CA48-5958-9B3D873FEB22</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

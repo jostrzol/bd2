@@ -30,9 +30,9 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>5</dataTypePrecision>
-<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Wartość" id="91AF8F80-52A7-20E0-AA2E-977A1145B627">
+<Attribute name="Ocena" id="91AF8F80-52A7-20E0-AA2E-977A1145B627">
 <createdBy>ogurczak</createdBy>
 <createdTime>2022-03-11 17:04:44 UTC</createdTime>
 <ownerDesignName>BD2C070</ownerDesignName>

@@ -9,8 +9,8 @@
 <targetTransferable>false</targetTransferable>
 <sourcePk>66CFF542-2DA9-E64B-0507-1274EDA9A4F2</sourcePk>
 <identifying>true</identifying>
-<nameOnSource>ma</nameOnSource>
-<nameOnTarget>jest w</nameOnTarget>
+<nameOnSource>zawiera</nameOnSource>
+<nameOnTarget>zawarta w</nameOnTarget>
 <optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>

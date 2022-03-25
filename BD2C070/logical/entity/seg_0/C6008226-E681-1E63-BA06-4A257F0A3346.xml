@@ -17,33 +17,4 @@
 <normalForm>Third</normalForm>
 <preferredAbbreviation>Agenci</preferredAbbreviation>
 <shortName>agt</shortName>
-<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Nr agenta" id="7D733D60-0CA0-DD33-F5DE-602BF5D330C0">
-<createdBy>tuco</createdBy>
-<createdTime>2022-03-25 13:15:44 UTC</createdTime>
-<ownerDesignName>BD2C070</ownerDesignName>
-<engineerTo>
-<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>4</dataTypePrecision>
-<ownDataTypeParameters>,4,</ownDataTypeParameters>
-</Attribute>
-</attributes>
-<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="2CEC2ABF-63AB-6A61-132C-EDD5EDCBDC2D" name="Agent UIDv1">
-<createdBy>tuco</createdBy>
-<createdTime>2022-03-25 13:18:13 UTC</createdTime>
-<ownerDesignName>BD2C070</ownerDesignName>
-<engineerTo>
-<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
-</engineerTo>
-<newElementsIDs>7D733D60-0CA0-DD33-F5DE-602BF5D330C0</newElementsIDs>
-<usedAttributes>
-<attributeRef>7D733D60-0CA0-DD33-F5DE-602BF5D330C0</attributeRef>
-</usedAttributes>
-</identifier>
-</identifiers>
 </Entity>

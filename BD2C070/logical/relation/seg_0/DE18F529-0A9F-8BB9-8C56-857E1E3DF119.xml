@@ -9,7 +9,7 @@
 <targetTransferable>false</targetTransferable>
 <sourcePk>2A11C5D9-9692-2240-9AEB-08B94A379714</sourcePk>
 <identifying>false</identifying>
-<nameOnSource>oceniany przez</nameOnSource>
+<nameOnSource>oceniony przez</nameOnSource>
 <nameOnTarget>ocenia</nameOnTarget>
 <optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
