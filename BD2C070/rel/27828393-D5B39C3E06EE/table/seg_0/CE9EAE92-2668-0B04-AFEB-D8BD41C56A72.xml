@@ -12,6 +12,7 @@
 <Column name="Nr_pytania" id="3CD4623E-84C4-2785-2D61-5249EAB7118E">
 <createdBy>tuco</createdBy>
 <createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nr pytania jednocześnie identyfikuje dane pytanie w ramach jednego typu ankiety oraz ustala kolejność tego pytania w ankiecie.]]></commentInRDBMS>
 <generatorID>2C0F97C6-AF11-A21B-060C-3089917E6ABF</generatorID>
 <ownerDesignName>BD2C070</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -37,17 +38,18 @@
 <Column name="Czy_opcjonalne" id="E96280CA-533D-396C-F59A-E717E42313A6">
 <createdBy>tuco</createdBy>
 <createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Przyjmuje wartość 0 dla pytań obowiązkowych, a 1 dla opcjonalnych.]]></commentInRDBMS>
 <generatorID>3BDD7ACC-F9B6-1AA8-8F93-823191EC786E</generatorID>
 <ownerDesignName>BD2C070</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT025</logicalDatatype>
-<dataTypeSize>1 BYTE</dataTypeSize>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
 <listOfValues>
-<valueDef value="N" description="Pytanie obowiązkowe"/>
-<valueDef value="T" description="Pytanie opcjonalne"/>
+<valueDef value="0" description="Pytanie obowiązkowe"/>
+<valueDef value="1" description="Pytanie opcjonalne"/>
 </listOfValues>
-<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="Kod_typu_ankiety" id="BFE944C8-B573-8051-828D-061B69EFAE3B">
@@ -58,8 +60,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>12 CHAR</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>8 CHAR</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
@@ -69,7 +71,7 @@
 <Column name="Opis" id="A7F904E9-39BA-09C8-AEC6-776DBE1A50CF">
 <createdBy>tuco</createdBy>
 <createdTime>2022-03-25 13:21:15 UTC</createdTime>
-<commentInRDBMS><![CDATA[Opis wewnętrzny pytania, niewidoczny na ankiecie.]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[Opis wewnętrzny pytania, niewidoczny dla wypełniającego.]]></commentInRDBMS>
 <generatorID>0D731886-23B5-7ACF-A123-E0D4A8E93883</generatorID>
 <ownerDesignName>BD2C070</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>

@@ -49,6 +49,20 @@
 <ownDataTypeParameters>13 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="kli_Nr_karty_stałego_klienta" id="A23A5D28-7C65-CBB8-8ADE-69D542307FB6">
+<createdBy>tuco</createdBy>
+<createdTime>2022-04-21 15:27:08 UTC</createdTime>
+<commentInRDBMS><![CDATA[Składa się z 13 cyfr, aby łatwo można było go zareprezentować w postaci kodu kreskowego EAN-13.]]></commentInRDBMS>
+<generatorID>FE2FCF19-7FFC-AA05-C7CE-5B45D5302638</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>13 CHAR</dataTypeSize>
+<ownDataTypeParameters>13 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="E3A68CF7-E0CD-481E-D4FC-D442EFC6EC6F" name="Klienci_PK">
@@ -83,6 +97,17 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="FE29EBBB-FEDB-0459-40FF-2CC7EF4E2980"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1EEBB208-D750-14EC-13D4-2C6634276F72" name="Klienci_kli_Nr_karty_stałego_klienta_UN">
+<createdBy>tuco</createdBy>
+<createdTime>2022-04-21 15:27:08 UTC</createdTime>
+<generatorID>0079D843-4262-5BFB-08CA-F3002C968B0F</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A23A5D28-7C65-CBB8-8ADE-69D542307FB6"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="F03CB413-A973-EB43-558B-190862A160F0" name="Klienci_Osoby_FK">

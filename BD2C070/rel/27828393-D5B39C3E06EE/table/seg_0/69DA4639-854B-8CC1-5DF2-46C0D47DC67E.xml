@@ -2,6 +2,7 @@
 <Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="69DA4639-854B-8CC1-5DF2-46C0D47DC67E" name="Typy_ankiet">
 <createdBy>tuco</createdBy>
 <createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Typ ankiety definiuje szablon ankiety złożony z pytań. Wszystkie ankiety o tym samym typie mają ten sam zestaw pytań.]]></commentInRDBMS>
 <generatorID>9893A7BF-6A95-DF3B-C3DF-D19D80CB9D37</generatorID>
 <ownerDesignName>BD2C070</ownerDesignName>
 <abbreviation>t_ank</abbreviation>
@@ -17,8 +18,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>12 CHAR</dataTypeSize>
-<ownDataTypeParameters>12 CHAR,,</ownDataTypeParameters>
+<dataTypeSize>8 CHAR</dataTypeSize>
+<ownDataTypeParameters>8 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="Nazwa" id="2BD27FFC-C042-F3F3-4256-2E277679BEEC">

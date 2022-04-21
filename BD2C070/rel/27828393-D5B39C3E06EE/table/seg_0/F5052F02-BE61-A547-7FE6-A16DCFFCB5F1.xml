@@ -18,14 +18,14 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>5</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
 <colAssociation fkAssociation="2AE3F0FC-227F-8B2F-0B2C-6ADC10E274DA" referredColumn="6DE3D457-0094-AE1F-E6B7-90B1E3E8D2F1"/>
 </associations>
 </Column>
-<Column name="Wartość" id="9B75E6D1-D49E-33C2-40B1-2FA723E52779">
+<Column name="Ocena" id="9B75E6D1-D49E-33C2-40B1-2FA723E52779">
 <createdBy>tuco</createdBy>
 <createdTime>2022-03-25 13:21:15 UTC</createdTime>
 <generatorID>91AF8F80-52A7-20E0-AA2E-977A1145B627</generatorID>
@@ -52,7 +52,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>3</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
@@ -67,8 +67,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>12 CHAR</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>8 CHAR</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>

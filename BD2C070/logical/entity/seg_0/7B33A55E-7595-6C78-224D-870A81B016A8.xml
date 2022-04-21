@@ -21,7 +21,7 @@
 <Attribute name="Nr karty stałego klienta" id="FE2FCF19-7FFC-AA05-C7CE-5B45D5302638">
 <createdBy>tuco</createdBy>
 <createdTime>2022-03-25 20:08:34 UTC</createdTime>
-<commentInRDBMS><![CDATA[Powinien składać się z 13 cyfr, aby łatwo można było go zareprezentować w postaci kodu kreskowego EAN-13.]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[Składa się z 13 cyfr, aby łatwo można było go zareprezentować w postaci kodu kreskowego EAN-13.]]></commentInRDBMS>
 <ownerDesignName>BD2C070</ownerDesignName>
 <engineerTo>
 <item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>

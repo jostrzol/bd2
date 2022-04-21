@@ -36,6 +36,103 @@
 <ownDataTypeParameters>,4,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="agt_Data_urodzenia" id="CF7FEC54-5872-C2D7-3AA2-9CCACEE26798">
+<createdBy>tuco</createdBy>
+<createdTime>2022-04-21 15:27:08 UTC</createdTime>
+<generatorID>97AF6705-E2CD-4781-9346-68DF43E2C7EA</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="agt_Państwo" id="B04F513E-1F67-5A99-5426-9943863F3C39">
+<createdBy>tuco</createdBy>
+<createdTime>2022-04-21 15:27:08 UTC</createdTime>
+<generatorID>56B2050B-DFBB-68D4-A84A-827E015B49C6</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="agt_Miasto" id="C83AFEEA-74BF-56A1-18F1-4B5B655C4115">
+<createdBy>tuco</createdBy>
+<createdTime>2022-04-21 15:27:08 UTC</createdTime>
+<generatorID>E9284A11-CCDE-145A-92A7-9BAAACB3C937</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="agt_Kod_pocztowy" id="00609209-E006-A1FD-E3D0-F4306A1528D4">
+<createdBy>tuco</createdBy>
+<createdTime>2022-04-21 15:27:08 UTC</createdTime>
+<generatorID>3EA8ACE5-E602-3E66-B6F7-8AC7A746AB3D</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="agt_Ulica" id="7E572F16-5D64-BB68-BAC0-5ECE1D91ABF0">
+<createdBy>tuco</createdBy>
+<createdTime>2022-04-21 15:27:08 UTC</createdTime>
+<generatorID>50832E34-9386-0262-65E8-FB3CFBD1044C</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 CHAR</dataTypeSize>
+<ownDataTypeParameters>40 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="agt_Nr_domu" id="399F401D-83CF-E3AA-460F-AF407DCB7A10">
+<createdBy>tuco</createdBy>
+<createdTime>2022-04-21 15:27:08 UTC</createdTime>
+<generatorID>BD7A797E-B45C-3A0D-D426-34AC75902627</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5 CHAR</dataTypeSize>
+<ownDataTypeParameters>5 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="agt_Nr_mieszkania" id="2017F779-E7E0-E3D8-97F7-B2C6AAADD093">
+<createdBy>tuco</createdBy>
+<createdTime>2022-04-21 15:27:08 UTC</createdTime>
+<generatorID>447A11EA-BCD6-5CC2-3BC7-9044754C336D</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5 CHAR</dataTypeSize>
+<ownDataTypeParameters>5 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="agt_PESEL" id="1BB45834-ACC7-D65E-CCBA-07E4FFAEB9AA">
+<createdBy>tuco</createdBy>
+<createdTime>2022-04-21 15:27:08 UTC</createdTime>
+<generatorID>CC7A4056-B1FA-032F-A637-02E140D6390B</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>11 BYTE</dataTypeSize>
+<ownDataTypeParameters>11 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="A2D1825E-8DDD-54FF-5CD8-3E1860C23C19" name="Agenci_PK">
@@ -59,6 +156,17 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="7DA5190B-A09E-FF52-B7C4-F3474CD77C20"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="93B10345-BF39-6598-22D5-A804BBE3E2DE" name="Agenci_agt_PESEL_UN">
+<createdBy>tuco</createdBy>
+<createdTime>2022-04-21 15:27:08 UTC</createdTime>
+<generatorID>9EB7C65A-175A-86C9-0A44-54D36DC1A81C</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1BB45834-ACC7-D65E-CCBA-07E4FFAEB9AA"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="4FAC4588-CA18-F294-5969-5B601E5DF2F4" name="Agenci_Osoby_FK">

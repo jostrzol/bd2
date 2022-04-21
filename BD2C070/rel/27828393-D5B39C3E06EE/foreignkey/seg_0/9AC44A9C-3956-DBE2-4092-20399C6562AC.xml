@@ -9,7 +9,7 @@
 <referredTableID>DB644B41-1D3C-AFD0-D442-D0830CA8E65D</referredTableID>
 <keyObject>E3A68CF7-E0CD-481E-D4FC-D442EFC6EC6F</keyObject>
 <referredKeyID>E3A68CF7-E0CD-481E-D4FC-D442EFC6EC6F</referredKeyID>
-<mandatory>true</mandatory>
+<mandatory>false</mandatory>
 <refColNames>osb_Id_osoby</refColNames>
 <transferable>false</transferable>
 <rely>false</rely>

@@ -17,9 +17,25 @@
 <preferredAbbreviation>Pytania</preferredAbbreviation>
 <shortName>pyt</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Kod typu ankiety" id="8118046E-A9B6-C658-4183-6878BED48E68">
+<createdBy>ogurczak</createdBy>
+<createdTime>2022-03-16 17:49:41 UTC</createdTime>
+<generatorID>316EFD6E-D395-8279-AC3F-5F23B55F1A9C</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<engineerTo>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+</engineerTo>
+<referedAttribute>9C07B1C4-91D6-A587-1705-748D3C703EF7</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8 CHAR</dataTypeSize>
+<ownDataTypeParameters>8 CHAR,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="Nr pytania" id="2C0F97C6-AF11-A21B-060C-3089917E6ABF">
 <createdBy>ogurczak</createdBy>
 <createdTime>2022-03-11 17:04:19 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nr pytania jednocześnie identyfikuje dane pytanie w ramach jednego typu ankiety oraz ustala kolejność tego pytania w ankiecie.]]></commentInRDBMS>
 <ownerDesignName>BD2C070</ownerDesignName>
 <engineerTo>
 <item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
@@ -47,39 +63,25 @@
 <Attribute name="Czy opcjonalne" id="3BDD7ACC-F9B6-1AA8-8F93-823191EC786E">
 <createdBy>ogurczak</createdBy>
 <createdTime>2022-03-11 17:06:01 UTC</createdTime>
+<commentInRDBMS><![CDATA[Przyjmuje wartość 0 dla pytań obowiązkowych, a 1 dla opcjonalnych.]]></commentInRDBMS>
 <ownerDesignName>BD2C070</ownerDesignName>
 <engineerTo>
 <item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT025</logicalDatatype>
-<dataTypeSize>1 BYTE</dataTypeSize>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
 <listOfValues>
-<valueDef value="N" description="Pytanie obowiązkowe"/>
-<valueDef value="T" description="Pytanie opcjonalne"/>
+<valueDef value="0" description="Pytanie obowiązkowe"/>
+<valueDef value="1" description="Pytanie opcjonalne"/>
 </listOfValues>
-<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Kod typu ankiety" id="8118046E-A9B6-C658-4183-6878BED48E68">
-<createdBy>ogurczak</createdBy>
-<createdTime>2022-03-16 17:49:41 UTC</createdTime>
-<generatorID>316EFD6E-D395-8279-AC3F-5F23B55F1A9C</generatorID>
-<ownerDesignName>BD2C070</ownerDesignName>
-<engineerTo>
-<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
-</engineerTo>
-<referedAttribute>9C07B1C4-91D6-A587-1705-748D3C703EF7</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>12</dataTypeSize>
-<ownDataTypeParameters>12,,</ownDataTypeParameters>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Opis" id="0D731886-23B5-7ACF-A123-E0D4A8E93883">
 <createdBy>tuco</createdBy>
 <createdTime>2022-03-24 23:05:56 UTC</createdTime>
-<commentInRDBMS><![CDATA[Opis wewnętrzny pytania, niewidoczny na ankiecie.]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[Opis wewnętrzny pytania, niewidoczny dla wypełniającego.]]></commentInRDBMS>
 <ownerDesignName>BD2C070</ownerDesignName>
 <engineerTo>
 <item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
@@ -97,8 +99,9 @@
 <createdBy>ogurczak</createdBy>
 <createdTime>2022-03-11 17:04:37 UTC</createdTime>
 <ownerDesignName>BD2C070</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

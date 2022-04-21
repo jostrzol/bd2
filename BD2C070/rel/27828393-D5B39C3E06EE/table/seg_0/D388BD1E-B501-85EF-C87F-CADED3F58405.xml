@@ -2,6 +2,7 @@
 <Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D388BD1E-B501-85EF-C87F-CADED3F58405" name="Ankiety">
 <createdBy>tuco</createdBy>
 <createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ankieta to zbiór odpowiedzi na pytania definiowane przez jej typ. Ankieta zawsze ocenia jakiegoś agenta i może być wypełniona anonimowo lub jawnie.]]></commentInRDBMS>
 <generatorID>F2C5C123-3279-2851-313E-7F894FC187B0</generatorID>
 <ownerDesignName>BD2C070</ownerDesignName>
 <abbreviation>ank</abbreviation>
@@ -32,23 +33,24 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Id_osoby" id="A7AF519B-E5A4-90EA-F891-39A86F1DBB66">
+<Column name="Id_agenta" id="A7AF519B-E5A4-90EA-F891-39A86F1DBB66">
 <createdBy>tuco</createdBy>
 <createdTime>2022-03-25 13:21:15 UTC</createdTime>
 <generatorID>D4365D81-549A-0F47-0A24-15E8B68BCB17</generatorID>
 <ownerDesignName>BD2C070</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>5</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
 <colAssociation fkAssociation="9AC44A9C-3956-DBE2-4092-20399C6562AC" referredColumn="41837F01-F3DD-E8C9-C292-E8DED6288B75"/>
 </associations>
 </Column>
-<Column name="Id_osoby1" id="059DD4B3-0091-9791-D178-76243EBC3D4B">
+<Column name="Id_klienta" id="059DD4B3-0091-9791-D178-76243EBC3D4B">
 <createdBy>tuco</createdBy>
 <createdTime>2022-03-25 13:21:15 UTC</createdTime>
 <generatorID>4AFD3619-322A-05D4-02A5-9A4E0FCD3790</generatorID>
@@ -57,7 +59,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>5</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
@@ -72,8 +74,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>12 CHAR</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>8 CHAR</dataTypeSize>
+<ownDataTypeParameters>12 CHAR,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>

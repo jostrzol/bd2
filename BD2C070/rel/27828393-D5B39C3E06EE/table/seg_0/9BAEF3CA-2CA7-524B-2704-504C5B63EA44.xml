@@ -71,6 +71,31 @@
 <ownDataTypeParameters>4000 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="osb_e-mail" id="9E28B082-D664-7BD3-51E2-3E8277A54260">
+<createdBy>tuco</createdBy>
+<createdTime>2022-04-21 15:27:08 UTC</createdTime>
+<generatorID>9492D173-044E-CA48-5958-9B3D873FEB22</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 CHAR</dataTypeSize>
+<ownDataTypeParameters>40 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="osb_Telefon" id="8815C788-EA1F-1200-845C-2277040E8943">
+<createdBy>tuco</createdBy>
+<createdTime>2022-04-21 15:27:08 UTC</createdTime>
+<generatorID>250F47A0-B6BD-495C-557E-A37438BAE192</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="1A85A74C-931C-ACD8-7AE2-B6FC057D3420" name="Osoby_PK">
@@ -83,6 +108,28 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="98B9E88F-9A8A-D15F-E583-298C3A57630D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D19D3A25-5CF7-8212-AEE5-24E9DCB48AEF" name="Osoby_osb_Telefon_UN">
+<createdBy>tuco</createdBy>
+<createdTime>2022-04-21 15:27:08 UTC</createdTime>
+<generatorID>5C254ED1-83A6-F086-045A-074ACBBFA24C</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8815C788-EA1F-1200-845C-2277040E8943"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="15BF6D6D-E23B-BE3A-8F19-66311602D4A0" name="Osoby_osb_e-mail_UN">
+<createdBy>tuco</createdBy>
+<createdTime>2022-04-21 15:27:08 UTC</createdTime>
+<generatorID>BE167242-1A11-59C1-15AD-4D0943D4F809</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9E28B082-D664-7BD3-51E2-3E8277A54260"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

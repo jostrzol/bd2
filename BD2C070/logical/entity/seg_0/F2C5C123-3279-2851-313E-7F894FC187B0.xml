@@ -2,6 +2,7 @@
 <Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F2C5C123-3279-2851-313E-7F894FC187B0" name="Ankieta">
 <createdBy>ogurczak</createdBy>
 <createdTime>2022-03-11 11:45:34 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ankieta to zbiór odpowiedzi na pytania definiowane przez jej typ. Ankieta zawsze ocenia jakiegoś agenta i może być wypełniona anonimowo lub jawnie.]]></commentInRDBMS>
 <ownerDesignName>BD2C070</ownerDesignName>
 <engineerTo>
 <item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
@@ -30,6 +31,21 @@
 <dataTypePrecision>5</dataTypePrecision>
 <ownDataTypeParameters>,5,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="Kod typu ankiety" id="8A2EE701-7169-B1AD-44FC-84E20925B6D7">
+<createdBy>ogurczak</createdBy>
+<createdTime>2022-03-16 17:49:41 UTC</createdTime>
+<generatorID>56E14ACD-B358-1431-2D08-3712837C733B</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<engineerTo>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+</engineerTo>
+<referedAttribute>9C07B1C4-91D6-A587-1705-748D3C703EF7</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8 CHAR</dataTypeSize>
+<ownDataTypeParameters>8 CHAR,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="Data wypełnienia" id="32AE3C7A-9E03-76D5-2CB3-82898BA5ED7F">
 <createdBy>ogurczak</createdBy>
 <createdTime>2022-03-11 17:21:45 UTC</createdTime>
@@ -42,23 +58,7 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Id osoby" id="D4365D81-549A-0F47-0A24-15E8B68BCB17">
-<createdBy>ogurczak</createdBy>
-<createdTime>2022-03-16 17:44:00 UTC</createdTime>
-<generatorID>13E4E474-143D-8FE0-CC72-58E5D564FD0E</generatorID>
-<ownerDesignName>BD2C070</ownerDesignName>
-<engineerTo>
-<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<referedAttribute>FBD11185-2DFD-6793-7BBE-6720B23CB116</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>5</dataTypePrecision>
-<ownDataTypeParameters>,5,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Id osoby1" id="4AFD3619-322A-05D4-02A5-9A4E0FCD3790">
+<Attribute name="Id agenta" id="4AFD3619-322A-05D4-02A5-9A4E0FCD3790">
 <createdBy>ogurczak</createdBy>
 <createdTime>2022-03-16 17:44:07 UTC</createdTime>
 <generatorID>DE18F529-0A9F-8BB9-8C56-857E1E3DF119</generatorID>
@@ -73,20 +73,21 @@
 <dataTypePrecision>5</dataTypePrecision>
 <ownDataTypeParameters>,5,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Kod typu ankiety" id="8A2EE701-7169-B1AD-44FC-84E20925B6D7">
+<Attribute name="Id klienta" id="D4365D81-549A-0F47-0A24-15E8B68BCB17">
 <createdBy>ogurczak</createdBy>
-<createdTime>2022-03-16 17:49:41 UTC</createdTime>
-<generatorID>56E14ACD-B358-1431-2D08-3712837C733B</generatorID>
+<createdTime>2022-03-16 17:44:00 UTC</createdTime>
+<generatorID>13E4E474-143D-8FE0-CC72-58E5D564FD0E</generatorID>
 <ownerDesignName>BD2C070</ownerDesignName>
 <engineerTo>
 <item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
 </engineerTo>
-<referedAttribute>9C07B1C4-91D6-A587-1705-748D3C703EF7</referedAttribute>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>FBD11185-2DFD-6793-7BBE-6720B23CB116</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>12 CHAR</dataTypeSize>
-<ownDataTypeParameters>12 CHAR,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Uwagi" id="BA045251-5B16-E973-1AB7-DC603AAA1DCB">
 <createdBy>tuco</createdBy>
@@ -108,8 +109,9 @@
 <createdBy>ogurczak</createdBy>
 <createdTime>2022-03-11 16:58:10 UTC</createdTime>
 <ownerDesignName>BD2C070</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
