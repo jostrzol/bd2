@@ -109,6 +109,10 @@
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
 <dataTypeSize>13 CHAR</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="TRIM(TRANSLATE(nr_karty_stalego_klienta, &apos;0123456789&apos;, &apos; &apos;)) IS NULL"/>
+<implementationDef dbType="Oracle Database 21c" definition="TRIM(TRANSLATE(nr_karty_stalego_klienta, &apos;0123456789&apos;, &apos; &apos;)) IS NULL"/>
+</checkConstraint>
 <ownDataTypeParameters>13 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
