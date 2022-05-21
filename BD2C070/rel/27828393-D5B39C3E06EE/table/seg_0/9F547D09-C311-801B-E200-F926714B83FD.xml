@@ -94,8 +94,8 @@
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="61749E70-7B54-02E5-08A8-730958E085F8"/>
 <colUsage columnID="DB6E4BB0-B2FD-DBF4-60BA-B61A4B9F1FBB"/>
+<colUsage columnID="61749E70-7B54-02E5-08A8-730958E085F8"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="728E90F3-887D-E745-D2BB-E156A8A13290" name="PYT_TANK_FK">

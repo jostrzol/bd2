@@ -10,22 +10,6 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="Id_ankiety" id="D9C1CB85-2135-01F9-64AE-DC65F289F452">
-<createdBy>tuco</createdBy>
-<createdTime>2022-05-21 17:28:52 UTC</createdTime>
-<generatorID>EA491687-135E-8A20-C1BF-1E664811819A</generatorID>
-<ownerDesignName>BD2C070</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>5</dataTypePrecision>
-<ownDataTypeParameters>,5,</ownDataTypeParameters>
-<previousColumn>false</previousColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="D1E89830-B85D-337E-1B31-1C2ED3ABBFFB" referredColumn="D7EFF99D-E29D-BEC5-56EB-C309662A4CAC"/>
-</associations>
-</Column>
 <Column name="Kod_typu_ankiety" id="BC5B6C79-4105-6371-DD73-8AACBA77879F">
 <createdBy>tuco</createdBy>
 <createdTime>2022-05-21 17:28:52 UTC</createdTime>
@@ -56,6 +40,22 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
 <colAssociation fkAssociation="9099FF10-E700-EDAA-275E-ECEFD019A4AE" referredColumn="61749E70-7B54-02E5-08A8-730958E085F8"/>
+</associations>
+</Column>
+<Column name="Id_ankiety" id="D9C1CB85-2135-01F9-64AE-DC65F289F452">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-21 17:28:52 UTC</createdTime>
+<generatorID>EA491687-135E-8A20-C1BF-1E664811819A</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D1E89830-B85D-337E-1B31-1C2ED3ABBFFB" referredColumn="D7EFF99D-E29D-BEC5-56EB-C309662A4CAC"/>
 </associations>
 </Column>
 <Column name="Ocena" id="5F753DFA-995D-7D52-8775-928CA17E3DDB">
@@ -121,8 +121,8 @@
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="18F61B29-9B18-F65A-193C-59C37AA875FA"/>
 <colUsage columnID="BC5B6C79-4105-6371-DD73-8AACBA77879F"/>
+<colUsage columnID="18F61B29-9B18-F65A-193C-59C37AA875FA"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>
