@@ -51,7 +51,7 @@ jakub.ostrzolek.stud@pw.edu.pl</comment>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="F77D0AE3-CE21-65C5-9DF3-E98639E5D213" otype="Table" vid="8079285D-1DB2-E146-DB9B-D47868DDC5EF">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="205" y="12" width="365" height="322"/>
+<bounds x="205" y="22" width="365" height="322"/>
 <useDefaultColor>false</useDefaultColor>
 <backgroundColor>-1</backgroundColor>
 <foregroundColor>-16777216</foregroundColor>
@@ -85,10 +85,10 @@ jakub.ostrzolek.stud@pw.edu.pl</comment>
 <backgroundColor>-16777216</backgroundColor>
 <lineWidth>1</lineWidth>
 <points>
-<point x="397" y="334"/>
-<point x="397" y="368"/>
-<point x="195" y="368"/>
-<point x="195" y="422"/>
+<point x="377" y="344"/>
+<point x="377" y="393"/>
+<point x="175" y="393"/>
+<point x="175" y="422"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="9099FF10-E700-EDAA-275E-ECEFD019A4AE" otype="FKIndexAssociation" vid_source="91575764-D732-38A2-31BF-902C8F577290" vid_target="6DE2089E-7AFE-BDE4-6ACE-5FB5B9D723DA">
@@ -118,10 +118,10 @@ jakub.ostrzolek.stud@pw.edu.pl</comment>
 <backgroundColor>-16777216</backgroundColor>
 <lineWidth>1</lineWidth>
 <points>
-<point x="377" y="334"/>
-<point x="377" y="388"/>
-<point x="175" y="388"/>
-<point x="175" y="422"/>
+<point x="397" y="344"/>
+<point x="397" y="373"/>
+<point x="195" y="373"/>
+<point x="195" y="422"/>
 </points>
 </Connector>
 </connectors>

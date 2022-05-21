@@ -46,7 +46,7 @@
 <ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Imię" id="750919AB-6FB6-82B1-6688-6C749A66DF23">
+<Column name="Imie" id="750919AB-6FB6-82B1-6688-6C749A66DF23">
 <createdBy>tuco</createdBy>
 <createdTime>2022-05-21 17:28:52 UTC</createdTime>
 <generatorID>6E9C113C-2A17-7F43-0124-9ADA57127ED6</generatorID>
@@ -58,7 +58,7 @@
 <ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Imię_2" id="1CFC6FB9-D160-1EDA-D36B-6F6243D9ACFE">
+<Column name="Imie_2" id="1CFC6FB9-D160-1EDA-D36B-6F6243D9ACFE">
 <createdBy>tuco</createdBy>
 <createdTime>2022-05-21 17:28:52 UTC</createdTime>
 <generatorID>6D709054-721E-6BDA-AFE7-C6B4830F3119</generatorID>
@@ -97,12 +97,13 @@
 <ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Nr_karty_stałego_klienta" id="53772181-57B9-FE06-97D8-2216CD90F207">
+<Column name="Nr_karty_stalego_klienta" id="53772181-57B9-FE06-97D8-2216CD90F207">
 <createdBy>tuco</createdBy>
 <createdTime>2022-05-21 17:28:52 UTC</createdTime>
 <commentInRDBMS><![CDATA[Składa się z 13 cyfr, aby łatwo można było go zareprezentować w postaci kodu kreskowego EAN-13.]]></commentInRDBMS>
 <generatorID>FE2FCF19-7FFC-AA05-C7CE-5B45D5302638</generatorID>
 <ownerDesignName>BD2C070</ownerDesignName>
+<constraintName>OSB_N_KARTY_CHK</constraintName>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -123,7 +124,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Państwo" id="9A3EBDBD-2454-57A2-FF42-9FF39C5C1B32">
+<Column name="Panstwo" id="9A3EBDBD-2454-57A2-FF42-9FF39C5C1B32">
 <createdBy>tuco</createdBy>
 <createdTime>2022-05-21 17:28:52 UTC</createdTime>
 <generatorID>56B2050B-DFBB-68D4-A84A-827E015B49C6</generatorID>

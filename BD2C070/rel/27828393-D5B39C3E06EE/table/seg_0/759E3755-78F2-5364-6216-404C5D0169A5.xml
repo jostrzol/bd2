@@ -38,7 +38,7 @@
 <colAssociation fkAssociation="014E9838-5D19-02CF-C76F-9AD450C2C59D" referredColumn="A3178A55-302D-BBF1-C0B4-0D07CDB60E27"/>
 </associations>
 </Column>
-<Column name="Data_wypełnienia" id="0788CEE1-EB40-27C1-203B-61990D8E5BE5">
+<Column name="Data_wypelnienia" id="0788CEE1-EB40-27C1-203B-61990D8E5BE5">
 <createdBy>tuco</createdBy>
 <createdTime>2022-05-21 17:28:52 UTC</createdTime>
 <generatorID>32AE3C7A-9E03-76D5-2CB3-82898BA5ED7F</generatorID>

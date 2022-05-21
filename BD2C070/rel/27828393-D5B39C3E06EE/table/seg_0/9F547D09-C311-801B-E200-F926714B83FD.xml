@@ -44,7 +44,7 @@
 <ownDataTypeParameters>,3,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Treść" id="3B066706-9B86-0619-FFF9-6DB30E6E1AE9">
+<Column name="Tresc" id="3B066706-9B86-0619-FFF9-6DB30E6E1AE9">
 <createdBy>tuco</createdBy>
 <createdTime>2022-05-21 17:28:52 UTC</createdTime>
 <commentInRDBMS><![CDATA[Treść pytania dostępna dla wypełniającego.]]></commentInRDBMS>
