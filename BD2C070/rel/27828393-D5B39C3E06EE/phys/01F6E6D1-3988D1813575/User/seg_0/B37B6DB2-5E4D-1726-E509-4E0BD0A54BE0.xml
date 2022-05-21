@@ -3,41 +3,41 @@
 <createdBy>tuco</createdBy>
 <createdTime>2022-05-21 18:41:49 UTC</createdTime>
 <ownerDesignName>BD2C070</ownerDesignName>
-<identifier>05166E9D3C4ABB5606998A7B7C26BB8120</identifier>
+<identifier>05EA873DC68F00C547AC8400EAE3B95FB4</identifier>
 <permissions>
 <Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions1" id="EC924F9C-EA07-3614-8974-C129C9179AF2">
 <createdBy>tuco</createdBy>
 <createdTime>2022-05-21 18:45:30 UTC</createdTime>
 <ownerDesignName>BD2C070</ownerDesignName>
-<privilegesWithGrantOption>DELETE, INSERT, SELECT, UPDATE</privilegesWithGrantOption>
+<privileges>DELETE, INSERT, SELECT, UPDATE</privileges>
 <table>759E3755-78F2-5364-6216-404C5D0169A5</table>
 </Permission>
 <Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions2" id="E499F2EC-D2E4-0EE5-E32E-252C3B0751FD">
 <createdBy>tuco</createdBy>
 <createdTime>2022-05-21 18:45:30 UTC</createdTime>
 <ownerDesignName>BD2C070</ownerDesignName>
-<privilegesWithGrantOption>DELETE, INSERT, SELECT, UPDATE</privilegesWithGrantOption>
+<privileges>DELETE, INSERT, SELECT, UPDATE</privileges>
 <table>393419E9-FEC7-3C55-4587-E4F10D371ECC</table>
 </Permission>
 <Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions3" id="E6372E5E-20EE-C1D5-EE6A-406329B394D3">
 <createdBy>tuco</createdBy>
 <createdTime>2022-05-21 18:45:30 UTC</createdTime>
 <ownerDesignName>BD2C070</ownerDesignName>
-<privilegesWithGrantOption>DELETE, INSERT, SELECT, UPDATE</privilegesWithGrantOption>
+<privileges>DELETE, INSERT, SELECT, UPDATE</privileges>
 <table>F77D0AE3-CE21-65C5-9DF3-E98639E5D213</table>
 </Permission>
 <Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions4" id="48CBA8FE-4DBA-A1CE-0CE2-4D47B2E47284">
 <createdBy>tuco</createdBy>
 <createdTime>2022-05-21 18:45:30 UTC</createdTime>
 <ownerDesignName>BD2C070</ownerDesignName>
-<privilegesWithGrantOption>DELETE, INSERT, SELECT, UPDATE</privilegesWithGrantOption>
+<privileges>DELETE, INSERT, SELECT, UPDATE</privileges>
 <table>9F547D09-C311-801B-E200-F926714B83FD</table>
 </Permission>
 <Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions5" id="99417F05-283C-42EA-4EA4-3A7DA29B90C8">
 <createdBy>tuco</createdBy>
 <createdTime>2022-05-21 18:45:30 UTC</createdTime>
 <ownerDesignName>BD2C070</ownerDesignName>
-<privilegesWithGrantOption>DELETE, INSERT, SELECT, UPDATE</privilegesWithGrantOption>
+<privileges>DELETE, INSERT, SELECT, UPDATE</privileges>
 <table>A0D11254-FF0D-8175-4461-453ABA94CC58</table>
 </Permission>
 </permissions>
