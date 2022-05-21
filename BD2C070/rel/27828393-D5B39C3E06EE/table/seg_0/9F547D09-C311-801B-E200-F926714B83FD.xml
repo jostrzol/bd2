@@ -13,12 +13,17 @@
 <Column name="Kod_typu_ankiety" id="DB6E4BB0-B2FD-DBF4-60BA-B61A4B9F1FBB">
 <createdBy>tuco</createdBy>
 <createdTime>2022-05-21 17:28:52 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nie może zawierać małych liter.]]></commentInRDBMS>
 <generatorID>8118046E-A9B6-C658-4183-6878BED48E68</generatorID>
 <ownerDesignName>BD2C070</ownerDesignName>
+<constraintName>PYT_KOD_CHK</constraintName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>8 CHAR</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="UPPER(kod_typu_ankiety) = kod_typu_ankiety"/>
+</checkConstraint>
 <ownDataTypeParameters>8 CHAR,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
@@ -58,6 +63,7 @@
 <commentInRDBMS><![CDATA[Przyjmuje wartość 0 dla pytań obowiązkowych, a 1 dla opcjonalnych.]]></commentInRDBMS>
 <generatorID>3BDD7ACC-F9B6-1AA8-8F93-823191EC786E</generatorID>
 <ownerDesignName>BD2C070</ownerDesignName>
+<constraintName>PYT_OPCJN_CHK</constraintName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -66,7 +72,9 @@
 <valueDef value="0" description="Pytanie obowiązkowe"/>
 <valueDef value="1" description="Pytanie opcjonalne"/>
 </listOfValues>
+<defaultValue>0</defaultValue>
 <ownDataTypeParameters>,1,</ownDataTypeParameters>
+<defaultOntNull>true</defaultOntNull>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="Opis" id="C564BA0B-386D-A89A-4CF5-45C61F638C97">

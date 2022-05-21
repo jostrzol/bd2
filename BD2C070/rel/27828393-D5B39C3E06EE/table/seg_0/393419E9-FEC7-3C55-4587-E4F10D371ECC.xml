@@ -64,6 +64,7 @@
 <commentInRDBMS><![CDATA[Przyjmuje wartości 0, 50 i 100.]]></commentInRDBMS>
 <generatorID>91AF8F80-52A7-20E0-AA2E-977A1145B627</generatorID>
 <ownerDesignName>BD2C070</ownerDesignName>
+<constraintName>ODP_OCENA_CHK</constraintName>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
