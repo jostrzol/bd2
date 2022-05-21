@@ -1,18 +1,18 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="69DA4639-854B-8CC1-5DF2-46C0D47DC67E" name="Typy_ankiet">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A0D11254-FF0D-8175-4461-453ABA94CC58" name="Typy_ankiet">
 <createdBy>tuco</createdBy>
-<createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<createdTime>2022-05-21 17:28:52 UTC</createdTime>
 <commentInRDBMS><![CDATA[Typ ankiety definiuje szablon ankiety złożony z pytań. Wszystkie ankiety o tym samym typie mają ten sam zestaw pytań.]]></commentInRDBMS>
 <generatorID>9893A7BF-6A95-DF3B-C3DF-D19D80CB9D37</generatorID>
 <ownerDesignName>BD2C070</ownerDesignName>
-<abbreviation>t_ank</abbreviation>
+<abbreviation>TANK</abbreviation>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="Kod_typu_ankiety" id="E40A1496-CC3F-321C-9CCD-C90B78AD8FCF">
+<Column name="Kod_typu_ankiety" id="A3178A55-302D-BBF1-C0B4-0D07CDB60E27">
 <createdBy>tuco</createdBy>
-<createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<createdTime>2022-05-21 17:28:52 UTC</createdTime>
 <generatorID>9C07B1C4-91D6-A587-1705-748D3C703EF7</generatorID>
 <ownerDesignName>BD2C070</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -22,9 +22,9 @@
 <ownDataTypeParameters>8 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Nazwa" id="2BD27FFC-C042-F3F3-4256-2E277679BEEC">
+<Column name="Nazwa" id="2C6C1BCF-004A-E757-FF1C-1F6AFFFC9DF2">
 <createdBy>tuco</createdBy>
-<createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<createdTime>2022-05-21 17:28:52 UTC</createdTime>
 <generatorID>6A142327-4A46-82B7-D881-A0E3E5FD7902</generatorID>
 <ownerDesignName>BD2C070</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -34,9 +34,9 @@
 <ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Opis" id="DF8D4BA8-B67B-CD17-40B3-DF75A841449A">
+<Column name="Opis" id="D5B332BF-E9A1-F3D8-EA5F-7FFD8E49F72F">
 <createdBy>tuco</createdBy>
-<createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<createdTime>2022-05-21 17:28:52 UTC</createdTime>
 <generatorID>6CD00E32-A624-55FC-DBFD-25EA216737C2</generatorID>
 <ownerDesignName>BD2C070</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
@@ -49,16 +49,16 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="AB72C1FA-CFD0-FF0A-743D-2EBF16BD44A5" name="Typy_ankiet_PK">
+<ind_PK_UK id="60D47017-D53C-753F-3DEF-9B71A471858C" name="TANK_PK">
 <createdBy>tuco</createdBy>
-<createdTime>2022-03-25 13:21:15 UTC</createdTime>
+<createdTime>2022-05-21 17:28:52 UTC</createdTime>
 <generatorID>3E8FA3A2-C7ED-D879-38B6-FA64F8C9CD5F</generatorID>
 <ownerDesignName>BD2C070</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="E40A1496-CC3F-321C-9CCD-C90B78AD8FCF"/>
+<colUsage columnID="A3178A55-302D-BBF1-C0B4-0D07CDB60E27"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

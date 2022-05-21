@@ -2,6 +2,7 @@
 <Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C74BD59C-BF81-E563-DD92-BB1D4CA4BA8F" name="Osoba">
 <createdBy>ogurczak</createdBy>
 <createdTime>2022-03-16 16:59:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[Osoba reprezentuje klienta lub agenta. Agent świadczy usługi dla firmy, a jego praca jest oceniana przez klienta.]]></commentInRDBMS>
 <ownerDesignName>BD2C070</ownerDesignName>
 <engineerTo>
 <item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
@@ -15,7 +16,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <preferredAbbreviation>Osoby</preferredAbbreviation>
-<shortName>osb</shortName>
+<shortName>OSB</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
 <Attribute name="Id osoby" id="FBD11185-2DFD-6793-7BBE-6720B23CB116">
 <createdBy>ogurczak</createdBy>

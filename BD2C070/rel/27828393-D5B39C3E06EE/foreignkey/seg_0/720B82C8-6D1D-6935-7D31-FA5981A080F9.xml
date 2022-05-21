@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="720B82C8-6D1D-6935-7D31-FA5981A080F9" containerWithKeyObject="759E3755-78F2-5364-6216-404C5D0169A5" localFKIndex="627B1642-BA93-38BA-496B-F8CD2D205998" name="ANK_KLI_FK">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-21 17:28:52 UTC</createdTime>
+<generatorID>13E4E474-143D-8FE0-CC72-58E5D564FD0E</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<referredTableLongName>Osoby</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>F77D0AE3-CE21-65C5-9DF3-E98639E5D213</referredTableID>
+<keyObject>157781FE-89CE-A5C6-FBBC-A98045D691E9</keyObject>
+<referredKeyID>157781FE-89CE-A5C6-FBBC-A98045D691E9</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>Id_osoby</refColNames>
+<transferable>false</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

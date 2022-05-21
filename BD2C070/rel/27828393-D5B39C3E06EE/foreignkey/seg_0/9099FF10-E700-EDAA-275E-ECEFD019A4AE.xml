@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="9099FF10-E700-EDAA-275E-ECEFD019A4AE" containerWithKeyObject="393419E9-FEC7-3C55-4587-E4F10D371ECC" localFKIndex="06F71ACF-CD2F-FECF-8C6C-6EE1C1E7F495" name="ODP_PYT_FK">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-21 17:28:52 UTC</createdTime>
+<generatorID>A5320EC2-C37A-1947-7E39-20CD9DB8147A</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<referredTableLongName>Pytania</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>9F547D09-C311-801B-E200-F926714B83FD</referredTableID>
+<keyObject>6BD72206-A200-B063-2455-BE84CBEB6D0E</keyObject>
+<referredKeyID>6BD72206-A200-B063-2455-BE84CBEB6D0E</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Nr_pytania,Kod_typu_ankiety</refColNames>
+<transferable>false</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

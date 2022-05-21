@@ -2,9 +2,11 @@
 <Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C6008226-E681-1E63-BA06-4A257F0A3346" name="Agent">
 <createdBy>ogurczak</createdBy>
 <createdTime>2022-03-11 11:45:02 UTC</createdTime>
+<commentInRDBMS><![CDATA[Agent świadczy usługi dla firmy, a jego praca jest oceniana przez klienta.]]></commentInRDBMS>
 <ownerDesignName>BD2C070</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="false"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -16,7 +18,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <preferredAbbreviation>Agenci</preferredAbbreviation>
-<shortName>agt</shortName>
+<shortName>AGT</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
 <Attribute name="Data urodzenia" id="97AF6705-E2CD-4781-9346-68DF43E2C7EA">
 <createdBy>tuco</createdBy>
@@ -129,8 +131,9 @@
 <createdBy>tuco</createdBy>
 <createdTime>2022-03-25 20:06:08 UTC</createdTime>
 <ownerDesignName>BD2C070</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="false"/>
 </engineerTo>
 <newElementsIDs>CC7A4056-B1FA-032F-A637-02E140D6390B</newElementsIDs>
 <usedAttributes>

@@ -1,0 +1,129 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="393419E9-FEC7-3C55-4587-E4F10D371ECC" name="Odpowiedzi">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-21 17:28:52 UTC</createdTime>
+<commentInRDBMS><![CDATA[Odpowiedź udzielona przez klienta na konkretne pytanie w danej ankiecie.]]></commentInRDBMS>
+<generatorID>FF978E5C-095B-ACFA-CEC9-606BBE3CC90C</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<abbreviation>ODP</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id_ankiety" id="D9C1CB85-2135-01F9-64AE-DC65F289F452">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-21 17:28:52 UTC</createdTime>
+<generatorID>EA491687-135E-8A20-C1BF-1E664811819A</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D1E89830-B85D-337E-1B31-1C2ED3ABBFFB" referredColumn="D7EFF99D-E29D-BEC5-56EB-C309662A4CAC"/>
+</associations>
+</Column>
+<Column name="Kod_typu_ankiety" id="BC5B6C79-4105-6371-DD73-8AACBA77879F">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-21 17:28:52 UTC</createdTime>
+<generatorID>9A8BE516-37A1-2260-675D-D80D7F713A43</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8 CHAR</dataTypeSize>
+<ownDataTypeParameters>8 CHAR,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9099FF10-E700-EDAA-275E-ECEFD019A4AE" referredColumn="DB6E4BB0-B2FD-DBF4-60BA-B61A4B9F1FBB"/>
+</associations>
+</Column>
+<Column name="Nr_pytania" id="18F61B29-9B18-F65A-193C-59C37AA875FA">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-21 17:28:52 UTC</createdTime>
+<generatorID>040B5542-6B59-2593-3A73-C245D27E4FEF</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9099FF10-E700-EDAA-275E-ECEFD019A4AE" referredColumn="61749E70-7B54-02E5-08A8-730958E085F8"/>
+</associations>
+</Column>
+<Column name="Ocena" id="5F753DFA-995D-7D52-8775-928CA17E3DDB">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-21 17:28:52 UTC</createdTime>
+<commentInRDBMS><![CDATA[Przyjmuje wartości 0, 50 i 100.]]></commentInRDBMS>
+<generatorID>91AF8F80-52A7-20E0-AA2E-977A1145B627</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<listOfValues>
+<valueDef value="0" description=""/>
+<valueDef value="100" description=""/>
+<valueDef value="50" description=""/>
+</listOfValues>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7A409C4B-B703-45D3-C88B-DFCBFD26EF15" name="ODP_PK">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-21 17:28:52 UTC</createdTime>
+<generatorID>5D1EC4CA-0328-8DC9-32CF-3EF3CE577E88</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BC5B6C79-4105-6371-DD73-8AACBA77879F"/>
+<colUsage columnID="18F61B29-9B18-F65A-193C-59C37AA875FA"/>
+<colUsage columnID="D9C1CB85-2135-01F9-64AE-DC65F289F452"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3C366323-85A2-8013-4EAC-B85906E64C20" name="ODP_ANK_IDX">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-21 17:41:37 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D9C1CB85-2135-01F9-64AE-DC65F289F452"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D73DE330-63A2-EF6D-75D6-28A2B5D458FD" name="ODP_ANK_FK">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-21 17:28:52 UTC</createdTime>
+<generatorID>A160B82C-0A60-9E84-6F0D-F34A5A14DE11</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D9C1CB85-2135-01F9-64AE-DC65F289F452"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="06F71ACF-CD2F-FECF-8C6C-6EE1C1E7F495" name="ODP_PYT_FK">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-21 17:28:52 UTC</createdTime>
+<generatorID>A5320EC2-C37A-1947-7E39-20CD9DB8147A</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="18F61B29-9B18-F65A-193C-59C37AA875FA"/>
+<colUsage columnID="BC5B6C79-4105-6371-DD73-8AACBA77879F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

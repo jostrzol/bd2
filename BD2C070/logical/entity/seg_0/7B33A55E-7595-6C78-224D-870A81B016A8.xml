@@ -2,9 +2,11 @@
 <Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7B33A55E-7595-6C78-224D-870A81B016A8" name="Klient">
 <createdBy>ogurczak</createdBy>
 <createdTime>2022-03-11 11:47:38 UTC</createdTime>
+<commentInRDBMS><![CDATA[Klient ocenia agentów za pomocą ankiet.]]></commentInRDBMS>
 <ownerDesignName>BD2C070</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="false"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -16,7 +18,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <preferredAbbreviation>Klienci</preferredAbbreviation>
-<shortName>kli</shortName>
+<shortName>KLI</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
 <Attribute name="Nr karty stałego klienta" id="FE2FCF19-7FFC-AA05-C7CE-5B45D5302638">
 <createdBy>tuco</createdBy>
@@ -39,8 +41,9 @@
 <createdBy>tuco</createdBy>
 <createdTime>2022-03-25 20:15:56 UTC</createdTime>
 <ownerDesignName>BD2C070</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
+<item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="false"/>
 </engineerTo>
 <newElementsIDs>FE2FCF19-7FFC-AA05-C7CE-5B45D5302638</newElementsIDs>
 <usedAttributes>

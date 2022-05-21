@@ -2,6 +2,7 @@
 <Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FF978E5C-095B-ACFA-CEC9-606BBE3CC90C" name="Odpowiedź">
 <createdBy>ogurczak</createdBy>
 <createdTime>2022-03-11 17:00:07 UTC</createdTime>
+<commentInRDBMS><![CDATA[Odpowiedź udzielona przez klienta na konkretne pytanie w danej ankiecie.]]></commentInRDBMS>
 <ownerDesignName>BD2C070</ownerDesignName>
 <engineerTo>
 <item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>
@@ -15,7 +16,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <preferredAbbreviation>Odpowiedzi</preferredAbbreviation>
-<shortName>odp</shortName>
+<shortName>ODP</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
 <Attribute name="Id ankiety" id="EA491687-135E-8A20-C1BF-1E664811819A">
 <createdBy>ogurczak</createdBy>
@@ -65,6 +66,7 @@
 <Attribute name="Ocena" id="91AF8F80-52A7-20E0-AA2E-977A1145B627">
 <createdBy>ogurczak</createdBy>
 <createdTime>2022-03-11 17:04:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Przyjmuje wartości 0, 50 i 100.]]></commentInRDBMS>
 <ownerDesignName>BD2C070</ownerDesignName>
 <engineerTo>
 <item key="27828393-51DB-188D-DECD-D5B39C3E06EE" value="true"/>

@@ -320,8 +320,8 @@
 			<property name="Table Type" selected="true"/>
 			<property name="Structured Type" selected="true"/>
 			<property name="Type Substitution (Super-Type Object)" selected="true"/>
-			<property name="Allow Type Substitution" selected="true"/>
-			<property name="Min Volumes" selected="true"/>
+			<property name="Allow Type Substitution" selected="false"/>
+			<property name="Min Volumes" selected="false"/>
 			<property name="Expected Volumes" selected="true"/>
 			<property name="Max Volumes" selected="true"/>
 			<property name="Growth Percent" selected="true"/>

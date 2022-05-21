@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D1E89830-B85D-337E-1B31-1C2ED3ABBFFB" containerWithKeyObject="393419E9-FEC7-3C55-4587-E4F10D371ECC" localFKIndex="D73DE330-63A2-EF6D-75D6-28A2B5D458FD" name="ODP_ANK_FK">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-21 17:28:52 UTC</createdTime>
+<generatorID>A160B82C-0A60-9E84-6F0D-F34A5A14DE11</generatorID>
+<ownerDesignName>BD2C070</ownerDesignName>
+<referredTableLongName>Ankiety</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>759E3755-78F2-5364-6216-404C5D0169A5</referredTableID>
+<keyObject>CEEBF0EA-BF07-6FA3-48BB-572583324C2C</keyObject>
+<referredKeyID>CEEBF0EA-BF07-6FA3-48BB-572583324C2C</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Id_ankiety</refColNames>
+<transferable>false</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

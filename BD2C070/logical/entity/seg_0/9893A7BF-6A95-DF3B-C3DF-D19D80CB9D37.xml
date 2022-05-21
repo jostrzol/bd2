@@ -16,7 +16,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <preferredAbbreviation>Typy_ankiet</preferredAbbreviation>
-<shortName>t_ank</shortName>
+<shortName>TANK</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
 <Attribute name="Kod typu ankiety" id="9C07B1C4-91D6-A587-1705-748D3C703EF7">
 <createdBy>ogurczak</createdBy>

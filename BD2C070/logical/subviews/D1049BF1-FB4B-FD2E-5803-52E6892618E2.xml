@@ -128,7 +128,7 @@ jakub.ostrzolek.stud@pw.edu.pl</comment>
 <lineWidth>1</lineWidth>
 <sourceLabel class="oracle.dbtools.crest.model.design.Label">
 <site>0</site>
-<labelBounds x="335" y="439" width="59" height="26"/>
+<labelBounds x="335" y="443" width="59" height="22"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </sourceLabel>
