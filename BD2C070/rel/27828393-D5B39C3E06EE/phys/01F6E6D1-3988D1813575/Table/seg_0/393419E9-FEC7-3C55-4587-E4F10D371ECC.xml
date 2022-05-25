@@ -37,6 +37,17 @@
 <ownerDesignName>BD2C070</ownerDesignName>
 </IndexProxy>
 </indexProxies>
+<synonyms>
+<Synonym class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SynonymOraclev10g" name="Odpowiedzi" id="A3A331A0-CB19-80C2-9DF7-C7BC1CA7DF45">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-25 21:17:31 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<objectName>Odpowiedzi</objectName>
+<objectUser>2D830D89-A582-C6E9-37BE-9DE0814C163E</objectUser>
+<user>B37B6DB2-5E4D-1726-E509-4E0BD0A54BE0</user>
+<referredObjectID>393419E9-FEC7-3C55-4587-E4F10D371ECC</referredObjectID>
+</Synonym>
+</synonyms>
 <foreignKeys>
 <ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="ODP_PYT_FK" id="06F71ACF-CD2F-FECF-8C6C-6EE1C1E7F495">
 <createdBy>tuco</createdBy>

@@ -24,7 +24,7 @@
 <createdTime>2022-05-21 18:41:20 UTC</createdTime>
 <ownerDesignName>BD2C070</ownerDesignName>
 </ColumnProxy>
-<ColumnProxy name="Imię_2" id="1CFC6FB9-D160-1EDA-D36B-6F6243D9ACFE">
+<ColumnProxy name="Imie_2" id="1CFC6FB9-D160-1EDA-D36B-6F6243D9ACFE">
 <createdBy>tuco</createdBy>
 <createdTime>2022-05-21 18:41:20 UTC</createdTime>
 <ownerDesignName>BD2C070</ownerDesignName>
@@ -39,7 +39,7 @@
 <createdTime>2022-05-21 18:41:20 UTC</createdTime>
 <ownerDesignName>BD2C070</ownerDesignName>
 </ColumnProxy>
-<ColumnProxy name="Nr_karty_stałego_klienta" id="53772181-57B9-FE06-97D8-2216CD90F207">
+<ColumnProxy name="Nr_karty_stalego_klienta" id="53772181-57B9-FE06-97D8-2216CD90F207">
 <createdBy>tuco</createdBy>
 <createdTime>2022-05-21 18:41:20 UTC</createdTime>
 <ownerDesignName>BD2C070</ownerDesignName>
@@ -54,7 +54,7 @@
 <createdTime>2022-05-21 18:41:20 UTC</createdTime>
 <ownerDesignName>BD2C070</ownerDesignName>
 </ColumnProxy>
-<ColumnProxy name="Imię" id="750919AB-6FB6-82B1-6688-6C749A66DF23">
+<ColumnProxy name="Imie" id="750919AB-6FB6-82B1-6688-6C749A66DF23">
 <createdBy>tuco</createdBy>
 <createdTime>2022-05-21 18:41:20 UTC</createdTime>
 <ownerDesignName>BD2C070</ownerDesignName>
@@ -64,7 +64,7 @@
 <createdTime>2022-05-21 18:41:20 UTC</createdTime>
 <ownerDesignName>BD2C070</ownerDesignName>
 </ColumnProxy>
-<ColumnProxy name="Państwo" id="9A3EBDBD-2454-57A2-FF42-9FF39C5C1B32">
+<ColumnProxy name="Panstwo" id="9A3EBDBD-2454-57A2-FF42-9FF39C5C1B32">
 <createdBy>tuco</createdBy>
 <createdTime>2022-05-21 18:41:20 UTC</createdTime>
 <ownerDesignName>BD2C070</ownerDesignName>
@@ -90,6 +90,17 @@
 <ownerDesignName>BD2C070</ownerDesignName>
 </ColumnProxy>
 </columnProxies>
+<synonyms>
+<Synonym class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SynonymOraclev10g" name="Osoby" id="CFAC540F-78D8-1128-DFF8-523CE75E3957">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-25 21:15:57 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<objectName>Osoby</objectName>
+<objectUser>2D830D89-A582-C6E9-37BE-9DE0814C163E</objectUser>
+<user>B37B6DB2-5E4D-1726-E509-4E0BD0A54BE0</user>
+<referredObjectID>F77D0AE3-CE21-65C5-9DF3-E98639E5D213</referredObjectID>
+</Synonym>
+</synonyms>
 <primaryKeys>
 <PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="OSB_PK" id="157781FE-89CE-A5C6-FBBC-A98045D691E9">
 <createdBy>tuco</createdBy>

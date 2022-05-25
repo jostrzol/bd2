@@ -25,6 +25,17 @@
 <ownerDesignName>BD2C070</ownerDesignName>
 </ColumnProxy>
 </columnProxies>
+<synonyms>
+<Synonym class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SynonymOraclev10g" name="Typy_ankiet" id="D2FCDD67-540B-F2C0-E99B-A9DEC8B1F9C4">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-25 21:16:56 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<objectName>Typy_ankiet</objectName>
+<objectUser>2D830D89-A582-C6E9-37BE-9DE0814C163E</objectUser>
+<user>B37B6DB2-5E4D-1726-E509-4E0BD0A54BE0</user>
+<referredObjectID>A0D11254-FF0D-8175-4461-453ABA94CC58</referredObjectID>
+</Synonym>
+</synonyms>
 <primaryKeys>
 <PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="TANK_PK" id="60D47017-D53C-753F-3DEF-9B71A471858C">
 <createdBy>tuco</createdBy>
