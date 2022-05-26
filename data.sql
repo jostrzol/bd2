@@ -1,26 +1,26 @@
 ROLLBACK;
 
-INSERT INTO osoby (id_osoby, "e-mail", nazwisko, imie, imie_2, telefon, nr_karty_stalego_klienta)
+INSERT INTO osoby (id_osoby, email, nazwisko, imie, imie_2, telefon, nr_karty_stalego_klienta)
 VALUES (1001, 'jkowalski@mail.com', 'Kowalski', 'Jan', NULL, '111111111', '1111111111111');
-INSERT INTO osoby (id_osoby, "e-mail", nazwisko, imie, imie_2, telefon, nr_karty_stalego_klienta)
+INSERT INTO osoby (id_osoby, email, nazwisko, imie, imie_2, telefon, nr_karty_stalego_klienta)
 VALUES (1002, 'kmsciungwa@mail.com', 'Mściungwa', 'Kamil', NULL, '222222222', '2222222222222');
-INSERT INTO osoby (id_osoby, "e-mail", nazwisko, imie, imie_2, telefon, nr_karty_stalego_klienta)
+INSERT INTO osoby (id_osoby, email, nazwisko, imie, imie_2, telefon, nr_karty_stalego_klienta)
 VALUES (1003, 'adrzewo@mail.com', 'Drzewo', 'Albert', 'Anastazy', '333333333', '3333333333333');
-INSERT INTO osoby (id_osoby, "e-mail", nazwisko, imie, imie_2, telefon, nr_karty_stalego_klienta)
+INSERT INTO osoby (id_osoby, email, nazwisko, imie, imie_2, telefon, nr_karty_stalego_klienta)
 VALUES (1004, 'jbombrowicz@mail.com', 'Bombrowicz', 'Jakub', 'Edward', '444444444', '4444444444444');
-INSERT INTO osoby (id_osoby, "e-mail", nazwisko, imie, imie_2, telefon, nr_karty_stalego_klienta)
+INSERT INTO osoby (id_osoby, email, nazwisko, imie, imie_2, telefon, nr_karty_stalego_klienta)
 VALUES (1005, 'nmazur@mail.com', 'Mazur', 'Natalia', NULL, '555555555', '5555555555555');
 
 
-INSERT INTO osoby (id_osoby, "e-mail", nazwisko, imie, imie_2, telefon, pesel, data_urodzenia, panstwo, miasto, ulica, nr_domu, nr_mieszkania)
+INSERT INTO osoby (id_osoby, email, nazwisko, imie, imie_2, telefon, pesel, data_urodzenia, panstwo, miasto, ulica, nr_domu, nr_mieszkania)
 VALUES (1006, 'akozlowski@mail.com', 'Kozłowski', 'Andrzej', NULL, '666666666', '45102000859', TO_DATE('20.10.1945', 'DD.MM.YYYY'), 'Polska', 'Warszawa', 'Długa', '1A', NULL);
-INSERT INTO osoby (id_osoby, "e-mail", nazwisko, imie, imie_2, telefon, pesel, data_urodzenia, panstwo, miasto, ulica, nr_domu, nr_mieszkania)
+INSERT INTO osoby (id_osoby, email, nazwisko, imie, imie_2, telefon, pesel, data_urodzenia, panstwo, miasto, ulica, nr_domu, nr_mieszkania)
 VALUES (1007, 'jczerwienska@mail.com', 'Czerwieńska', 'Józefa', 'Maria', '777777777', '58050197229', TO_DATE('01.05.1958', 'DD.MM.YYYY'), 'Polska', 'Chorzów', 'Krótka', '12', '2');
-INSERT INTO osoby (id_osoby, "e-mail", nazwisko, imie, imie_2, telefon, pesel, data_urodzenia, panstwo, miasto, ulica, nr_domu, nr_mieszkania)
+INSERT INTO osoby (id_osoby, email, nazwisko, imie, imie_2, telefon, pesel, data_urodzenia, panstwo, miasto, ulica, nr_domu, nr_mieszkania)
 VALUES (1008, 'jostrowska@mail.com', 'Ostrowska', 'Julianna', NULL, '888888888', '42092804885', TO_DATE('28.09.1942', 'DD.MM.YYYY'), 'Polska', 'Rzeszów', 'Szeroka', '43', NULL);
-INSERT INTO osoby (id_osoby, "e-mail", nazwisko, imie, imie_2, telefon, pesel, data_urodzenia, panstwo, miasto, ulica, nr_domu, nr_mieszkania)
+INSERT INTO osoby (id_osoby, email, nazwisko, imie, imie_2, telefon, pesel, data_urodzenia, panstwo, miasto, ulica, nr_domu, nr_mieszkania)
 VALUES (1009, 'ipiotrowski@mail.com', 'Piotrowski', 'Ignacy', NULL, '999999999', '77011733157', TO_DATE('17.01.1977', 'DD.MM.YYYY'), 'Polska', 'Jastrzębie', 'Wąska', '55', '11');
-INSERT INTO osoby (id_osoby, "e-mail", nazwisko, imie, imie_2, telefon, pesel, data_urodzenia, panstwo, miasto, ulica, nr_domu, nr_mieszkania)
+INSERT INTO osoby (id_osoby, email, nazwisko, imie, imie_2, telefon, pesel, data_urodzenia, panstwo, miasto, ulica, nr_domu, nr_mieszkania)
 VALUES (1010, 'kwalczak@mail.com', 'Walczak', 'Karol', 'Mateusz', '000000000', '76040623635', TO_DATE('06.04.1976', 'DD.MM.YYYY'), 'Polska', 'Szczecin', 'Średnia', '102', '17');
 
 
