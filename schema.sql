@@ -247,25 +247,6 @@ BEGIN
 END;
 /
 
---CREATE OR REPLACE TRIGGER ank_all_required_odp BEFORE
---    INSERT ON ankiety
---    FOR EACH ROW
---DECLARE
---    TYPE ODP_PYT_JOIN_T IS RECORD (
---      kod_typu_ankiety  pytania.kod_typu_ankiety%TYPE,
---      czy_opcjonalne    pytania.czy_opcjonalne%TYPE,
---      ocena             odpowiedzi.ocena%TYPE);
---    odp_pyt ODP_PYT_JOIN_T;
---BEGIN
---    FOR odp_pyt IN (SELECT p.kod_typu_ankiety, p.czy_opcjonalne, o.ocena
---        FROM odpowiedzi o RIGHT JOIN pytania p
---        ON (o.kod_typu_ankiety = p.kod_typu_ankiety and o.nr_pytania = p.nr_pytania)
---        WHERE id_ankiety = :new.id_ankiety)
---    LOOP
---    END LOOP;
---END;
---/
-
 -- Oracle SQL Developer Data Modeler Summary Report: 
 -- 
 -- CREATE TABLE                             5

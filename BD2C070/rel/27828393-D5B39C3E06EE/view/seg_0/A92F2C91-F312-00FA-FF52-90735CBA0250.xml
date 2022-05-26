@@ -1,0 +1,132 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="A92F2C91-F312-00FA-FF52-90735CBA0250" name="Srednie_oceny_pytan">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-26 11:59:26 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<ordsAlias>view_4</ordsAlias>
+<userDefined>true</userDefined>
+<userDefinedSQL><![CDATA[SELECT
+    p.kod_typu_ankiety,
+    p.nr_pytania,
+    p.tresc,
+    AVG(o.ocena) AS srednia_ocena
+FROM
+         odpowiedzi o
+    INNER JOIN pytania p ON o.kod_typu_ankiety = p.kod_typu_ankiety
+                            AND o.nr_pytania = p.nr_pytania
+GROUP BY
+    p.kod_typu_ankiety,
+    p.nr_pytania,
+    p.tresc]]></userDefinedSQL>
+<parsed>true</parsed>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="kod_typu_ankiety" id="5EC4DEC2-E4F3-C59E-722C-53A7B2299EFA">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-26 12:00:58 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>VARCHAR2 (8 CHAR)</dataType>
+<headerAlias>kod_typu_ankiety</headerAlias>
+<reference>false</reference>
+<referencedColumn>DB6E4BB0-B2FD-DBF4-60BA-B61A4B9F1FBB</referencedColumn>
+<table>9F547D09-C311-801B-E200-F926714B83FD</table>
+<tableAlias>p</tableAlias>
+<associations>
+<colAssociation fkAssociation="86E67EC5-508D-0F1E-0575-C663D293A408" referredColumn="A3178A55-302D-BBF1-C0B4-0D07CDB60E27"/>
+</associations>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="nr_pytania" id="8A93CCA6-2F9D-C93B-9ED3-C192D46A38B5">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-26 12:00:58 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>NUMBER (3)</dataType>
+<headerAlias>nr_pytania</headerAlias>
+<reference>false</reference>
+<referencedColumn>61749E70-7B54-02E5-08A8-730958E085F8</referencedColumn>
+<table>9F547D09-C311-801B-E200-F926714B83FD</table>
+<tableAlias>p</tableAlias>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="tresc" id="8ED026EF-FFF7-AAE2-66E9-5E8E9981D7D8">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-26 12:00:58 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>VARCHAR2 (1000 CHAR)</dataType>
+<headerAlias>tresc</headerAlias>
+<reference>false</reference>
+<referencedColumn>3B066706-9B86-0619-FFF9-6DB30E6E1AE9</referencedColumn>
+<table>9F547D09-C311-801B-E200-F926714B83FD</table>
+<tableAlias>p</tableAlias>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="srednia_ocena" id="B7C07595-F9C0-E2F7-F7F5-2A20CEE13A78">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-26 12:00:58 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>srednia_ocena</alias>
+<dataType>UNKNOWN</dataType>
+<headerAlias>srednia_ocena</headerAlias>
+<expression>AVG(o.ocena)</expression>
+<reference>false</reference>
+</viewElement>
+</viewElements>
+<usedObjects>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="393419E9-FEC7-3C55-4587-E4F10D371ECC">
+<container>true</container>
+<tableName>Odpowiedzi</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="9F547D09-C311-801B-E200-F926714B83FD">
+<container>true</container>
+<tableName>Pytania</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="DB6E4BB0-B2FD-DBF4-60BA-B61A4B9F1FBB">
+<columnName>Kod_typu_ankiety</columnName>
+<tableName>Pytania</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="61749E70-7B54-02E5-08A8-730958E085F8">
+<columnName>Nr_pytania</columnName>
+<tableName>Pytania</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="3B066706-9B86-0619-FFF9-6DB30E6E1AE9">
+<columnName>Tresc</columnName>
+<tableName>Pytania</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="18F61B29-9B18-F65A-193C-59C37AA875FA">
+<columnName>Nr_pytania</columnName>
+<tableName>Odpowiedzi</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="5F753DFA-995D-7D52-8775-928CA17E3DDB">
+<columnName>Ocena</columnName>
+<tableName>Odpowiedzi</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="BC5B6C79-4105-6371-DD73-8AACBA77879F">
+<columnName>Kod_typu_ankiety</columnName>
+<tableName>Odpowiedzi</tableName>
+</UsedObject>
+</usedObjects>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.ViewIndex">
+<ind_PK_UK id="00E57228-0182-2554-44E3-3689F9A8B4DE" name="SRED_PYT_PK">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-26 12:00:58 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="5EC4DEC2-E4F3-C59E-722C-53A7B2299EFA"/>
+<colUsage columnID="8A93CCA6-2F9D-C93B-9ED3-C192D46A38B5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F40F206D-8D02-FF98-E191-F72258DBE139" name="SRED_PYT_TANK_FK">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-26 12:03:47 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<indexColumnUsage>
+<colUsage columnID="5EC4DEC2-E4F3-C59E-722C-53A7B2299EFA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</TableView>

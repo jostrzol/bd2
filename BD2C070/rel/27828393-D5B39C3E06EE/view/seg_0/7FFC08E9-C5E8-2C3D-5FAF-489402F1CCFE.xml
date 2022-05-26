@@ -1,0 +1,147 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="7FFC08E9-C5E8-2C3D-5FAF-489402F1CCFE" name="Srednie_oceny_osob">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-26 10:54:21 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<ordsAlias>view_2</ordsAlias>
+<userDefined>true</userDefined>
+<userDefinedSQL><![CDATA[SELECT
+    os.id_osoby,
+    os.email,
+    os.nazwisko,
+    os.imie,
+    AVG(o.ocena) AS srednia_ocena
+FROM
+         odpowiedzi o
+    INNER JOIN ankiety a ON ( o.id_ankiety = a.id_ankiety )
+    RIGHT JOIN osoby   os ON ( a.id_agenta = os.id_osoby )
+GROUP BY
+    os.id_osoby,
+    os.email,
+    os.nazwisko,
+    os.imie]]></userDefinedSQL>
+<parsed>true</parsed>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="id_osoby" id="53C0BC69-80F5-395B-C16B-9FDBBA5306B0">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-26 10:59:36 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>NUMBER (5)</dataType>
+<headerAlias>id_osoby</headerAlias>
+<reference>false</reference>
+<referencedColumn>44D75C3C-5359-F7F1-78CD-0C7862FCB96B</referencedColumn>
+<table>F77D0AE3-CE21-65C5-9DF3-E98639E5D213</table>
+<tableAlias>os</tableAlias>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="email" id="A02D21FD-71F4-C032-55A7-0CF6A3B7DA9C">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-26 10:59:36 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>VARCHAR2 (40 CHAR)</dataType>
+<headerAlias>email</headerAlias>
+<reference>false</reference>
+<referencedColumn>1961FCA6-6D7E-7A57-661E-69A69589CB00</referencedColumn>
+<table>F77D0AE3-CE21-65C5-9DF3-E98639E5D213</table>
+<tableAlias>os</tableAlias>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="nazwisko" id="F34CCC1E-CEC4-4CC0-5DE0-808D02BC6E52">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-26 10:59:36 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>VARCHAR2 (30 CHAR)</dataType>
+<headerAlias>nazwisko</headerAlias>
+<reference>false</reference>
+<referencedColumn>1792B763-3541-F3CC-6544-630BA03FC4A0</referencedColumn>
+<table>F77D0AE3-CE21-65C5-9DF3-E98639E5D213</table>
+<tableAlias>os</tableAlias>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="imie" id="CEA55022-D740-B904-C4A2-51835E32F066">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-26 10:59:36 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>VARCHAR2 (20 CHAR)</dataType>
+<headerAlias>imie</headerAlias>
+<reference>false</reference>
+<referencedColumn>750919AB-6FB6-82B1-6688-6C749A66DF23</referencedColumn>
+<table>F77D0AE3-CE21-65C5-9DF3-E98639E5D213</table>
+<tableAlias>os</tableAlias>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="srednia_ocena" id="B7EC2E28-179D-3B26-B791-12A4BA242842">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-26 10:59:36 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>srednia_ocena</alias>
+<dataType>UNKNOWN</dataType>
+<headerAlias>srednia_ocena</headerAlias>
+<expression>AVG(o.ocena)</expression>
+<reference>false</reference>
+</viewElement>
+</viewElements>
+<usedObjects>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="393419E9-FEC7-3C55-4587-E4F10D371ECC">
+<container>true</container>
+<tableName>Odpowiedzi</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="759E3755-78F2-5364-6216-404C5D0169A5">
+<container>true</container>
+<tableName>Ankiety</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="F77D0AE3-CE21-65C5-9DF3-E98639E5D213">
+<container>true</container>
+<tableName>Osoby</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="44D75C3C-5359-F7F1-78CD-0C7862FCB96B">
+<columnName>Id_osoby</columnName>
+<tableName>Osoby</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="1961FCA6-6D7E-7A57-661E-69A69589CB00">
+<columnName>email</columnName>
+<tableName>Osoby</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="1792B763-3541-F3CC-6544-630BA03FC4A0">
+<columnName>Nazwisko</columnName>
+<tableName>Osoby</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="750919AB-6FB6-82B1-6688-6C749A66DF23">
+<columnName>Imie</columnName>
+<tableName>Osoby</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="D9C1CB85-2135-01F9-64AE-DC65F289F452">
+<columnName>Id_ankiety</columnName>
+<tableName>Odpowiedzi</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="D7EFF99D-E29D-BEC5-56EB-C309662A4CAC">
+<columnName>Id_ankiety</columnName>
+<tableName>Ankiety</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="5F753DFA-995D-7D52-8775-928CA17E3DDB">
+<columnName>Ocena</columnName>
+<tableName>Odpowiedzi</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="BE3CD86F-C66E-CD28-6F15-C78B9BC23E23">
+<columnName>Id_agenta</columnName>
+<tableName>Ankiety</tableName>
+</UsedObject>
+</usedObjects>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.ViewIndex">
+<ind_PK_UK id="2C219676-B10A-73BB-6EF0-89973AA605BD" name="SRED_OSB_PK">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-26 10:59:36 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="53C0BC69-80F5-395B-C16B-9FDBBA5306B0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</TableView>

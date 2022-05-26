@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableViewProxyOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableViewProxyOraclev10g" name="Srednie_oceny_pytan" directorySegmentName="seg_0" id="A92F2C91-F312-00FA-FF52-90735CBA0250">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-26 11:59:26 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<synonyms>
+<Synonym class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SynonymOraclev10g" name="Srednie_oceny_pytan" id="CC182E6D-C4F6-2938-1449-0B6F5FE30B75">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-26 12:05:51 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<objectName>Srednie_oceny_pytan</objectName>
+<objectUser>2D830D89-A582-C6E9-37BE-9DE0814C163E</objectUser>
+<user>B37B6DB2-5E4D-1726-E509-4E0BD0A54BE0</user>
+<referredObjectID>A92F2C91-F312-00FA-FF52-90735CBA0250</referredObjectID>
+</Synonym>
+</synonyms>
+</TableViewProxyOraclev10g>
