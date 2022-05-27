@@ -1,0 +1,37 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="SG_ODP_OCENA_NIE_NULL_DLA_OBOWIAZKOWYCH" directorySegmentName="seg_0" id="35D69575-7920-BF48-68A4-34094154D214">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-27 13:39:45 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<actions>UPDATE</actions>
+<body><![CDATA[/*
+Ten wyzwalacz nie pozwala ustawić oceny na wartość NULL dla odpowiedzi
+na pytania obowiązkowe.
+
+W połączeniu z innymi wyzwalaczami z przedrostkiem "SG_" pozwala zapewnić
+integralność struktury generycznej złożonej z tabel:
+    * typy_ankiet
+    * pytania
+    * ankiety
+    * odpowiedzi.
+*/
+DECLARE
+    numer_bledu     CONSTANT NUMBER(6)      := -20002;
+    wiadomosc_bledu CONSTANT VARCHAR(128)   :=
+        'Ocena musi mieć wartość określoną dla pytań obowiązkowych';
+
+    czy_opcjonalne  Pytania.czy_opcjonalne%TYPE;
+BEGIN
+    SELECT czy_opcjonalne INTO czy_opcjonalne
+    FROM pytania
+    WHERE kod_typu_ankiety = :old.kod_typu_ankiety
+        AND nr_pytania = :old.nr_pytania;
+
+    IF czy_opcjonalne = 0 THEN
+        raise_application_error(numer_bledu, wiadomosc_bledu);
+    END IF;
+END;]]></body>
+<triggerTime>BEFORE</triggerTime>
+<condition><![CDATA[ocena IS NULL]]></condition>
+<table>393419E9-FEC7-3C55-4587-E4F10D371ECC</table>
+</TriggerOraclev10g>

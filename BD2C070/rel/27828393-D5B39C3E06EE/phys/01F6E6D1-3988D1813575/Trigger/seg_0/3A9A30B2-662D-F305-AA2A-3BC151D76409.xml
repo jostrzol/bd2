@@ -19,41 +19,43 @@ integralność struktury generycznej złożonej z tabel:
 TYPE typ_ankiety IS TABLE OF ankiety.id_ankiety%TYPE INDEX BY BINARY_INTEGER;
 
 numer_bledu         CONSTANT NUMBER(6)      := -20000;
-wiadomosc_bledu     CONSTANT VARCHAR(128)   := 'Nie można usunąć pojedynczych odpowiedzi. Aby usunąć odpowiedzi należy usunąć całą ankietę';
+wiadomosc_bledu     CONSTANT VARCHAR(128)   :=
+	'Nie można usunąć pojedynczych odpowiedzi. ' ||
+	'Aby usunąć odpowiedzi należy usunąć całą ankietę';
 
-usuniete_ankiety    typ_ankiety;
+usuniete_ankiety	typ_ankiety;
 czy_znaleziony      BOOLEAN;
 l_ankiet            NUMBER(1);
 
 AFTER EACH ROW IS
 BEGIN
-   czy_znaleziony := FALSE;
-   
-   FOR i IN 1 .. usuniete_ankiety.COUNT
-   LOOP
-       IF usuniete_ankiety(i) = :old.id_ankiety THEN
-           czy_znaleziony := TRUE;
-           EXIT;
-       END IF;
-   END LOOP;
-   
-   IF NOT czy_znaleziony THEN
-       usuniete_ankiety (usuniete_ankiety.COUNT + 1) := :old.id_ankiety;
-   END IF;
+	czy_znaleziony := FALSE;
+	
+	FOR i IN 1 .. usuniete_ankiety.COUNT
+	LOOP
+		IF usuniete_ankiety(i) = :old.id_ankiety THEN
+			czy_znaleziony := TRUE;
+			EXIT;
+		END IF;
+	END LOOP;
+	
+	IF NOT czy_znaleziony THEN
+		usuniete_ankiety (usuniete_ankiety.COUNT + 1) := :old.id_ankiety;
+	END IF;
 END AFTER EACH ROW;
 
 AFTER STATEMENT IS
 BEGIN
-   FOR i IN 1 .. usuniete_ankiety.COUNT
-   LOOP
-       SELECT COUNT(*) INTO l_ankiet
-       FROM ankiety
-       WHERE id_ankiety = usuniete_ankiety(i);
-       
-       IF l_ankiet <> 0 THEN
-           raise_application_error(numer_bledu, wiadomosc_bledu);
-       END IF;
-   END LOOP;
+	FOR i IN 1 .. usuniete_ankiety.COUNT
+	LOOP
+		SELECT COUNT(*) INTO l_ankiet
+		FROM ankiety
+		WHERE id_ankiety = usuniete_ankiety(i);
+		
+		IF l_ankiet <> 0 THEN
+			raise_application_error(numer_bledu, wiadomosc_bledu);
+		END IF;
+	END LOOP;
 END AFTER STATEMENT;
 
 END;

@@ -19,25 +19,25 @@ Jeżeli pytanie jest obowiązkowe, to domyślną wartością stworzonych
 odpowiedzi jest 0, a jeżeli jest nieobowiązkowe, to NULL.
 */
 DECLARE
-    pytanie     pytania%ROWTYPE;
-    ocena       odpowiedzi.ocena%TYPE;
+	pytanie	pytania%ROWTYPE;
+	ocena	odpowiedzi.ocena%TYPE;
 BEGIN
-    FOR pytanie IN (
-        SELECT *
-        FROM pytania
-        WHERE kod_typu_ankiety = :new.kod_typu_ankiety
-    )
-    LOOP
-        ocena := 0;
-        IF pytanie.czy_opcjonalne = 1 THEN
-            ocena := NULL;
-        END IF;
-        
-        INSERT INTO odpowiedzi VALUES (
-            pytanie.kod_typu_ankiety, pytanie.nr_pytania, :new.id_ankiety,
-            ocena
-        );
-    END LOOP;
+	FOR pytanie IN (
+	   SELECT *
+	   FROM pytania
+	   WHERE kod_typu_ankiety = :new.kod_typu_ankiety
+	)
+	LOOP
+		ocena := 0;
+		IF pytanie.czy_opcjonalne = 1 THEN
+			ocena := NULL;
+		END IF;
+		
+		INSERT INTO odpowiedzi VALUES (
+			pytanie.kod_typu_ankiety, pytanie.nr_pytania,
+			:new.id_ankiety, ocena
+);
+	END LOOP;
 END;]]></body>
 <triggerTime>AFTER</triggerTime>
 <table>759E3755-78F2-5364-6216-404C5D0169A5</table>

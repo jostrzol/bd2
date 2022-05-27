@@ -15,7 +15,7 @@ dotychczasowych ankiet nanowo dodane pytania, jednak w przypadku pytań
 obowiązkowych wiązałoby się to z przymusem wygenerowania sztucznej 
 odpowiedzi niebędącej NULL-em, która w rzeczywistości nie zaistniała.
 
-W połączeniu z innymi wyzwalaczami z przedrostkiem "sg_" pozwala zapewnić
+W połączeniu z innymi wyzwalaczami z przedrostkiem "SG_" pozwala zapewnić
 integralność struktury generycznej złożonej z tabel:
     * typy_ankiet
     * pytania
@@ -23,17 +23,20 @@ integralność struktury generycznej złożonej z tabel:
     * odpowiedzi.
 */
 DECLARE
-    numer_bledu     CONSTANT NUMBER(6)      := -20001;
-    wiadomosc_bledu CONSTANT VARCHAR(128)   := 'Nie można dodawać pytań do typu ankiety, który jest już w użyciu. Dodaj nowy typ ankiety.';
-    l_ankiet        NUMBER(1); 
+	numer_bledu	 CONSTANT NUMBER(6)      := -20001;
+	wiadomosc_bledu CONSTANT VARCHAR(128)   := 
+		'Nie można dodawać pytań do typu ankiety, ' ||
+		'który jest już w użyciu. Dodaj nowy typ ankiety.';
+	
+	l_ankiet        NUMBER(1); 
 BEGIN
-    SELECT COUNT(*) INTO l_ankiet
-    FROM ankiety
-    WHERE kod_typu_ankiety = :new.kod_typu_ankiety;
-    
-    IF l_ankiet <> 0 THEN
-        raise_application_error(numer_bledu, wiadomosc_bledu);
-    END IF;
+	SELECT COUNT(*) INTO l_ankiet
+	FROM ankiety
+	WHERE kod_typu_ankiety = :new.kod_typu_ankiety;
+
+	IF l_ankiet <> 0 THEN
+		raise_application_error(numer_bledu, wiadomosc_bledu);
+	END IF;
 END;]]></body>
 <triggerTime>BEFORE</triggerTime>
 <table>9F547D09-C311-801B-E200-F926714B83FD</table>
