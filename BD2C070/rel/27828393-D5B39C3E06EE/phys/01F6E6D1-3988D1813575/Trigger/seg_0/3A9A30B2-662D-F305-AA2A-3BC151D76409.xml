@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="SG_PYT_NIE_WSTAWIAJ_GDY_TANK_W_UZYCIU" directorySegmentName="seg_0" id="3A9A30B2-662D-F305-AA2A-3BC151D76409">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-27 08:58:53 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<actions>DELETE</actions>
+<body><![CDATA[/*
+Ten wyzwalacz nie pozwala usunąć odpowiedzi, dla której istnieje ankieta.
+Odpowiedzi można usuwać poprzez usunięcie całej ankiety dzięki regule
+ON DELETE CASCADE.
+
+W połączeniu z innymi wyzwalaczami z przedrostkiem "sg_" pozwala zapewnić
+integralność struktury generycznej złożonej z tabel:
+* typy_ankiet
+* pytania
+* ankiety
+* odpowiedzi.
+*/
+TYPE typ_ankiety IS TABLE OF ankiety.id_ankiety%TYPE INDEX BY BINARY_INTEGER;
+
+numer_bledu         CONSTANT NUMBER(6)      := -20000;
+wiadomosc_bledu     CONSTANT VARCHAR(128)   := 'Nie można usunąć pojedynczych odpowiedzi. Aby usunąć odpowiedzi należy usunąć całą ankietę';
+
+usuniete_ankiety    typ_ankiety;
+czy_znaleziony      BOOLEAN;
+l_ankiet            NUMBER(1);
+
+AFTER EACH ROW IS
+BEGIN
+   czy_znaleziony := FALSE;
+   
+   FOR i IN 1 .. usuniete_ankiety.COUNT
+   LOOP
+       IF usuniete_ankiety(i) = :old.id_ankiety THEN
+           czy_znaleziony := TRUE;
+           EXIT;
+       END IF;
+   END LOOP;
+   
+   IF NOT czy_znaleziony THEN
+       usuniete_ankiety (usuniete_ankiety.COUNT + 1) := :old.id_ankiety;
+   END IF;
+END AFTER EACH ROW;
+
+AFTER STATEMENT IS
+BEGIN
+   FOR i IN 1 .. usuniete_ankiety.COUNT
+   LOOP
+       SELECT COUNT(*) INTO l_ankiet
+       FROM ankiety
+       WHERE id_ankiety = usuniete_ankiety(i);
+       
+       IF l_ankiet <> 0 THEN
+           raise_application_error(numer_bledu, wiadomosc_bledu);
+       END IF;
+   END LOOP;
+END AFTER STATEMENT;
+
+END;
+]]></body>
+<triggerTime>COMPOUND</triggerTime>
+<table>393419E9-FEC7-3C55-4587-E4F10D371ECC</table>
+</TriggerOraclev10g>

@@ -21,6 +21,7 @@
 <dataTypePrecision>5</dataTypePrecision>
 <ownDataTypeParameters>,5,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementGenerateTrigger>false</autoIncrementGenerateTrigger>
 </Column>
 <Column name="Kod_typu_ankiety" id="14A80EF6-B9D9-1908-AE97-8F922F189344">
 <createdBy>tuco</createdBy>

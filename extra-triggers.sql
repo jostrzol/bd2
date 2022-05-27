@@ -1,21 +1,21 @@
 CREATE OR REPLACE TRIGGER SG_ANK_WSTAW_ODPOWIEDZI
     AFTER INSERT ON ankiety
     FOR EACH ROW
+/*
+Ten wyzwalacz, po wstawieniu nowej ankiety, wstawia do niej 
+odpowiedzi na wszystkie pytania.
+
+W połączeniu z innymi wyzwalaczami z przedrostkiem "sg_" pozwala zapewnić
+integralność struktury generycznej złożonej z tabel:
+    * typy_ankiet
+    * pytania
+    * ankiety
+    * odpowiedzi.
+
+Jeżeli pytanie jest obowiązkowe, to domyślną wartością stworzonych
+odpowiedzi jest 0, a jeżeli jest nieobowiązkowe, to NULL.
+*/
 DECLARE
-    /*
-    Ten wyzwalacz, po wstawieniu nowej ankiety, wstawia do niej 
-    odpowiedzi na wszystkie pytania.
-    
-    W połączeniu z innymi wyzwalaczami z przedrostkiem "sg_" pozwala zapewnić
-    integralność struktury generycznej złożonej z tabel:
-        * typy_ankiet
-        * pytania
-        * ankiety
-        * odpowiedzi.
-    
-    Jeżeli pytanie jest obowiązkowe, to domyślną wartością stworzonych
-    odpowiedzi jest 0, a jeżeli jest nieobowiązkowe, to NULL.
-    */
     pytanie     pytania%ROWTYPE;
     ocena       odpowiedzi.ocena%TYPE;
 BEGIN
@@ -41,17 +41,18 @@ END;
 CREATE OR REPLACE TRIGGER SG_PYT_NIE_WSTAWIAJ_GDY_TANK_W_UZYCIU
     FOR DELETE ON odpowiedzi
 COMPOUND TRIGGER
-    /*
-    Ten wyzwalacz nie pozwala usunąć odpowiedzi, dla której istnieje ankieta.
-    Odpowiedzi można usuwać poprzez usunięcie całej ankiety dzięki regule
-    ON DELETE CASCADE.
-    
-    W połączeniu z innymi wyzwalaczami z przedrostkiem "sg_" pozwala zapewnić
-    integralność struktury generycznej złożonej z tabel:
-        * typy_ankiet
-        * pytania
-        * ankiety
-        * odpowiedzi. */
+/*
+Ten wyzwalacz nie pozwala usunąć odpowiedzi, dla której istnieje ankieta.
+Odpowiedzi można usuwać poprzez usunięcie całej ankiety dzięki regule
+ON DELETE CASCADE.
+
+W połączeniu z innymi wyzwalaczami z przedrostkiem "sg_" pozwala zapewnić
+integralność struktury generycznej złożonej z tabel:
+* typy_ankiet
+* pytania
+* ankiety
+* odpowiedzi.
+*/
     TYPE typ_ankiety IS TABLE OF ankiety.id_ankiety%TYPE INDEX BY BINARY_INTEGER;
     
     numer_bledu         CONSTANT NUMBER(6)      := -20000;
@@ -97,25 +98,25 @@ END;
 CREATE OR REPLACE TRIGGER SG_ODP_NIE_USUWAJ_GDY_ANK_ISTNIEJE
     BEFORE INSERT ON pytania
     FOR EACH ROW
+/*
+Ten wyzwalacz nie pozwala dodać pytań do typu ankiety, jeżeli istnieją już
+ankiety mające ten typ. Pozwala on zapobiec następującym sytuacjom, gdzie
+ankieta nie posiada odpowiedzi na wszystkie pytania po dodaniu nowego
+pytania do typu ankiety.
+
+Alternatywnym rozwiązaniem byłoby automatyczne wstawianie odpowiedzi do
+dotychczasowych ankiet nanowo dodane pytania, jednak w przypadku pytań
+obowiązkowych wiązałoby się to z przymusem wygenerowania sztucznej 
+odpowiedzi niebędącej NULL-em, która w rzeczywistości nie zaistniała.
+
+W połączeniu z innymi wyzwalaczami z przedrostkiem "sg_" pozwala zapewnić
+integralność struktury generycznej złożonej z tabel:
+    * typy_ankiet
+    * pytania
+    * ankiety
+    * odpowiedzi.
+*/
 DECLARE
-    /*
-    Ten wyzwalacz nie pozwala dodać pytań do typu ankiety, jeżeli istnieją już
-    ankiety mające ten typ. Pozwala on zapobiec następującym sytuacjom, gdzie
-    ankieta nie posiada odpowiedzi na wszystkie pytania po dodaniu nowego
-    pytania do typu ankiety.
-    
-    Alternatywnym rozwiązaniem byłoby automatyczne wstawianie odpowiedzi do
-    dotychczasowych ankiet nanowo dodane pytania, jednak w przypadku pytań
-    obowiązkowych wiązałoby się to z przymusem wygenerowania sztucznej 
-    odpowiedzi niebędącej NULL-em, która w rzeczywistości nie zaistniała.
-    
-    W połączeniu z innymi wyzwalaczami z przedrostkiem "sg_" pozwala zapewnić
-    integralność struktury generycznej złożonej z tabel:
-        * typy_ankiet
-        * pytania
-        * ankiety
-        * odpowiedzi.
-    */
     numer_bledu     CONSTANT NUMBER(6)      := -20001;
     wiadomosc_bledu CONSTANT VARCHAR(128)   := 'Nie można dodawać pytań do typu ankiety, który jest już w użyciu. Dodaj nowy typ ankiety.';
     l_ankiet        NUMBER(1); 

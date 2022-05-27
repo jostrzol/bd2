@@ -21,6 +21,7 @@
 <dataTypePrecision>5</dataTypePrecision>
 <ownDataTypeParameters>,5,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementGenerateTrigger>false</autoIncrementGenerateTrigger>
 </Column>
 <Column name="email" id="1961FCA6-6D7E-7A57-661E-69A69589CB00">
 <createdBy>tuco</createdBy>
@@ -76,11 +77,16 @@
 <createdTime>2022-05-21 17:28:52 UTC</createdTime>
 <generatorID>CC7A4056-B1FA-032F-A637-02E140D6390B</generatorID>
 <ownerDesignName>BD2C070</ownerDesignName>
+<constraintName>OSB_PESEL_CHK</constraintName>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
 <dataTypeSize>11 BYTE</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="TRIM(TRANSLATE(pesel, &apos;0123456789&apos;, &apos; &apos;)) IS NULL AND LENGTH(TRIM(pesel)) = 11"/>
+<implementationDef dbType="Oracle Database 21c" definition="TRIM(TRANSLATE(pesel, &apos;0123456789&apos;, &apos; &apos;)) IS NULL AND LENGTH(TRIM(pesel)) = 11"/>
+</checkConstraint>
 <ownDataTypeParameters>11 BYTE,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
@@ -110,8 +116,8 @@
 <logicalDatatype>LOGDT025</logicalDatatype>
 <dataTypeSize>13 CHAR</dataTypeSize>
 <checkConstraint>
-<implementationDef dbType="Generic Constraint" definition="TRIM(TRANSLATE(nr_karty_stalego_klienta, &apos;0123456789&apos;, &apos; &apos;)) IS NULL"/>
-<implementationDef dbType="Oracle Database 21c" definition="TRIM(TRANSLATE(nr_karty_stalego_klienta, &apos;0123456789&apos;, &apos; &apos;)) IS NULL"/>
+<implementationDef dbType="Generic Constraint" definition="TRIM(TRANSLATE(nr_karty_stalego_klienta, &apos;0123456789&apos;, &apos; &apos;)) IS NULL AND LENGTH(TRIM(nr_karty_stalego_klienta)) = 13"/>
+<implementationDef dbType="Oracle Database 21c" definition="TRIM(TRANSLATE(nr_karty_stalego_klienta, &apos;0123456789&apos;, &apos; &apos;)) IS NULL AND LENGTH(TRIM(nr_karty_stalego_klienta)) = 13"/>
 </checkConstraint>
 <ownDataTypeParameters>13 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>

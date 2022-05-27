@@ -3,7 +3,47 @@ set linesize 300;
 set pagesize 500;
 spool BD2C070_DML.LIS;
 
+-- test unikalności kolumny id_osoby w tabeli osoby
+INSERT INTO osoby (id_osoby, email, nazwisko, imie, telefon, pesel, nr_karty_stalego_klienta)
+    VALUES (2000, 'test1@mail.com', 'test1', 'test1', '0123456789', '01234567891', '0123456789123');
+INSERT INTO osoby (id_osoby, email, nazwisko, imie)
+    VALUES (2000, 'test2@mail.com', 'test2', 'test2');
 
+-- test unikalności kolumny email w tabeli osoby
+INSERT INTO osoby (id_osoby, email, nazwisko, imie)
+    VALUES (2001, 'test1@mail.com', 'test2', 'test2');
+
+-- test unikalności kolumny telefon w tabeli osoby
+INSERT INTO osoby (id_osoby, email, nazwisko, imie, telefon)
+    VALUES (2001, 'test2@mail.com', 'test2', 'test2', '0123456789');
+
+-- test unikalności kolumny pesel w tabeli osoby
+INSERT INTO osoby (id_osoby, email, nazwisko, imie, pesel)
+    VALUES (2001, 'test2@mail.com', 'test2', 'test2', '01234567891');
+
+-- test unikalności kolumny nr_karty_stalego_klienta w tabeli osoby
+INSERT INTO osoby (id_osoby, email, nazwisko, imie, nr_karty_stalego_klienta)
+    VALUES (2001, 'test2@mail.com', 'test2', 'test2', '01234567891');
+    
+-- test sprawdzenia, że w peselu mogą być tylko cyfry
+INSERT INTO osoby (id_osoby, email, nazwisko, imie, pesel)
+    VALUES (2001, 'test2@mail.com', 'test2', 'test2', '012345a7891');
+
+-- test sprawdzenia, że w peselu musi być dokładnie 11 znaków
+INSERT INTO osoby (id_osoby, email, nazwisko, imie, pesel)
+    VALUES (2001, 'test2@mail.com', 'test2', 'test2', '012345678912');
+INSERT INTO osoby (id_osoby, email, nazwisko, imie, pesel)
+    VALUES (2001, 'test2@mail.com', 'test2', 'test2', '0123456789');
+
+-- test sprawdzenia, że w nr_karty_stalego_klienta mogą być tylko cyfry
+INSERT INTO osoby (id_osoby, email, nazwisko, imie, nr_karty_stalego_klienta)
+    VALUES (2001, 'test2@mail.com', 'test2', 'test2', '012345a789123');
+
+-- test sprawdzenia, że w nr_karty_stalego_klienta musi być dokładnie 13 znaków
+INSERT INTO osoby (id_osoby, email, nazwisko, imie, nr_karty_stalego_klienta)
+    VALUES (2001, 'test2@mail.com', 'test2', 'test2', '01234567891234');
+INSERT INTO osoby (id_osoby, email, nazwisko, imie, nr_karty_stalego_klienta)
+    VALUES (2001, 'test2@mail.com', 'test2', 'test2', '012345678912');
 
 -- wyzwalacz SG_ANK_WSTAW_ODPOWIEDZI powinien wstawić odpowiedzi na
 -- wszystkie pytania do ankiety

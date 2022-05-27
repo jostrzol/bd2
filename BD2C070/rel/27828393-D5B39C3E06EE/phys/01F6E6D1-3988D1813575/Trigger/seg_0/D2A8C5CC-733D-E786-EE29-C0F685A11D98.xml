@@ -1,0 +1,44 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="SG_ANK_WSTAW_ODPOWIEDZI" directorySegmentName="seg_0" id="D2A8C5CC-733D-E786-EE29-C0F685A11D98">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-27 08:56:39 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<actions>INSERT</actions>
+<body><![CDATA[/*
+Ten wyzwalacz, po wstawieniu nowej ankiety, wstawia do niej 
+odpowiedzi na wszystkie pytania.
+
+W połączeniu z innymi wyzwalaczami z przedrostkiem "sg_" pozwala zapewnić
+integralność struktury generycznej złożonej z tabel:
+    * typy_ankiet
+    * pytania
+    * ankiety
+    * odpowiedzi.
+
+Jeżeli pytanie jest obowiązkowe, to domyślną wartością stworzonych
+odpowiedzi jest 0, a jeżeli jest nieobowiązkowe, to NULL.
+*/
+DECLARE
+    pytanie     pytania%ROWTYPE;
+    ocena       odpowiedzi.ocena%TYPE;
+BEGIN
+    FOR pytanie IN (
+        SELECT *
+        FROM pytania
+        WHERE kod_typu_ankiety = :new.kod_typu_ankiety
+    )
+    LOOP
+        ocena := 0;
+        IF pytanie.czy_opcjonalne = 1 THEN
+            ocena := NULL;
+        END IF;
+        
+        INSERT INTO odpowiedzi VALUES (
+            pytanie.kod_typu_ankiety, pytanie.nr_pytania, :new.id_ankiety,
+            ocena
+        );
+    END LOOP;
+END;]]></body>
+<triggerTime>AFTER</triggerTime>
+<table>759E3755-78F2-5364-6216-404C5D0169A5</table>
+</TriggerOraclev10g>

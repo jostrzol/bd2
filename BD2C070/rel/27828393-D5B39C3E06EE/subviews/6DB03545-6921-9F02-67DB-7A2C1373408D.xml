@@ -37,7 +37,7 @@ jakub.ostrzolek.stud@pw.edu.pl</comment>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.relational.TVView" oid="7FFC08E9-C5E8-2C3D-5FAF-489402F1CCFE" otype="View" vid="80F70B28-E505-42A2-1B13-89B0959EAC03">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="609" y="17" width="240" height="171"/>
+<bounds x="610" y="17" width="239" height="171"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="9F547D09-C311-801B-E200-F926714B83FD" otype="Table" vid="91575764-D732-38A2-31BF-902C8F577290">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
@@ -55,7 +55,7 @@ jakub.ostrzolek.stud@pw.edu.pl</comment>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.relational.TVView" oid="A92F2C91-F312-00FA-FF52-90735CBA0250" otype="View" vid="DDBEBD03-004E-6943-0E83-6E51E852F367">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="589" y="202" width="268" height="157"/>
+<bounds x="600" y="204" width="268" height="157"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="F77D0AE3-CE21-65C5-9DF3-E98639E5D213" otype="Table" vid="8079285D-1DB2-E146-DB9B-D47868DDC5EF">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
@@ -72,7 +72,7 @@ jakub.ostrzolek.stud@pw.edu.pl</comment>
 <lineWidth>1</lineWidth>
 <centerLabel class="oracle.dbtools.crest.model.design.Label">
 <site>1</site>
-<labelBounds x="-89" y="-31" width="89" height="30"/>
+<labelBounds x="-133" y="-46" width="89" height="30"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </centerLabel>
@@ -89,7 +89,7 @@ jakub.ostrzolek.stud@pw.edu.pl</comment>
 <lineWidth>1</lineWidth>
 <centerLabel class="oracle.dbtools.crest.model.design.Label">
 <site>1</site>
-<labelBounds x="-89" y="-31" width="89" height="30"/>
+<labelBounds x="-133" y="-46" width="89" height="30"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </centerLabel>
@@ -106,7 +106,7 @@ jakub.ostrzolek.stud@pw.edu.pl</comment>
 <lineWidth>1</lineWidth>
 <centerLabel class="oracle.dbtools.crest.model.design.Label">
 <site>1</site>
-<labelBounds x="-77" y="-31" width="77" height="30"/>
+<labelBounds x="-115" y="-46" width="77" height="30"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </centerLabel>
@@ -123,15 +123,15 @@ jakub.ostrzolek.stud@pw.edu.pl</comment>
 <lineWidth>1</lineWidth>
 <centerLabel class="oracle.dbtools.crest.model.design.Label">
 <site>1</site>
-<labelBounds x="-34" y="-16" width="67" height="30"/>
+<labelBounds x="-67" y="-31" width="67" height="30"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </centerLabel>
 <points>
 <point x="630" y="490"/>
-<point x="630" y="391"/>
-<point x="723" y="391"/>
-<point x="723" y="359"/>
+<point x="630" y="392"/>
+<point x="734" y="392"/>
+<point x="734" y="361"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="9099FF10-E700-EDAA-275E-ECEFD019A4AE" otype="FKIndexAssociation" vid_source="91575764-D732-38A2-31BF-902C8F577290" vid_target="6DE2089E-7AFE-BDE4-6ACE-5FB5B9D723DA">
@@ -157,7 +157,7 @@ jakub.ostrzolek.stud@pw.edu.pl</comment>
 <lineWidth>1</lineWidth>
 <centerLabel class="oracle.dbtools.crest.model.design.Label">
 <site>1</site>
-<labelBounds x="-83" y="-31" width="83" height="30"/>
+<labelBounds x="-124" y="-46" width="83" height="30"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </centerLabel>
@@ -174,7 +174,7 @@ jakub.ostrzolek.stud@pw.edu.pl</comment>
 <lineWidth>1</lineWidth>
 <centerLabel class="oracle.dbtools.crest.model.design.Label">
 <site>1</site>
-<labelBounds x="-83" y="-31" width="83" height="30"/>
+<labelBounds x="-124" y="-46" width="83" height="30"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </centerLabel>
