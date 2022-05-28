@@ -38,40 +38,55 @@ GROUP BY os.id_osoby, os.email, os.nazwisko, os.imie
 ORDER BY srednia_ocen DESC
 FETCH NEXT 1 ROW ONLY;
 
--- jaka część agentów ma nielepszą średnią ocenę na dane pytanie niż agent 1007
+-- jaka część agentów ma nielepszą średnią ocenę na dane pytanie niż podany agent
 WITH sr_odp_agentow as (
     SELECT os.id_osoby, kod_typu_ankiety, nr_pytania, AVG(o.ocena) as srednia_ocena
     FROM odpowiedzi o NATURAL JOIN ankiety a JOIN osoby os ON (a.id_agenta = os.id_osoby)
     GROUP BY os.id_osoby, kod_typu_ankiety, nr_pytania)
-SELECT o1.kod_typu_ankiety, o1.nr_pytania, ROUND(
+SELECT dany_agt.kod_typu_ankiety, dany_agt.nr_pytania, ROUND(
         (
+            -- liczba agentów z nielepszą średnią oceną za pytanie niż dany agent
             SELECT COUNT(*)
             FROM sr_odp_agentow
-            WHERE id_osoby <> 1007
-                AND o1.kod_typu_ankiety = kod_typu_ankiety
-                AND o1.nr_pytania = nr_pytania
+            WHERE dany_agt.kod_typu_ankiety = kod_typu_ankiety
+                AND dany_agt.nr_pytania = nr_pytania
                 AND srednia_ocena <= (
+                    -- średnia ocena za pytanie danego agenta
                     SELECT srednia_ocena
-                    FROM sr_odp_agentow 
-                    WHERE id_osoby = 1007 
-                        AND o1.kod_typu_ankiety = kod_typu_ankiety
-                        AND o1.nr_pytania = nr_pytania
+                    FROM sr_odp_agentow
+                    WHERE id_osoby = :param_id_agenta
+                        AND dany_agt.kod_typu_ankiety = kod_typu_ankiety
+                        AND dany_agt.nr_pytania = nr_pytania
                 )
         ) / (
+            -- łączna liczba agentów z zarejestrowaną odpowiedzią na pytanie
             SELECT COUNT(*)
             FROM sr_odp_agentow
-            WHERE id_osoby <> 1007
-                AND o1.kod_typu_ankiety = kod_typu_ankiety
-                AND o1.nr_pytania = nr_pytania
+            WHERE dany_agt.kod_typu_ankiety = kod_typu_ankiety
+                AND dany_agt.nr_pytania = nr_pytania
         )
     , 2) as niegorszy_od
-FROM sr_odp_agentow o1
-WHERE o1.id_osoby = 1007
-ORDER BY o1.kod_typu_ankiety, o1.nr_pytania;
+FROM sr_odp_agentow dany_agt
+WHERE dany_agt.id_osoby = :param_id_agenta
+ORDER BY dany_agt.kod_typu_ankiety, dany_agt.nr_pytania;
 
 -- wszyscy pracownicy ze średnią ocen poniżej 50
 SELECT *
 FROM srednie_oceny_osob
 WHERE srednia_ocena < 50;
+
+-- wyświetl kto ocenił kogo w ankiecie i z jaką średnią oceną
+SELECT
+    NVL2(agt.id_osoby, agt.nazwisko || ' ' || agt.imie || ' ' || agt.imie_2, NULL) as agent,
+    NVL2(kli.id_osoby, kli.nazwisko || ' ' || kli.imie || ' ' || kli.imie_2, NULL) as klient,
+    ROUND(AVG(odp.ocena), 2) as srednia_ocena
+FROM ankiety ank
+    JOIN osoby agt ON (ank.id_agenta = agt.id_osoby)
+    LEFT JOIN osoby kli ON (ank.id_klienta = kli.id_osoby)
+    JOIN odpowiedzi odp ON (ank.id_ankiety = odp.id_ankiety)
+GROUP BY
+    ank.id_ankiety,
+    agt.id_osoby, agt.nazwisko, agt.imie, agt.imie_2,
+    kli.id_osoby, kli.nazwisko, kli.imie, kli.imie_2;
 
 spool off;
