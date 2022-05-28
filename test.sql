@@ -38,7 +38,7 @@ GROUP BY os.id_osoby, os.email, os.nazwisko, os.imie
 ORDER BY srednia_ocen DESC
 FETCH NEXT 1 ROW ONLY;
 
--- jaka część agentow ma nielepszą średnią ocenę na dane pytanie niż agent 1007
+-- jaka część agentów ma nielepszą średnią ocenę na dane pytanie niż agent 1007
 WITH sr_odp_agentow as (
     SELECT os.id_osoby, kod_typu_ankiety, nr_pytania, AVG(o.ocena) as srednia_ocena
     FROM odpowiedzi o NATURAL JOIN ankiety a JOIN osoby os ON (a.id_agenta = os.id_osoby)

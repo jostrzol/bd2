@@ -32,6 +32,6 @@ BEGIN
     END IF;
 END;]]></body>
 <triggerTime>BEFORE</triggerTime>
-<condition><![CDATA[ocena IS NULL]]></condition>
+<condition><![CDATA[new.ocena IS NULL]]></condition>
 <table>393419E9-FEC7-3C55-4587-E4F10D371ECC</table>
 </TriggerOraclev10g>

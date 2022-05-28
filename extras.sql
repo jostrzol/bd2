@@ -134,7 +134,7 @@ END;
 CREATE OR REPLACE TRIGGER SG_ODP_OCENA_NIE_NULL_DLA_OBOWIAZKOWYCH 
     BEFORE UPDATE ON Odpowiedzi 
     FOR EACH ROW 
-    WHEN ( ocena IS NULL ) 
+    WHEN ( new.ocena IS NULL )
 /*
 Ten wyzwalacz nie pozwala ustawić oceny na wartość NULL dla odpowiedzi
 na pytania obowiązkowe.
