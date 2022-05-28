@@ -148,47 +148,47 @@ SQL> INSERT INTO pytania VALUES ('TEST1', 1, 'TEST1', 1, NULL);
 
 1 row inserted.
 
+SQL> -- źle
 SQL> INSERT INTO pytania VALUES ('TEST1', 1, 'TEST2', 1, NULL);
 
-Error starting at line : 63 in command -
+Error starting at line : 64 in command -
 INSERT INTO pytania VALUES ('TEST1', 1, 'TEST2', 1, NULL)
 Error report -
 ORA-00001: naruszono więzy unikatowe (BD2C070.PYT_PK)
 
-SQL>   -- źle
+SQL> -- dobrze
 SQL> INSERT INTO pytania VALUES ('TEST1', 2, 'TEST2', 1, NULL);
 
 1 row inserted.
 
-SQL>   -- dobrze
 SQL> 
 SQL> -- wartości dopuszczalne kolumny czy_opcjonalne: 0, 1
+SQL> -- źle
 SQL> INSERT INTO pytania VALUES ('TEST1', 3, 'TEST2', -1, NULL);
 
-Error starting at line : 67 in command -
+Error starting at line : 70 in command -
 INSERT INTO pytania VALUES ('TEST1', 3, 'TEST2', -1, NULL)
 Error report -
 ORA-02290: naruszono więzy CHECK (BD2C070.PYT_OPCJN_CHK)
 
-SQL>  -- źle
+SQL> -- dobrze
 SQL> INSERT INTO pytania VALUES ('TEST1', 4, 'TEST2', 0, NULL);
 
 1 row inserted.
 
-SQL>   -- dobrze
+SQL> -- dobrze
 SQL> INSERT INTO pytania VALUES ('TEST1', 5, 'TEST2', 1, NULL);
 
 1 row inserted.
 
-SQL>   -- dobrze
+SQL> -- źle
 SQL> INSERT INTO pytania VALUES ('TEST1', 6, 'TEST2', 2, NULL);
 
-Error starting at line : 70 in command -
+Error starting at line : 76 in command -
 INSERT INTO pytania VALUES ('TEST1', 6, 'TEST2', 2, NULL)
 Error report -
 ORA-02290: naruszono więzy CHECK (BD2C070.PYT_OPCJN_CHK)
 
-SQL>   -- źle
 SQL> 
 SQL> /******************
 SQL> * TABELA ANKIETY *
@@ -200,7 +200,7 @@ SQL> INSERT INTO ankiety VALUES (2000, 'TEST1', 2000, TO_DATE('01.01.2022', 'DD.
 
 SQL> INSERT INTO ankiety VALUES (2000, 'TEST1', 2000, TO_DATE('01.01.2022', 'DD.MM.YYYY'), NULL, NULL);
 
-Error starting at line : 77 in command -
+Error starting at line : 83 in command -
 INSERT INTO ankiety VALUES (2000, 'TEST1', 2000, TO_DATE('01.01.2022', 'DD.MM.YYYY'), NULL, NULL)
 Error report -
 ORA-00001: naruszono więzy unikatowe (BD2C070.ANK_PK)
@@ -211,84 +211,85 @@ SQL> * TABELA ODPOWIEDZI *
 SQL> *********************/
 SQL> -- wartości dopuszczalne kolumny ocena: 0, 50, 100
 SQL> -- (wartość nieokreślona dla pytań opcjonalnych przetestowana w sekcji WYZWALACZE)
+SQL> -- źle
 SQL> UPDATE odpowiedzi SET ocena = -1 WHERE id_ankiety = 2000 AND nr_pytania = 1;
 
-Error starting at line : 84 in command -
+Error starting at line : 91 in command -
 UPDATE odpowiedzi SET ocena = -1 WHERE id_ankiety = 2000 AND nr_pytania = 1
 Error report -
 ORA-02290: naruszono więzy CHECK (BD2C070.ODP_OCENA_CHK)
 
-SQL>     -- źle
+SQL> -- dobrze
 SQL> UPDATE odpowiedzi SET ocena = 0 WHERE id_ankiety = 2000 AND nr_pytania = 1;
 
 1 row updated.
 
-SQL>      -- dobrze
+SQL> -- źle
 SQL> UPDATE odpowiedzi SET ocena = 1 WHERE id_ankiety = 2000 AND nr_pytania = 1;
 
-Error starting at line : 86 in command -
+Error starting at line : 95 in command -
 UPDATE odpowiedzi SET ocena = 1 WHERE id_ankiety = 2000 AND nr_pytania = 1
 Error report -
 ORA-02290: naruszono więzy CHECK (BD2C070.ODP_OCENA_CHK)
 
-SQL>      -- źle
+SQL> -- źle
 SQL> UPDATE odpowiedzi SET ocena = 49 WHERE id_ankiety = 2000 AND nr_pytania = 1;
 
-Error starting at line : 87 in command -
+Error starting at line : 97 in command -
 UPDATE odpowiedzi SET ocena = 49 WHERE id_ankiety = 2000 AND nr_pytania = 1
 Error report -
 ORA-02290: naruszono więzy CHECK (BD2C070.ODP_OCENA_CHK)
 
-SQL>     -- źle
+SQL> -- dobrze
 SQL> UPDATE odpowiedzi SET ocena = 50 WHERE id_ankiety = 2000 AND nr_pytania = 1;
 
 1 row updated.
 
-SQL>     -- dobrze
+SQL> -- źle
 SQL> UPDATE odpowiedzi SET ocena = 51 WHERE id_ankiety = 2000 AND nr_pytania = 1;
 
-Error starting at line : 89 in command -
+Error starting at line : 101 in command -
 UPDATE odpowiedzi SET ocena = 51 WHERE id_ankiety = 2000 AND nr_pytania = 1
 Error report -
 ORA-02290: naruszono więzy CHECK (BD2C070.ODP_OCENA_CHK)
 
-SQL>     -- źle
+SQL> -- źle
 SQL> UPDATE odpowiedzi SET ocena = 99 WHERE id_ankiety = 2000 AND nr_pytania = 1;
 
-Error starting at line : 90 in command -
+Error starting at line : 103 in command -
 UPDATE odpowiedzi SET ocena = 99 WHERE id_ankiety = 2000 AND nr_pytania = 1
 Error report -
 ORA-02290: naruszono więzy CHECK (BD2C070.ODP_OCENA_CHK)
 
-SQL>     -- źle
+SQL> -- dobrze
 SQL> UPDATE odpowiedzi SET ocena = 100 WHERE id_ankiety = 2000 AND nr_pytania = 1;
 
 1 row updated.
 
-SQL>    -- dobrze
+SQL> -- źle
 SQL> UPDATE odpowiedzi SET ocena = 101 WHERE id_ankiety = 2000 AND nr_pytania = 1;
 
-Error starting at line : 92 in command -
+Error starting at line : 107 in command -
 UPDATE odpowiedzi SET ocena = 101 WHERE id_ankiety = 2000 AND nr_pytania = 1
 Error report -
 ORA-02290: naruszono więzy CHECK (BD2C070.ODP_OCENA_CHK)
 
-SQL>    -- źle
 SQL> 
 SQL> /**************
 SQL> * WYZWALACZE *
 SQL> **************/
 SQL> -- nietransferowalność związku typy_ankiet - pytania
+SQL> -- dobrze (brak zmiany)
 SQL> UPDATE pytania SET kod_typu_ankiety = 'TEST1'
   2  WHERE kod_typu_ankiety = 'TEST1' AND nr_pytania = 1;
 
 1 row updated.
 
-SQL>     -- dobrze (brak zmiany)
+SQL> -- źle
 SQL> UPDATE pytania SET kod_typu_ankiety = 'SAT-V01'
   2  WHERE kod_typu_ankiety = 'TEST1' AND nr_pytania = 1;
 
-Error starting at line : 100 in command -
+Error starting at line : 117 in command -
 UPDATE pytania SET kod_typu_ankiety = 'SAT-V01'
 WHERE kod_typu_ankiety = 'TEST1' AND nr_pytania = 1
 Error report -
@@ -296,92 +297,92 @@ ORA-20225: Non Transferable FK constraint PYT_TANK_FK on table Pytania is violat
 ORA-06512: przy "BD2C070.FKNTM_PYTANIA", linia 2
 ORA-04088: błąd w trakcie wykonywania wyzwalacza 'BD2C070.FKNTM_PYTANIA'
 
-SQL>     -- źle
 SQL> 
 SQL> -- nietransferowalność związku ankiety - agenci
+SQL> -- dobrze (brak zmiany)
 SQL> UPDATE ankiety SET id_agenta = 2000 WHERE id_ankiety = 2000;
 
 1 row updated.
 
-SQL>     -- dobrze (brak zmiany)
+SQL> -- źle
 SQL> UPDATE ankiety SET id_agenta = 1006 WHERE id_ankiety = 2000;
 
-Error starting at line : 105 in command -
+Error starting at line : 124 in command -
 UPDATE ankiety SET id_agenta = 1006 WHERE id_ankiety = 2000
 Error report -
 ORA-20225: Non Transferable FK constraint ANK_AGT_FK or ANK_TANK_FK on table Ankiety is violated
 ORA-06512: przy "BD2C070.FKNTM_ANKIETY", linia 2
 ORA-04088: błąd w trakcie wykonywania wyzwalacza 'BD2C070.FKNTM_ANKIETY'
 
-SQL>     -- źle
 SQL> 
 SQL> -- nietransferowalność związku ankiety - klienci
+SQL> -- dobrze (zmiana z NULL)
 SQL> UPDATE ankiety SET id_klienta = 2000 WHERE id_ankiety = 2000;
 
 1 row updated.
 
-SQL>     -- dobrze (zmiana z NULL)
+SQL> -- dobrze (brak zmiany)
 SQL> UPDATE ankiety SET id_klienta = 2000 WHERE id_ankiety = 2000;
 
 1 row updated.
 
-SQL>     -- dobrze (brak zmiany)
+SQL> -- źle
 SQL> UPDATE ankiety SET id_klienta = 1001 WHERE id_ankiety = 2000;
 
-Error starting at line : 110 in command -
+Error starting at line : 132 in command -
 UPDATE ankiety SET id_klienta = 1001 WHERE id_ankiety = 2000
 Error report -
 ORA-20225: Non Transferable FK constraint ANK_KLI_FK on table Ankiety is violated
 ORA-06512: przy "BD2C070.FKNTO_ANKIETY", linia 3
 ORA-04088: błąd w trakcie wykonywania wyzwalacza 'BD2C070.FKNTO_ANKIETY'
 
-SQL>     -- źle
 SQL> 
 SQL> -- nietransferowalność związku ankiety - typy_ankiet
+SQL> -- dobrze (brak zmiany)
 SQL> UPDATE ankiety SET kod_typu_ankiety = 'TEST1' WHERE id_ankiety = 2000;
 
 1 row updated.
 
-SQL>       -- dobrze (brak zmiany)
+SQL> -- źle
 SQL> UPDATE ankiety SET kod_typu_ankiety = 'SAT-V01' WHERE id_ankiety = 2000;
 
-Error starting at line : 114 in command -
+Error starting at line : 138 in command -
 UPDATE ankiety SET kod_typu_ankiety = 'SAT-V01' WHERE id_ankiety = 2000
 Error report -
 ORA-20225: Non Transferable FK constraint ANK_AGT_FK or ANK_TANK_FK on table Ankiety is violated
 ORA-06512: przy "BD2C070.FKNTM_ANKIETY", linia 2
 ORA-04088: błąd w trakcie wykonywania wyzwalacza 'BD2C070.FKNTM_ANKIETY'
 
-SQL>     -- źle
 SQL> 
 SQL> -- nietransferowalność związku odpowiedzi - ankiety
+SQL> -- dobrze (brak zmiany)
 SQL> UPDATE odpowiedzi SET id_ankiety = 2000 WHERE id_ankiety = 2000;
 
 4 rows updated.
 
-SQL>     -- dobrze (brak zmiany)
+SQL> -- źle (nietransferowalność + unikalność)
 SQL> UPDATE odpowiedzi SET id_ankiety = 1001 WHERE id_ankiety = 2000;
 
-Error starting at line : 118 in command -
+Error starting at line : 144 in command -
 UPDATE odpowiedzi SET id_ankiety = 1001 WHERE id_ankiety = 2000
 Error report -
 ORA-20225: Non Transferable FK constraint ODP_ANK_FK or ODP_PYT_FK on table Odpowiedzi is violated
 ORA-06512: przy "BD2C070.FKNTM_ODPOWIEDZI", linia 2
 ORA-04088: błąd w trakcie wykonywania wyzwalacza 'BD2C070.FKNTM_ODPOWIEDZI'
 
-SQL>     -- źle (nietransferowalność + unikalność)
 SQL> 
 SQL> -- nietransferowalność związku odpowiedzi - pytania
+SQL> -- dobrze (brak zmiany)
 SQL> UPDATE odpowiedzi SET kod_typu_ankiety = 'TEST1', nr_pytania = 1
   2  WHERE id_ankiety = 2000 AND kod_typu_ankiety = 'TEST1' AND nr_pytania = 1;
 
 1 row updated.
 
-SQL>   -- dobrze (brak zmiany)
+SQL> -- źle
 SQL> UPDATE odpowiedzi SET kod_typu_ankiety = 'SAT-V01', nr_pytania = 1
   2  WHERE id_ankiety = 2000 AND kod_typu_ankiety = 'TEST1' AND nr_pytania = 1;
 
-Error starting at line : 123 in command -
+Error starting at line : 151 in command -
 UPDATE odpowiedzi SET kod_typu_ankiety = 'SAT-V01', nr_pytania = 1
 WHERE id_ankiety = 2000 AND kod_typu_ankiety = 'TEST1' AND nr_pytania = 1
 Error report -
@@ -389,11 +390,11 @@ ORA-20225: Non Transferable FK constraint ODP_ANK_FK or ODP_PYT_FK on table Odpo
 ORA-06512: przy "BD2C070.FKNTM_ODPOWIEDZI", linia 2
 ORA-04088: błąd w trakcie wykonywania wyzwalacza 'BD2C070.FKNTM_ODPOWIEDZI'
 
-SQL>   -- źle
+SQL> -- źle
 SQL> UPDATE odpowiedzi SET kod_typu_ankiety = 'SAT-V01', nr_pytania = 2
   2  WHERE id_ankiety = 2000 AND kod_typu_ankiety = 'TEST1' AND nr_pytania = 1;
 
-Error starting at line : 125 in command -
+Error starting at line : 154 in command -
 UPDATE odpowiedzi SET kod_typu_ankiety = 'SAT-V01', nr_pytania = 2
 WHERE id_ankiety = 2000 AND kod_typu_ankiety = 'TEST1' AND nr_pytania = 1
 Error report -
@@ -401,7 +402,6 @@ ORA-20225: Non Transferable FK constraint ODP_ANK_FK or ODP_PYT_FK on table Odpo
 ORA-06512: przy "BD2C070.FKNTM_ODPOWIEDZI", linia 2
 ORA-04088: błąd w trakcie wykonywania wyzwalacza 'BD2C070.FKNTM_ODPOWIEDZI'
 
-SQL>   -- źle
 SQL> 
 SQL> -- wyzwalacz SG_ANK_WSTAW_ODPOWIEDZI wstawia odpowiedzi na wszystkie pytania do ankiety
 SQL> INSERT INTO ankiety VALUES (2001, 'SAT-V02', 1006, TO_DATE('09.06.2022', 'DD.MM.YYYY'), 1003, NULL);
@@ -426,7 +426,7 @@ SQL> -- wyzwalacz SG_PYT_NIE_WSTAWIAJ_GDY_TANK_W_UZYCIU nie pozwala dodawać
 SQL> -- pytań do wykorzystywanych już typów ankiet.
 SQL> INSERT INTO pytania VALUES ('SAT-V01', 20, 'TEST', 0, NULL);
 
-Error starting at line : 134 in command -
+Error starting at line : 163 in command -
 INSERT INTO pytania VALUES ('SAT-V01', 20, 'TEST', 0, NULL)
 Error report -
 ORA-20001: Nie można dodawać pytań do typu ankiety, który jest już w użyciu. Dodaj nowy typ ankiety.
@@ -448,7 +448,7 @@ SQL> -- pojedynczych odpowiedzi bez usunięcia całej ankiety
 SQL> -- (przypadek usuwania całej ankiety w sekcji ON DELETE CASCADE)
 SQL> DELETE odpowiedzi WHERE id_ankiety = 2001;
 
-Error starting at line : 142 in command -
+Error starting at line : 171 in command -
 DELETE odpowiedzi WHERE id_ankiety = 2001
 Error report -
 ORA-20000: Nie można usunąć pojedynczych odpowiedzi. Aby usunąć odpowiedzi należy usunąć całą ankietę
@@ -460,7 +460,7 @@ SQL> -- wyzwalacz SG_ODP_OCENA_NIE_NULL_DLA_OBOWIAZKOWYCH nie pozwala ustawić
 SQL> -- wartości nieokreślonej dla odpowiedzi na pytania obowiązkowe
 SQL> UPDATE odpowiedzi SET ocena = NULL WHERE id_ankiety = 2001 AND nr_pytania = 1;
 
-Error starting at line : 146 in command -
+Error starting at line : 175 in command -
 UPDATE odpowiedzi SET ocena = NULL WHERE id_ankiety = 2001 AND nr_pytania = 1
 Error report -
 ORA-20002: Ocena musi mieć wartość określoną dla pytań obowiązkowych

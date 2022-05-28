@@ -60,14 +60,20 @@ INSERT INTO typy_ankiet VALUES ('TEST1', 'TEST2', NULL);
  ******************/
 -- unikalność kolumn kod_typu_ankiety i nr_pytania (klucz główny)
 INSERT INTO pytania VALUES ('TEST1', 1, 'TEST1', 1, NULL);
-INSERT INTO pytania VALUES ('TEST1', 1, 'TEST2', 1, NULL);  -- źle
-INSERT INTO pytania VALUES ('TEST1', 2, 'TEST2', 1, NULL);  -- dobrze
+-- źle
+INSERT INTO pytania VALUES ('TEST1', 1, 'TEST2', 1, NULL);
+-- dobrze
+INSERT INTO pytania VALUES ('TEST1', 2, 'TEST2', 1, NULL);
 
 -- wartości dopuszczalne kolumny czy_opcjonalne: 0, 1
-INSERT INTO pytania VALUES ('TEST1', 3, 'TEST2', -1, NULL); -- źle
-INSERT INTO pytania VALUES ('TEST1', 4, 'TEST2', 0, NULL);  -- dobrze
-INSERT INTO pytania VALUES ('TEST1', 5, 'TEST2', 1, NULL);  -- dobrze
-INSERT INTO pytania VALUES ('TEST1', 6, 'TEST2', 2, NULL);  -- źle
+-- źle
+INSERT INTO pytania VALUES ('TEST1', 3, 'TEST2', -1, NULL);
+-- dobrze
+INSERT INTO pytania VALUES ('TEST1', 4, 'TEST2', 0, NULL);
+-- dobrze
+INSERT INTO pytania VALUES ('TEST1', 5, 'TEST2', 1, NULL);
+-- źle
+INSERT INTO pytania VALUES ('TEST1', 6, 'TEST2', 2, NULL);
 
 /******************
  * TABELA ANKIETY *
@@ -81,49 +87,72 @@ INSERT INTO ankiety VALUES (2000, 'TEST1', 2000, TO_DATE('01.01.2022', 'DD.MM.YY
  *********************/
 -- wartości dopuszczalne kolumny ocena: 0, 50, 100
 -- (wartość nieokreślona dla pytań opcjonalnych przetestowana w sekcji WYZWALACZE)
-UPDATE odpowiedzi SET ocena = -1 WHERE id_ankiety = 2000 AND nr_pytania = 1;    -- źle
-UPDATE odpowiedzi SET ocena = 0 WHERE id_ankiety = 2000 AND nr_pytania = 1;     -- dobrze
-UPDATE odpowiedzi SET ocena = 1 WHERE id_ankiety = 2000 AND nr_pytania = 1;     -- źle
-UPDATE odpowiedzi SET ocena = 49 WHERE id_ankiety = 2000 AND nr_pytania = 1;    -- źle
-UPDATE odpowiedzi SET ocena = 50 WHERE id_ankiety = 2000 AND nr_pytania = 1;    -- dobrze
-UPDATE odpowiedzi SET ocena = 51 WHERE id_ankiety = 2000 AND nr_pytania = 1;    -- źle
-UPDATE odpowiedzi SET ocena = 99 WHERE id_ankiety = 2000 AND nr_pytania = 1;    -- źle
-UPDATE odpowiedzi SET ocena = 100 WHERE id_ankiety = 2000 AND nr_pytania = 1;   -- dobrze
-UPDATE odpowiedzi SET ocena = 101 WHERE id_ankiety = 2000 AND nr_pytania = 1;   -- źle
+-- źle
+UPDATE odpowiedzi SET ocena = -1 WHERE id_ankiety = 2000 AND nr_pytania = 1;
+-- dobrze
+UPDATE odpowiedzi SET ocena = 0 WHERE id_ankiety = 2000 AND nr_pytania = 1;
+-- źle
+UPDATE odpowiedzi SET ocena = 1 WHERE id_ankiety = 2000 AND nr_pytania = 1;
+-- źle
+UPDATE odpowiedzi SET ocena = 49 WHERE id_ankiety = 2000 AND nr_pytania = 1;
+-- dobrze
+UPDATE odpowiedzi SET ocena = 50 WHERE id_ankiety = 2000 AND nr_pytania = 1;
+-- źle
+UPDATE odpowiedzi SET ocena = 51 WHERE id_ankiety = 2000 AND nr_pytania = 1;
+-- źle
+UPDATE odpowiedzi SET ocena = 99 WHERE id_ankiety = 2000 AND nr_pytania = 1;
+-- dobrze
+UPDATE odpowiedzi SET ocena = 100 WHERE id_ankiety = 2000 AND nr_pytania = 1;
+-- źle
+UPDATE odpowiedzi SET ocena = 101 WHERE id_ankiety = 2000 AND nr_pytania = 1;
 
 /**************
  * WYZWALACZE *
  **************/
 -- nietransferowalność związku typy_ankiet - pytania
+-- dobrze (brak zmiany)
 UPDATE pytania SET kod_typu_ankiety = 'TEST1'
-WHERE kod_typu_ankiety = 'TEST1' AND nr_pytania = 1;    -- dobrze (brak zmiany)
+WHERE kod_typu_ankiety = 'TEST1' AND nr_pytania = 1;
+-- źle
 UPDATE pytania SET kod_typu_ankiety = 'SAT-V01'
-WHERE kod_typu_ankiety = 'TEST1' AND nr_pytania = 1;    -- źle
+WHERE kod_typu_ankiety = 'TEST1' AND nr_pytania = 1;
 
 -- nietransferowalność związku ankiety - agenci
-UPDATE ankiety SET id_agenta = 2000 WHERE id_ankiety = 2000;    -- dobrze (brak zmiany)
-UPDATE ankiety SET id_agenta = 1006 WHERE id_ankiety = 2000;    -- źle
+-- dobrze (brak zmiany)
+UPDATE ankiety SET id_agenta = 2000 WHERE id_ankiety = 2000;
+-- źle
+UPDATE ankiety SET id_agenta = 1006 WHERE id_ankiety = 2000;
 
 -- nietransferowalność związku ankiety - klienci
-UPDATE ankiety SET id_klienta = 2000 WHERE id_ankiety = 2000;    -- dobrze (zmiana z NULL)
-UPDATE ankiety SET id_klienta = 2000 WHERE id_ankiety = 2000;    -- dobrze (brak zmiany)
-UPDATE ankiety SET id_klienta = 1001 WHERE id_ankiety = 2000;    -- źle
+-- dobrze (zmiana z NULL)
+UPDATE ankiety SET id_klienta = 2000 WHERE id_ankiety = 2000;
+-- dobrze (brak zmiany)
+UPDATE ankiety SET id_klienta = 2000 WHERE id_ankiety = 2000;
+-- źle
+UPDATE ankiety SET id_klienta = 1001 WHERE id_ankiety = 2000;
 
 -- nietransferowalność związku ankiety - typy_ankiet
-UPDATE ankiety SET kod_typu_ankiety = 'TEST1' WHERE id_ankiety = 2000;      -- dobrze (brak zmiany)
-UPDATE ankiety SET kod_typu_ankiety = 'SAT-V01' WHERE id_ankiety = 2000;    -- źle
+-- dobrze (brak zmiany)
+UPDATE ankiety SET kod_typu_ankiety = 'TEST1' WHERE id_ankiety = 2000;
+-- źle
+UPDATE ankiety SET kod_typu_ankiety = 'SAT-V01' WHERE id_ankiety = 2000;
 
 -- nietransferowalność związku odpowiedzi - ankiety
-UPDATE odpowiedzi SET id_ankiety = 2000 WHERE id_ankiety = 2000;    -- dobrze (brak zmiany)
-UPDATE odpowiedzi SET id_ankiety = 1001 WHERE id_ankiety = 2000;    -- źle (nietransferowalność + unikalność)
+-- dobrze (brak zmiany)
+UPDATE odpowiedzi SET id_ankiety = 2000 WHERE id_ankiety = 2000;
+-- źle (nietransferowalność + unikalność)
+UPDATE odpowiedzi SET id_ankiety = 1001 WHERE id_ankiety = 2000;
 
 -- nietransferowalność związku odpowiedzi - pytania
+-- dobrze (brak zmiany)
 UPDATE odpowiedzi SET kod_typu_ankiety = 'TEST1', nr_pytania = 1
-WHERE id_ankiety = 2000 AND kod_typu_ankiety = 'TEST1' AND nr_pytania = 1;  -- dobrze (brak zmiany)
+WHERE id_ankiety = 2000 AND kod_typu_ankiety = 'TEST1' AND nr_pytania = 1;
+-- źle
 UPDATE odpowiedzi SET kod_typu_ankiety = 'SAT-V01', nr_pytania = 1
-WHERE id_ankiety = 2000 AND kod_typu_ankiety = 'TEST1' AND nr_pytania = 1;  -- źle
+WHERE id_ankiety = 2000 AND kod_typu_ankiety = 'TEST1' AND nr_pytania = 1;
+-- źle
 UPDATE odpowiedzi SET kod_typu_ankiety = 'SAT-V01', nr_pytania = 2
-WHERE id_ankiety = 2000 AND kod_typu_ankiety = 'TEST1' AND nr_pytania = 1;  -- źle
+WHERE id_ankiety = 2000 AND kod_typu_ankiety = 'TEST1' AND nr_pytania = 1;
 
 -- wyzwalacz SG_ANK_WSTAW_ODPOWIEDZI wstawia odpowiedzi na wszystkie pytania do ankiety
 INSERT INTO ankiety VALUES (2001, 'SAT-V02', 1006, TO_DATE('09.06.2022', 'DD.MM.YYYY'), 1003, NULL);
