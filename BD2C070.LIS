@@ -1,0 +1,199 @@
+SQL> 
+SQL> -- średnie oceny ze wszystkich ankiet na każdego agenta
+SQL> SELECT id_osoby, email, nazwisko, imie, ROUND(srednia_ocena, 2)
+  2  FROM srednie_oceny_osob;
+
+  ID_OSOBY EMAIL                                    NAZWISKO                       IMIE                 ROUND(SREDNIA_OCENA,2)
+---------- ---------------------------------------- ------------------------------ -------------------- ----------------------
+      1007 jczerwienska@mail.com                    Czerwieńska                    Józefa                                   50
+      1006 akozlowski@mail.com                      Kozłowski                      Andrzej                               83,33
+      1009 ipiotrowski@mail.com                     Piotrowski                     Ignacy                                43,75
+      1008 jostrowska@mail.com                      Ostrowska                      Julianna                                 50
+      1010 kwalczak@mail.com                        Walczak                        Karol                                    65
+
+SQL> 
+SQL> -- średnie oceny ze wszystkich ankiet na każde pytanie
+SQL> SELECT kod_typu_ankiety, nr_pytania, p.tresc,
+  2      ROUND(AVG(o.ocena), 2) as srednia_ocena
+  3  FROM odpowiedzi o NATURAL JOIN pytania p
+  4  GROUP BY kod_typu_ankiety, nr_pytania, p.tresc
+  5  ORDER BY kod_typu_ankiety, nr_pytania;
+
+KOD_TYPU NR_PYTANIA
+-------- ----------
+TRESC
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SREDNIA_OCENA
+-------------
+KUR-V01           1 
+Jak ocenia Pan/Pani punktualność kuriera?                                                                                                                                                                                                                                                                   
+        66,67
+
+KUR-V01           2 
+Jak ocenia Pan/Pani stan przesyłanego obiektu po dotarciu?                                                                                                                                                                                                                                                  
+        66,67
+
+SAT-V01           1 
+Jak ocenia Pan/Pani punktualność agenta?                                                                                                                                                                                                                                                                    
+           50
+
+SAT-V01           2 
+Jak ocenia Pan/Pani kooperatywność agenta?                                                                                                                                                                                                                                                                  
+           50
+
+SAT-V01           3 
+Jak ocenia Pan/Pani wiedzę agenta?                                                                                                                                                                                                                                                                          
+           25
+
+SAT-V01           4 
+Jak ocenia Pan/Pani chęć do pomocy agenta?                                                                                                                                                                                                                                                                  
+           50
+
+SAT-V02           1 
+Jak ocenia Pan/Pani punktualność agenta?                                                                                                                                                                                                                                                                    
+        71,43
+
+SAT-V02           2 
+Jak ocenia Pan/Pani przygotowanie agenta?                                                                                                                                                                                                                                                                   
+        42,86
+
+SAT-V02           3 
+Jak ocenia Pan/Pani wiedzę agenta?                                                                                                                                                                                                                                                                          
+           50
+
+SAT-V02           4 
+Jak ocenia Pan/Pani chęć do pomocy agenta?                                                                                                                                                                                                                                                                  
+        71,43
+
+SAT-V02           5 
+Jeśli spotkanie odbyło się w biurze, to jak Pan/Pani ocenia porządek w biurze agenta?                                                                                                                                                                                                                       
+         62,5
+
+SAT-V02           6 
+Jeśli spotkanie odbyło się w biurze, to jak Pan/Pani ocenia sprawność obsługi sprzętu elektronicznego w biurze przez agenta?                                                                                                                                                                                
+         37,5
+
+
+12 rows selected. 
+
+SQL> 
+SQL> -- średnie oceny ze wszystkich ankiet na każdy miesiąc
+SQL> WITH miesiac_ankiety as (
+  2      SELECT id_ankiety,
+  3          EXTRACT(YEAR FROM ankiety.data_wypelnienia) as rok,
+  4          EXTRACT(MONTH FROM ankiety.data_wypelnienia) as miesiac
+  5      FROM ankiety)
+  6  SELECT rok, miesiac, ROUND(AVG(ocena), 2) as srednia_ocena
+  7  FROM odpowiedzi NATURAL JOIN miesiac_ankiety
+  8  GROUP BY rok, miesiac
+  9  ORDER BY rok DESC, miesiac DESC;
+
+       ROK    MIESIAC SREDNIA_OCENA
+---------- ---------- -------------
+      2022          6         59,38
+      2022          5            60
+      2021         12            75
+      2021         11            25
+      2021         10           100
+      2021          8          12,5
+      2021          3            75
+      2020          2          37,5
+      2020          1            50
+
+9 rows selected. 
+
+SQL> 
+SQL> -- pracownik z najlepszą średnią ocen na obecny miesiąc (pracownik miesiąca)
+SQL> WITH oceny_ten_miesiac as (
+  2      SELECT id_agenta, ocena
+  3      FROM odpowiedzi NATURAL JOIN ankiety
+  4      WHERE ocena IS NOT NULL AND
+  5          EXTRACT(YEAR FROM data_wypelnienia) = EXTRACT(YEAR FROM sysdate) AND
+  6          EXTRACT(MONTH FROM data_wypelnienia) = EXTRACT(MONTH FROM sysdate))
+  7  SELECT os.id_osoby, os.email, os.nazwisko, os.imie, AVG(om.ocena) as srednia_ocen
+  8  FROM osoby os JOIN oceny_ten_miesiac om ON (os.id_osoby = om.id_agenta)
+  9  GROUP BY os.id_osoby, os.email, os.nazwisko, os.imie
+ 10  ORDER BY srednia_ocen DESC
+ 11  FETCH NEXT 1 ROW ONLY;
+
+  ID_OSOBY EMAIL                                    NAZWISKO                       IMIE                 SREDNIA_OCEN
+---------- ---------------------------------------- ------------------------------ -------------------- ------------
+      1009 ipiotrowski@mail.com                     Piotrowski                     Ignacy                         75
+
+SQL> 
+SQL> -- jaka część agentów ma nielepszą średnią ocenę na dane pytanie niż podany agent
+SQL> WITH sr_odp_agentow as (
+  2      SELECT os.id_osoby, kod_typu_ankiety, nr_pytania, AVG(o.ocena) as srednia_ocena
+  3      FROM odpowiedzi o NATURAL JOIN ankiety a JOIN osoby os ON (a.id_agenta = os.id_osoby)
+  4      GROUP BY os.id_osoby, kod_typu_ankiety, nr_pytania)
+  5  SELECT dany_agt.kod_typu_ankiety, dany_agt.nr_pytania, ROUND(
+  6          (
+  7              -- liczba agentów z nielepszą średnią oceną za pytanie niż dany agent
+  8              SELECT COUNT(*)
+  9              FROM sr_odp_agentow
+ 10              WHERE dany_agt.kod_typu_ankiety = kod_typu_ankiety
+ 11                  AND dany_agt.nr_pytania = nr_pytania
+ 12                  AND srednia_ocena <= (
+ 13                      -- średnia ocena za pytanie danego agenta
+ 14                      SELECT srednia_ocena
+ 15                      FROM sr_odp_agentow
+ 16                      WHERE id_osoby = :param_id_agenta
+ 17                          AND dany_agt.kod_typu_ankiety = kod_typu_ankiety
+ 18                          AND dany_agt.nr_pytania = nr_pytania
+ 19                  )
+ 20          ) / (
+ 21              -- łączna liczba agentów z zarejestrowaną odpowiedzią na pytanie
+ 22              SELECT COUNT(*)
+ 23              FROM sr_odp_agentow
+ 24              WHERE dany_agt.kod_typu_ankiety = kod_typu_ankiety
+ 25                  AND dany_agt.nr_pytania = nr_pytania
+ 26          )
+ 27      , 2) as niegorszy_od
+ 28  FROM sr_odp_agentow dany_agt
+ 29  WHERE dany_agt.id_osoby = :param_id_agenta
+ 30  ORDER BY dany_agt.kod_typu_ankiety, dany_agt.nr_pytania;
+SP2-0552: Bind variable "PARAM_ID_AGENTA" not declared.
+SQL> 
+SQL> -- wszyscy pracownicy ze średnią ocen poniżej 50
+SQL> SELECT *
+  2  FROM srednie_oceny_osob
+  3  WHERE srednia_ocena < 50;
+
+  ID_OSOBY EMAIL                                    NAZWISKO                       IMIE                 SREDNIA_OCENA
+---------- ---------------------------------------- ------------------------------ -------------------- -------------
+      1009 ipiotrowski@mail.com                     Piotrowski                     Ignacy                       43,75
+
+SQL> 
+SQL> -- wyświetl kto ocenił kogo w ankiecie i z jaką średnią oceną
+SQL> SELECT
+  2      NVL2(agt.id_osoby, agt.nazwisko || ' ' || agt.imie || ' ' || agt.imie_2, NULL) as agent,
+  3      NVL2(kli.id_osoby, kli.nazwisko || ' ' || kli.imie || ' ' || kli.imie_2, NULL) as klient,
+  4      ROUND(AVG(odp.ocena), 2) as srednia_ocena
+  5  FROM ankiety ank
+  6      JOIN osoby agt ON (ank.id_agenta = agt.id_osoby)
+  7      LEFT JOIN osoby kli ON (ank.id_klienta = kli.id_osoby)
+  8      JOIN odpowiedzi odp ON (ank.id_ankiety = odp.id_ankiety)
+  9  GROUP BY
+ 10      ank.id_ankiety,
+ 11      agt.id_osoby, agt.nazwisko, agt.imie, agt.imie_2,
+ 12      kli.id_osoby, kli.nazwisko, kli.imie, kli.imie_2;
+
+AGENT                                                                    KLIENT                                                                   SREDNIA_OCENA
+------------------------------------------------------------------------ ------------------------------------------------------------------------ -------------
+Ostrowska Julianna                                                       Mściungwa Kamil                                                                     75
+Czerwieńska Józefa Maria                                                                                                                                     50
+Piotrowski Ignacy                                                        Bombrowicz Jakub Edward                                                           12,5
+Piotrowski Ignacy                                                        Mazur Natalia                                                                       75
+Ostrowska Julianna                                                       Kowalski Jan                                                                        50
+Ostrowska Julianna                                                       Mazur Natalia                                                                       25
+Czerwieńska Józefa Maria                                                                                                                                  41,67
+Walczak Karol Mateusz                                                    Kowalski Jan                                                                        50
+Czerwieńska Józefa Maria                                                 Kowalski Jan                                                                      37,5
+Czerwieńska Józefa Maria                                                 Bombrowicz Jakub Edward                                                            100
+Walczak Karol Mateusz                                                                                                                                        75
+Kozłowski Andrzej                                                        Drzewo Albert Anastazy                                                           83,33
+
+12 rows selected. 
+
+SQL> 
+SQL> spool off;

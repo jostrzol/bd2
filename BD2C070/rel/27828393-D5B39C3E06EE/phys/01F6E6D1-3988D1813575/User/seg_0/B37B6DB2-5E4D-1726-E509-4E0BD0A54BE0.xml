@@ -3,7 +3,7 @@
 <createdBy>tuco</createdBy>
 <createdTime>2022-05-21 18:41:49 UTC</createdTime>
 <ownerDesignName>BD2C070</ownerDesignName>
-<identifier>0534BADA5FA6AB864E4028E305DA803282</identifier>
+<identifier>05B7F67153955252E19DF8DA862F2C62C8</identifier>
 <permissions>
 <Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions1" id="EC924F9C-EA07-3614-8974-C129C9179AF2">
 <createdBy>tuco</createdBy>
@@ -39,6 +39,20 @@
 <ownerDesignName>BD2C070</ownerDesignName>
 <privileges>DELETE, INSERT, SELECT, UPDATE</privileges>
 <table>A0D11254-FF0D-8175-4461-453ABA94CC58</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions6" id="1B93BDC1-1C30-0FDB-0250-B622BB7A1E15">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-28 22:11:25 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<privileges>DELETE, INSERT, SELECT, UPDATE</privileges>
+<view>7FFC08E9-C5E8-2C3D-5FAF-489402F1CCFE</view>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions7" id="ED689EF0-31C9-AAC7-C214-41170E4A2EBA">
+<createdBy>tuco</createdBy>
+<createdTime>2022-05-28 22:11:25 UTC</createdTime>
+<ownerDesignName>BD2C070</ownerDesignName>
+<privileges>DELETE, INSERT, SELECT, UPDATE</privileges>
+<view>A92F2C91-F312-00FA-FF52-90735CBA0250</view>
 </Permission>
 </permissions>
 </UserOraclev10g>
