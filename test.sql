@@ -1,7 +1,7 @@
 set echo on;
 set linesize 300;
 set pagesize 500;
-spool BD2C070.LIS;
+spool BD2C070_TEST.LIS;
 
 -- średnie oceny ze wszystkich ankiet na każdego agenta
 SELECT id_osoby, email, nazwisko, imie, ROUND(srednia_ocena, 2)
