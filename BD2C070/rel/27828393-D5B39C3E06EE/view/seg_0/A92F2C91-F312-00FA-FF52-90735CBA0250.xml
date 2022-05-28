@@ -32,9 +32,6 @@ GROUP BY
 <referencedColumn>DB6E4BB0-B2FD-DBF4-60BA-B61A4B9F1FBB</referencedColumn>
 <table>9F547D09-C311-801B-E200-F926714B83FD</table>
 <tableAlias>p</tableAlias>
-<associations>
-<colAssociation fkAssociation="86E67EC5-508D-0F1E-0575-C663D293A408" referredColumn="A3178A55-302D-BBF1-C0B4-0D07CDB60E27"/>
-</associations>
 </viewElement>
 <viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="nr_pytania" id="8A93CCA6-2F9D-C93B-9ED3-C192D46A38B5">
 <createdBy>tuco</createdBy>
@@ -118,15 +115,6 @@ GROUP BY
 <indexColumnUsage>
 <colUsage columnID="5EC4DEC2-E4F3-C59E-722C-53A7B2299EFA"/>
 <colUsage columnID="8A93CCA6-2F9D-C93B-9ED3-C192D46A38B5"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="F40F206D-8D02-FF98-E191-F72258DBE139" name="SRED_PYT_TANK_FK">
-<createdBy>tuco</createdBy>
-<createdTime>2022-05-26 12:03:47 UTC</createdTime>
-<ownerDesignName>BD2C070</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<indexColumnUsage>
-<colUsage columnID="5EC4DEC2-E4F3-C59E-722C-53A7B2299EFA"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

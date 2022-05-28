@@ -123,23 +123,6 @@ jakub.ostrzolek.stud@pw.edu.pl</comment>
 <point x="175" y="422"/>
 </points>
 </Connector>
-<Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="86E67EC5-508D-0F1E-0575-C663D293A408" otype="FKIndexAssociation" vid_source="D8FEF77B-538F-E3E6-F65E-1E21D2132661" vid_target="DDBEBD03-004E-6943-0E83-6E51E852F367">
-<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<backgroundColor>-16777216</backgroundColor>
-<lineWidth>1</lineWidth>
-<centerLabel class="oracle.dbtools.crest.model.design.Label">
-<site>1</site>
-<labelBounds x="-133" y="-61" width="67" height="30"/>
-<noBackgroundColor>true</noBackgroundColor>
-<noForegroundColor>true</noForegroundColor>
-</centerLabel>
-<points>
-<point x="630" y="490"/>
-<point x="630" y="392"/>
-<point x="734" y="392"/>
-<point x="734" y="361"/>
-</points>
-</Connector>
 <Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="9099FF10-E700-EDAA-275E-ECEFD019A4AE" otype="FKIndexAssociation" vid_source="91575764-D732-38A2-31BF-902C8F577290" vid_target="6DE2089E-7AFE-BDE4-6ACE-5FB5B9D723DA">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
 <backgroundColor>-16777216</backgroundColor>
