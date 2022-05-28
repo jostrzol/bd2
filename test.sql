@@ -38,7 +38,7 @@ GROUP BY os.id_osoby, os.email, os.nazwisko, os.imie
 ORDER BY srednia_ocen DESC
 FETCH NEXT 1 ROW ONLY;
 
--- jaka część agentów ma nielepszą średnią ocenę na dane pytanie niż podany agent
+-- jaka część agentów ma nielepszą średnią ocenę na dane pytanie niż agent 1006
 WITH sr_odp_agentow as (
     SELECT os.id_osoby, kod_typu_ankiety, nr_pytania, AVG(o.ocena) as srednia_ocena
     FROM odpowiedzi o NATURAL JOIN ankiety a JOIN osoby os ON (a.id_agenta = os.id_osoby)
@@ -54,7 +54,7 @@ SELECT dany_agt.kod_typu_ankiety, dany_agt.nr_pytania, ROUND(
                     -- średnia ocena za pytanie danego agenta
                     SELECT srednia_ocena
                     FROM sr_odp_agentow
-                    WHERE id_osoby = :param_id_agenta
+                    WHERE id_osoby = dany_agt.id_osoby
                         AND dany_agt.kod_typu_ankiety = kod_typu_ankiety
                         AND dany_agt.nr_pytania = nr_pytania
                 )
@@ -67,7 +67,7 @@ SELECT dany_agt.kod_typu_ankiety, dany_agt.nr_pytania, ROUND(
         )
     , 2) as niegorszy_od
 FROM sr_odp_agentow dany_agt
-WHERE dany_agt.id_osoby = :param_id_agenta
+WHERE dany_agt.id_osoby = 1006
 ORDER BY dany_agt.kod_typu_ankiety, dany_agt.nr_pytania;
 
 -- wszyscy pracownicy ze średnią ocen poniżej 50

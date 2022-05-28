@@ -121,7 +121,7 @@ SQL> WITH oceny_ten_miesiac as (
       1009 ipiotrowski@mail.com                     Piotrowski                     Ignacy                         75
 
 SQL> 
-SQL> -- jaka część agentów ma nielepszą średnią ocenę na dane pytanie niż podany agent
+SQL> -- jaka część agentów ma nielepszą średnią ocenę na dane pytanie niż agent 1006
 SQL> WITH sr_odp_agentow as (
   2      SELECT os.id_osoby, kod_typu_ankiety, nr_pytania, AVG(o.ocena) as srednia_ocena
   3      FROM odpowiedzi o NATURAL JOIN ankiety a JOIN osoby os ON (a.id_agenta = os.id_osoby)
@@ -137,7 +137,7 @@ SQL> WITH sr_odp_agentow as (
  13                      -- średnia ocena za pytanie danego agenta
  14                      SELECT srednia_ocena
  15                      FROM sr_odp_agentow
- 16                      WHERE id_osoby = :param_id_agenta
+ 16                      WHERE id_osoby = dany_agt.id_osoby
  17                          AND dany_agt.kod_typu_ankiety = kod_typu_ankiety
  18                          AND dany_agt.nr_pytania = nr_pytania
  19                  )
@@ -150,9 +150,20 @@ SQL> WITH sr_odp_agentow as (
  26          )
  27      , 2) as niegorszy_od
  28  FROM sr_odp_agentow dany_agt
- 29  WHERE dany_agt.id_osoby = :param_id_agenta
+ 29  WHERE dany_agt.id_osoby = 1006
  30  ORDER BY dany_agt.kod_typu_ankiety, dany_agt.nr_pytania;
-SP2-0552: Bind variable "PARAM_ID_AGENTA" not declared.
+
+KOD_TYPU NR_PYTANIA NIEGORSZY_OD
+-------- ---------- ------------
+SAT-V02           1            1
+SAT-V02           2 ,8          
+SAT-V02           3            1
+SAT-V02           4            1
+SAT-V02           5 ,8          
+SAT-V02           6 ,8          
+
+6 rows selected. 
+
 SQL> 
 SQL> -- wszyscy pracownicy ze średnią ocen poniżej 50
 SQL> SELECT *
