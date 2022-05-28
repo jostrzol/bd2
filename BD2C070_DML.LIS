@@ -53,13 +53,13 @@ ORA-00001: naruszono więzy unikatowe (BD2C070.OSB_PESEL_UK)
 SQL> 
 SQL> -- unikalność kolumny nr_karty_stalego_klienta
 SQL> INSERT INTO osoby (id_osoby, email, nazwisko, imie, nr_karty_stalego_klienta)
-  2      VALUES (2001, 'test2@mail.com', 'test2', 'test2', '01234567891');
+  2      VALUES (2001, 'test2@mail.com', 'test2', 'test2', '0123456789123');
 
 Error starting at line : 28 in command -
 INSERT INTO osoby (id_osoby, email, nazwisko, imie, nr_karty_stalego_klienta)
-    VALUES (2001, 'test2@mail.com', 'test2', 'test2', '01234567891')
+    VALUES (2001, 'test2@mail.com', 'test2', 'test2', '0123456789123')
 Error report -
-ORA-02290: naruszono więzy CHECK (BD2C070.OSB_N_KARTY_CHK)
+ORA-00001: naruszono więzy unikatowe (BD2C070.OSB_N_KARTY_UK)
 
 SQL> 
 SQL> -- pesel składa się tylko z cyfr

@@ -26,7 +26,7 @@ INSERT INTO osoby (id_osoby, email, nazwisko, imie, pesel)
 
 -- unikalność kolumny nr_karty_stalego_klienta
 INSERT INTO osoby (id_osoby, email, nazwisko, imie, nr_karty_stalego_klienta)
-    VALUES (2001, 'test2@mail.com', 'test2', 'test2', '01234567891');
+    VALUES (2001, 'test2@mail.com', 'test2', 'test2', '0123456789123');
     
 -- pesel składa się tylko z cyfr
 INSERT INTO osoby (id_osoby, email, nazwisko, imie, pesel)
