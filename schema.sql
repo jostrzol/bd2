@@ -214,49 +214,6 @@ ALTER TABLE pytania
             ON DELETE CASCADE
     DEFERRABLE;
 
-CREATE OR REPLACE VIEW Srednie_oceny_osob ( id_osoby, email, nazwisko, imie, srednia_ocena ) AS
-SELECT
-    os.id_osoby,
-    os.email,
-    os.nazwisko,
-    os.imie,
-    AVG(o.ocena) AS srednia_ocena
-FROM
-         odpowiedzi o
-    INNER JOIN ankiety a ON ( o.id_ankiety = a.id_ankiety )
-    RIGHT JOIN osoby   os ON ( a.id_agenta = os.id_osoby )
-GROUP BY
-    os.id_osoby,
-    os.email,
-    os.nazwisko,
-    os.imie 
-;
-
-ALTER VIEW srednie_oceny_osob ADD CONSTRAINT sred_osb_pk PRIMARY KEY ( id_osoby ) DISABLE;
-
-CREATE OR REPLACE VIEW Srednie_oceny_pytan ( kod_typu_ankiety, nr_pytania, tresc, srednia_ocena ) AS
-SELECT
-    p.kod_typu_ankiety,
-    p.nr_pytania,
-    p.tresc,
-    AVG(o.ocena) AS srednia_ocena
-FROM
-         odpowiedzi o
-    INNER JOIN pytania p ON o.kod_typu_ankiety = p.kod_typu_ankiety
-                            AND o.nr_pytania = p.nr_pytania
-GROUP BY
-    p.kod_typu_ankiety,
-    p.nr_pytania,
-    p.tresc 
-;
-
-ALTER VIEW srednie_oceny_pytan ADD CONSTRAINT sred_pyt_pk PRIMARY KEY ( kod_typu_ankiety,
-                                                                        nr_pytania ) DISABLE;
-
-ALTER VIEW srednie_oceny_pytan ADD CONSTRAINT sred_pyt_tank_fk FOREIGN KEY ( kod_typu_ankiety )
-    REFERENCES typy_ankiet ( kod_typu_ankiety )
-DISABLE;
-
 CREATE OR REPLACE TRIGGER fknto_ankiety BEFORE
     UPDATE OF id_klienta ON ankiety
     FOR EACH ROW
@@ -295,8 +252,8 @@ END;
 -- CREATE TABLE                             5
 -- CREATE INDEX                             4
 -- ALTER TABLE                             20
--- CREATE VIEW                              2
--- ALTER VIEW                               3
+-- CREATE VIEW                              0
+-- ALTER VIEW                               0
 -- CREATE PACKAGE                           0
 -- CREATE PACKAGE BODY                      0
 -- CREATE PROCEDURE                         0

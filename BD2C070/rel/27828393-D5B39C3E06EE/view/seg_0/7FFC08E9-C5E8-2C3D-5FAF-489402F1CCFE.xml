@@ -14,7 +14,7 @@
 FROM
          odpowiedzi o
     INNER JOIN ankiety a ON ( o.id_ankiety = a.id_ankiety )
-    RIGHT JOIN osoby   os ON ( a.id_agenta = os.id_osoby )
+    INNER JOIN osoby   os ON ( a.id_agenta = os.id_osoby )
 GROUP BY
     os.id_osoby,
     os.email,
