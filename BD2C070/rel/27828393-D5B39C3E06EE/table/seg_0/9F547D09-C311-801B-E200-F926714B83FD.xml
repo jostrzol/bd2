@@ -2,7 +2,9 @@
 <Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9F547D09-C311-801B-E200-F926714B83FD" name="Pytania">
 <createdBy>tuco</createdBy>
 <createdTime>2022-05-21 17:28:52 UTC</createdTime>
-<commentInRDBMS><![CDATA[Pytanie zdefiniowane w danym typie ankiety. ]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[Pytanie zdefiniowane w danym typie ankiety.
+
+Pytań nie należy dodawać ani usuwać w sytuacjach, gdy typ ankiety, do którego przynależą, jest już wykorzystywany w jakichkolwiek ankietach.]]></commentInRDBMS>
 <generatorID>80E14DBF-92ED-33EA-259A-37EF53445674</generatorID>
 <ownerDesignName>BD2C070</ownerDesignName>
 <abbreviation>PYT</abbreviation>

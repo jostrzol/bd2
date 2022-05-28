@@ -2,7 +2,9 @@
 <Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="759E3755-78F2-5364-6216-404C5D0169A5" name="Ankiety">
 <createdBy>tuco</createdBy>
 <createdTime>2022-05-21 17:28:52 UTC</createdTime>
-<commentInRDBMS><![CDATA[Ankieta to zestaw odpowiedzi na pytania definiowane przez jej typ. Ankieta zawsze ocenia jakiegoś agenta i może być wypełniona jawnie przez jakiegoś klienta lub anonimowo.]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[Ankieta to zestaw odpowiedzi na pytania definiowane przez jej typ. Ankieta zawsze ocenia jakiegoś agenta i może być wypełniona jawnie przez jakiegoś klienta lub anonimowo.
+
+Każda ankieta jest zawsze automatycznie tworzona oraz usuwana razem z pełnym zestawem odpowiedzi (nawet na pytania opcjonalne ale z oceną nieokreśloną).]]></commentInRDBMS>
 <generatorID>F2C5C123-3279-2851-313E-7F894FC187B0</generatorID>
 <ownerDesignName>BD2C070</ownerDesignName>
 <abbreviation>ANK</abbreviation>

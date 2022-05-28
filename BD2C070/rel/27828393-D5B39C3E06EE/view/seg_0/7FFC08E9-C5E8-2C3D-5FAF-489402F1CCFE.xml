@@ -2,6 +2,7 @@
 <TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="7FFC08E9-C5E8-2C3D-5FAF-489402F1CCFE" name="Srednie_oceny_osob">
 <createdBy>tuco</createdBy>
 <createdTime>2022-05-26 10:54:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[Pozwala na łatwy, szybki wgląd w średnie oceny agentów.]]></commentInRDBMS>
 <ownerDesignName>BD2C070</ownerDesignName>
 <ordsAlias>view_2</ordsAlias>
 <userDefined>true</userDefined>

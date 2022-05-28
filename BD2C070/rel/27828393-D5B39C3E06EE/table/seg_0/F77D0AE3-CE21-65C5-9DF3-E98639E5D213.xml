@@ -75,6 +75,7 @@
 <Column name="PESEL" id="B8A1D4AB-A62E-E270-6817-1C7398A81D82">
 <createdBy>tuco</createdBy>
 <createdTime>2022-05-21 17:28:52 UTC</createdTime>
+<commentInRDBMS><![CDATA[Składa się dokładnie z 11 cyfr.]]></commentInRDBMS>
 <generatorID>CC7A4056-B1FA-032F-A637-02E140D6390B</generatorID>
 <ownerDesignName>BD2C070</ownerDesignName>
 <constraintName>OSB_PESEL_CHK</constraintName>
@@ -106,7 +107,7 @@
 <Column name="Nr_karty_stalego_klienta" id="53772181-57B9-FE06-97D8-2216CD90F207">
 <createdBy>tuco</createdBy>
 <createdTime>2022-05-21 17:28:52 UTC</createdTime>
-<commentInRDBMS><![CDATA[Składa się z 13 cyfr, aby łatwo można było go zareprezentować w postaci kodu kreskowego EAN-13.]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[Składa dokładnie z 13 cyfr, aby łatwo można było go zareprezentować w postaci kodu kreskowego EAN-13.]]></commentInRDBMS>
 <generatorID>FE2FCF19-7FFC-AA05-C7CE-5B45D5302638</generatorID>
 <ownerDesignName>BD2C070</ownerDesignName>
 <constraintName>OSB_N_KARTY_CHK</constraintName>

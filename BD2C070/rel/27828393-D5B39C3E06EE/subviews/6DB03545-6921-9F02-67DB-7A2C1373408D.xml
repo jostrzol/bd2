@@ -72,7 +72,7 @@ jakub.ostrzolek.stud@pw.edu.pl</comment>
 <lineWidth>1</lineWidth>
 <centerLabel class="oracle.dbtools.crest.model.design.Label">
 <site>1</site>
-<labelBounds x="-133" y="-46" width="89" height="30"/>
+<labelBounds x="-177" y="-61" width="89" height="30"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </centerLabel>
@@ -89,7 +89,7 @@ jakub.ostrzolek.stud@pw.edu.pl</comment>
 <lineWidth>1</lineWidth>
 <centerLabel class="oracle.dbtools.crest.model.design.Label">
 <site>1</site>
-<labelBounds x="-133" y="-46" width="89" height="30"/>
+<labelBounds x="-177" y="-61" width="89" height="30"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </centerLabel>
@@ -106,7 +106,7 @@ jakub.ostrzolek.stud@pw.edu.pl</comment>
 <lineWidth>1</lineWidth>
 <centerLabel class="oracle.dbtools.crest.model.design.Label">
 <site>1</site>
-<labelBounds x="-115" y="-46" width="77" height="30"/>
+<labelBounds x="-153" y="-61" width="77" height="30"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </centerLabel>
@@ -123,7 +123,7 @@ jakub.ostrzolek.stud@pw.edu.pl</comment>
 <lineWidth>1</lineWidth>
 <centerLabel class="oracle.dbtools.crest.model.design.Label">
 <site>1</site>
-<labelBounds x="-67" y="-31" width="67" height="30"/>
+<labelBounds x="-100" y="-46" width="67" height="30"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </centerLabel>
@@ -157,7 +157,7 @@ jakub.ostrzolek.stud@pw.edu.pl</comment>
 <lineWidth>1</lineWidth>
 <centerLabel class="oracle.dbtools.crest.model.design.Label">
 <site>1</site>
-<labelBounds x="-124" y="-46" width="83" height="30"/>
+<labelBounds x="-165" y="-61" width="83" height="30"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </centerLabel>
@@ -174,7 +174,7 @@ jakub.ostrzolek.stud@pw.edu.pl</comment>
 <lineWidth>1</lineWidth>
 <centerLabel class="oracle.dbtools.crest.model.design.Label">
 <site>1</site>
-<labelBounds x="-124" y="-46" width="83" height="30"/>
+<labelBounds x="-165" y="-61" width="83" height="30"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </centerLabel>

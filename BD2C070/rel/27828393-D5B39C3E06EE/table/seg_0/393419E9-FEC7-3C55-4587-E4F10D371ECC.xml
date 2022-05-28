@@ -2,7 +2,9 @@
 <Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="393419E9-FEC7-3C55-4587-E4F10D371ECC" name="Odpowiedzi">
 <createdBy>tuco</createdBy>
 <createdTime>2022-05-21 17:28:52 UTC</createdTime>
-<commentInRDBMS><![CDATA[Odpowiedź udzielona przez klienta na konkretne pytanie w danej ankiecie.]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[Odpowiedź udzielona przez klienta na konkretne pytanie w danej ankiecie.
+
+Odpowiedzi są zawsze automatycznie tworzone i usuwane razem z ankietą, dlatego nigdy nie należy ich ręcznie tworzyć lub usuwać. Należy jedynie zmieniać ocenę odpowiedzi.]]></commentInRDBMS>
 <generatorID>FF978E5C-095B-ACFA-CEC9-606BBE3CC90C</generatorID>
 <ownerDesignName>BD2C070</ownerDesignName>
 <abbreviation>ODP</abbreviation>
